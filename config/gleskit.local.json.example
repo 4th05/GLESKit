@@ -1,0 +1,22 @@
+{
+  "paths": {
+    "workspace_root": "${PROJECT_ROOT}/.gleskit/workspace",
+    "runtime_root": "${PROJECT_ROOT}/.gleskit/runtime",
+    "reference_root": "${PROJECT_ROOT}/.gleskit/reference",
+    "r_lib_root": "${PROJECT_ROOT}/.gleskit/r_lib"
+  },
+  "runtime": {
+    "local_max_workers": 4,
+    "r_threads": 1,
+    "upload_preview_max_lines": 100,
+    "artifact_preview_max_lines": 100
+  },
+  "tools": {
+    "rscript_bin": "Rscript"
+  },
+  "server": {
+    "download_public_base_url": "",
+    "download_bind_host": "127.0.0.1",
+    "download_port": 0
+  }
+}

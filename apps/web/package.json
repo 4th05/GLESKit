@@ -1,0 +1,20 @@
+{
+  "name": "gleskit-web",
+  "version": "0.1.0",
+  "private": true,
+  "license": "CC-BY-NC-SA-4.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-web.mjs",
+    "build:web": "node scripts/build-web.mjs",
+    "test": "node --test src/*.test.mjs"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "katex": "^0.16.11",
+    "mermaid": "^11.13.0"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}

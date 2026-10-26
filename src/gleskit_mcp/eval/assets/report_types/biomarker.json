@@ -1,0 +1,286 @@
+{
+  "cases": [
+    {
+      "brief": "I have a translational biomarker panel from epithelial tumors and need a biomarker-oriented report that prioritizes candidates, states caveats, and suggests follow-up validation.",
+      "case_id": "epithelial_tumor_panel",
+      "description": "Prioritize epithelial-associated biomarker candidates for solid tumors.",
+      "expected_nuggets": [
+        "Ranks or prioritizes the candidate genes rather than treating them all as equal.",
+        "Uses evidence from disease, expression, targetability, or literature context.",
+        "States caveats or uncertainty for biomarker interpretation.",
+        "Suggests concrete validation or follow-up experiments."
+      ],
+      "forbidden_overclaims": [
+        "Do not claim clinical validity or diagnostic performance without explicit evidence.",
+        "Do not claim a gene is an established biomarker if the evidence in-session is only suggestive."
+      ],
+      "kickoff_context": {
+        "focus_tumor_types": [
+          "colorectal adenocarcinoma",
+          "ovarian carcinoma",
+          "pancreatic adenocarcinoma"
+        ],
+        "genes": [
+          "EPCAM",
+          "KRT19",
+          "MSLN",
+          "CEACAM5",
+          "VIM",
+          "MUC1"
+        ],
+        "study_context": "solid-tumor translational profiling",
+        "target_question": "Which genes from this panel are the strongest biomarker candidates and why?"
+      },
+      "tags": [
+        "cancer",
+        "epithelial",
+        "translation"
+      ],
+      "task": "Analyze EPCAM, KRT19, MSLN, CEACAM5, VIM, and MUC1 as translational biomarker candidates. Produce a biomarker report with ranked candidates, evidence-grounded rationale, caveats, and concrete validation recommendations.",
+      "title": "Epithelial tumor biomarker panel"
+    },
+    {
+      "brief": "I want to know which genes in this inflammatory serum panel are most promising as measurable biomarkers rather than just general pathway members.",
+      "case_id": "inflammatory_serum_panel",
+      "description": "Evaluate inflammatory mediators for soluble biomarker potential.",
+      "expected_nuggets": [
+        "Separates soluble or assay-friendly markers from genes that are mechanistically relevant but weak biomarkers.",
+        "Uses disease or expression context to justify prioritization.",
+        "Notes confounding by generalized inflammation.",
+        "Suggests a practical validation path such as ELISA, multiplex assay, or cohort stratification."
+      ],
+      "forbidden_overclaims": [
+        "Do not promise disease specificity if the evidence is broad inflammatory biology.",
+        "Do not claim blood detectability without support."
+      ],
+      "kickoff_context": {
+        "disease_area": "systemic inflammatory disease monitoring",
+        "genes": [
+          "CRP",
+          "IL6",
+          "CCL2",
+          "CXCL10",
+          "VCAM1",
+          "SPP1"
+        ],
+        "study_context": "serum biomarker discovery shortlist",
+        "target_question": "Which genes look most useful as measurable inflammatory biomarkers?"
+      },
+      "tags": [
+        "inflammation",
+        "serum",
+        "assay"
+      ],
+      "task": "Assess CRP, IL6, CCL2, CXCL10, VCAM1, and SPP1 as candidate serum biomarkers for inflammatory disease monitoring. Produce a biomarker report with prioritization, rationale, caveats, and validation recommendations.",
+      "title": "Inflammatory serum marker shortlist"
+    },
+    {
+      "brief": "This glioma-associated panel contains stemness, invasion, and lineage markers. I need a biomarker report focused on translational usefulness, not just mechanism.",
+      "case_id": "glioma_lineage_panel",
+      "description": "Prioritize glioma biomarker candidates across lineage and invasive-state genes.",
+      "expected_nuggets": [
+        "Distinguishes lineage markers from invasion-associated markers in biomarker terms.",
+        "Identifies whether any candidates are better suited for tissue, fluid, or imaging-oriented use.",
+        "Includes caveats around tumor heterogeneity and state plasticity.",
+        "Ends with concrete validation suggestions."
+      ],
+      "forbidden_overclaims": [
+        "Do not claim a marker is clinically established without explicit support.",
+        "Do not equate state markers with robust biomarkers without caveats."
+      ],
+      "kickoff_context": {
+        "disease_area": "glioma translational profiling",
+        "genes": [
+          "GFAP",
+          "OLIG2",
+          "SOX2",
+          "CHI3L1",
+          "AXL",
+          "VIM"
+        ],
+        "study_context": "brain tumor biomarker discovery",
+        "target_question": "Which genes are strongest biomarker candidates for glioma-oriented applications?"
+      },
+      "tags": [
+        "glioma",
+        "lineage",
+        "invasion"
+      ],
+      "task": "Analyze GFAP, OLIG2, SOX2, CHI3L1, AXL, and VIM as glioma biomarker candidates. Produce a biomarker report that prioritizes candidates for translational relevance, explains the rationale, states caveats, and recommends follow-up validation.",
+      "title": "Glioma lineage and invasion panel"
+    },
+    {
+      "brief": "I need a fibrosis-focused biomarker report for a secreted or extracellular matrix-heavy candidate list, with attention to specificity and translational caveats.",
+      "case_id": "fibrosis_ecm_panel",
+      "description": "Assess fibrosis-associated genes for biomarker suitability.",
+      "expected_nuggets": [
+        "Prioritizes candidates with extracellular or measurable relevance.",
+        "Recognizes that some genes are biologically important but nonspecific as biomarkers.",
+        "Discusses disease-context caveats and likely confounders.",
+        "Provides realistic validation steps."
+      ],
+      "forbidden_overclaims": [
+        "Do not imply organ specificity without evidence.",
+        "Do not present ECM genes as validated circulating biomarkers unless supported."
+      ],
+      "kickoff_context": {
+        "disease_area": "fibrotic disease biomarker discovery",
+        "genes": [
+          "COL1A1",
+          "COL3A1",
+          "POSTN",
+          "TIMP1",
+          "MMP7",
+          "TGFB1"
+        ],
+        "study_context": "fibrosis candidate panel",
+        "target_question": "Which fibrosis-associated genes are the most promising biomarker candidates?"
+      },
+      "tags": [
+        "fibrosis",
+        "ecm",
+        "translation"
+      ],
+      "task": "Assess COL1A1, COL3A1, POSTN, TIMP1, MMP7, and TGFB1 as fibrosis biomarker candidates. Produce a biomarker report with prioritization, evidence-grounded rationale, caveats, and a validation plan.",
+      "title": "Fibrosis extracellular matrix panel"
+    },
+    {
+      "brief": "This cardio-inflammatory shortlist mixes classical proteins with adhesion and matrix signals. I need a biomarker report that separates practical markers from broad biology.",
+      "case_id": "cardio_inflammation_panel",
+      "description": "Prioritize cardio-inflammatory biomarker candidates.",
+      "expected_nuggets": [
+        "Identifies practical, measurable candidates rather than treating all genes equally.",
+        "Discusses whether markers likely reflect vascular inflammation, injury, or broad systemic inflammation.",
+        "States likely specificity limitations.",
+        "Suggests concrete validation or cohort design steps."
+      ],
+      "forbidden_overclaims": [
+        "Do not claim cardiovascular risk prediction performance without explicit evidence.",
+        "Do not assume tissue specificity for generalized inflammatory markers."
+      ],
+      "kickoff_context": {
+        "disease_area": "cardiometabolic inflammation",
+        "genes": [
+          "IL6",
+          "VCAM1",
+          "ICAM1",
+          "CCL2",
+          "SPP1",
+          "LGALS3"
+        ],
+        "study_context": "vascular inflammation biomarker shortlist",
+        "target_question": "Which genes are strongest candidates for a cardiometabolic inflammation biomarker panel?"
+      },
+      "tags": [
+        "cardiometabolic",
+        "vascular",
+        "inflammation"
+      ],
+      "task": "Analyze IL6, VCAM1, ICAM1, CCL2, SPP1, and LGALS3 as candidate cardiometabolic inflammation biomarkers. Produce a biomarker report that prioritizes the strongest markers, explains why, states caveats, and suggests validation steps.",
+      "title": "Cardio-inflammatory biomarker shortlist"
+    }
+  ],
+  "display_name": "Biomarker Prioritization",
+  "overview": "Rank biomarker candidates for translational usefulness, separate signal from confounding biology, and end with concrete validation next steps.",
+  "grounding_requirements": [
+    "Every substantive report section after Use Case must include a visible `Sources:` line immediately after the supported content.",
+    "Marker ranking claims must be grounded in named evidence streams such as Europe PMC, GTEx, Expression Atlas, disease evidence, or a GLESKit investigation bundle.",
+    "When a sentence or section contains synthesis, caveats, or validation advice that goes beyond direct retrieval, label it explicitly as interpretation, caveat, or recommended validation.",
+    "Prefer human-readable provider names, paper titles, and direct links in `Sources:` lines. Keep artifact ids and tool names as secondary traceability only.",
+    "Include the major evidence artifacts in `linked_artifact_ids` when saving the report."
+  ],
+  "section_grounding_expectations": [
+    {
+      "heading": "Use Case",
+      "evidence_expectation": "Frame the intended biomarker use and panel objective from the task context; no forced retrieval is required if this is only setup.",
+      "interpretation_expectation": "Keep this section descriptive and brief."
+    },
+    {
+      "heading": "Marker Candidates",
+      "evidence_expectation": "Rank the candidates using the strongest evidence actually retrieved in-session, such as grouped literature, expression context, disease context, or set-level investigation outputs.",
+      "provenance_expectation": "Add a visible `Sources:` line naming the main provider streams and links that support the ranking."
+    },
+    {
+      "heading": "Panel Behavior",
+      "evidence_expectation": "Describe complementarity, redundancy, and signal separation using retrieved panel-level or gene-level evidence rather than unsupported intuition alone.",
+      "provenance_expectation": "Add a visible `Sources:` line that points to the investigation bundle, literature support, or expression-context artifacts used for the joint interpretation.",
+      "interpretation_expectation": "If some panel behavior is expert synthesis rather than a direct retrieved finding, label it as interpretation."
+    },
+    {
+      "heading": "Reproducibility Caveats",
+      "evidence_expectation": "Tie caveats to retrieved evidence when possible, especially around general inflammation, tissue specificity, and assay limitations.",
+      "provenance_expectation": "Add a visible `Sources:` line naming the supporting literature or evidence streams for the caveats.",
+      "interpretation_expectation": "If a caveat is a general translational warning rather than a directly retrieved result, keep it explicit as a caveat."
+    },
+    {
+      "heading": "Translational Plausibility",
+      "evidence_expectation": "Support claims about assay practicality, measurability, or translational promise with retrieved literature or context tools whenever available.",
+      "provenance_expectation": "Add a visible `Sources:` line using human-readable paper titles, provider names, or artifact links."
+    },
+    {
+      "heading": "Recommended Validation",
+      "evidence_expectation": "Recommendations may extend beyond direct retrieval, but they should stay consistent with the evidence already gathered.",
+      "provenance_expectation": "If the recommendations rely on retrieved evidence, add a `Sources:` line; otherwise keep the section clearly framed as recommended validation.",
+      "interpretation_expectation": "Label this section as recommended validation or next steps rather than as a retrieved fact block."
+    }
+  ],
+  "report_type": "biomarker",
+  "template_id": "biomarker",
+  "workflow_steps": [
+    {
+      "allowed_tools": [
+        "list_report_templates",
+        "get_report_template"
+      ],
+      "instructions": "Load the report templates and the biomarker template before any evidence gathering.",
+      "required_skill_files": [
+        "references/60_reports_and_notes.md"
+      ],
+      "required_tools": [
+        "get_report_template"
+      ],
+      "step_id": "load_template",
+      "title": "Load Template"
+    },
+    {
+      "allowed_tools": [
+        "investigate_gene_set",
+        "search_papers",
+        "expression_context",
+        "gene_disease_associations",
+        "drug_target_context",
+        "resolve_gene"
+      ],
+      "instructions": "Start with a set-level investigation for the full panel. Then run at least one grouped literature search anchored to the panel and target context. Use targeted follow-up evidence only as needed to justify prioritization, caveats, and validation strategy. Carry explicit section-local `Sources:` lines into the final report instead of relying on the tool trace alone.",
+      "required_skill_files": [
+        "references/00_core_rules.md",
+        "references/20_gene_sets_and_signatures.md",
+        "references/40_literature_and_provenance.md"
+      ],
+      "required_tools": [
+        "investigate_gene_set",
+        "search_papers"
+      ],
+      "step_id": "retrieve_evidence",
+      "title": "Gather Biomarker Evidence"
+    },
+    {
+      "allowed_tools": [
+        "create_session_report",
+        "get_session_report",
+        "update_session_report"
+      ],
+      "instructions": "Draft the report using the biomarker template, save it, and revise once only if needed for clarity or grounding. Every substantive section should expose visible provenance and major evidence artifacts should be linked in the saved report metadata.",
+      "required_skill_files": [
+        "references/00_core_rules.md",
+        "references/40_literature_and_provenance.md",
+        "references/60_reports_and_notes.md"
+      ],
+      "required_tools": [
+        "create_session_report"
+      ],
+      "step_id": "save_report",
+      "title": "Save Report"
+    }
+  ]
+}

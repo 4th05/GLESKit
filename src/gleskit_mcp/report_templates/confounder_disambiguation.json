@@ -1,0 +1,32 @@
+{
+  "id": "confounder_disambiguation",
+  "label": "Confounder disambiguation",
+  "description": "Prioritize secondary-program risks, confounder evidence, and concrete disambiguation experiments before strong claims.",
+  "intent": "Use this when the apparent signal might reflect contamination, mixed programs, correlated processes, or another misleading secondary effect.",
+  "sections": [
+    {
+      "heading": "Observed Signal",
+      "guidance": "Describe the main pattern or claim under consideration without overstating what it means yet."
+    },
+    {
+      "heading": "Potential Confounders",
+      "guidance": "List the most plausible confounders, secondary programs, or alternative drivers that could explain the signal."
+    },
+    {
+      "heading": "Evidence For and Against",
+      "guidance": "Weigh the current artifacts and literature for each confounder versus the primary interpretation."
+    },
+    {
+      "heading": "Most Likely Interpretations",
+      "guidance": "State the leading explanations, but keep the language provisional and evidence-tiered."
+    },
+    {
+      "heading": "Disambiguation Experiments",
+      "guidance": "Recommend the most informative analyses, controls, or experiments that could separate the competing explanations."
+    },
+    {
+      "heading": "Claim Boundaries",
+      "guidance": "Make explicit which claims are safe now and which should wait until the confounder risk is resolved."
+    }
+  ]
+}

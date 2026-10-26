@@ -1,0 +1,32 @@
+{
+  "id": "target_prioritization",
+  "label": "Target prioritization",
+  "description": "Prioritize intervention candidates supported by driver recurrence, evidence support, and network context.",
+  "intent": "Use this when the user wants a ranked view of intervention or follow-up candidates rather than a broad descriptive summary.",
+  "sections": [
+    {
+      "heading": "Decision Context",
+      "guidance": "Clarify what kind of intervention or prioritization decision this report is meant to support."
+    },
+    {
+      "heading": "Candidate Targets",
+      "guidance": "List the leading targets, nodes, or intervention candidates under consideration."
+    },
+    {
+      "heading": "Evidence Support",
+      "guidance": "Summarize the direct evidence backing each candidate, including recurrence, disease links, pathway relevance, or literature support."
+    },
+    {
+      "heading": "Network and Pathway Context",
+      "guidance": "Explain how each candidate sits in the broader biological network and whether it appears central, redundant, or peripheral."
+    },
+    {
+      "heading": "Risks and Tradeoffs",
+      "guidance": "Call out liabilities, weak evidence, possible off-target concerns, or reasons a candidate may be less attractive than it first appears."
+    },
+    {
+      "heading": "Prioritized Shortlist",
+      "guidance": "Finish with a ranked shortlist and a short justification for the ordering."
+    }
+  ]
+}

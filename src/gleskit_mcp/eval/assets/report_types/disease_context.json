@@ -1,0 +1,285 @@
+{
+  "cases": [
+    {
+      "brief": "I have an IBD-associated panel and want a disease-context report that explains how the genes connect to inflammatory bowel biology without overstating disease specificity.",
+      "case_id": "ibd_inflammatory_panel",
+      "description": "Connect a gut inflammatory panel to disease context.",
+      "expected_nuggets": [
+        "Links the panel to a coherent disease context rather than isolated associations.",
+        "Uses disease-focused evidence from the retrieved tools.",
+        "Explains limits of disease specificity or interpretation.",
+        "Suggests what would strengthen the disease-context claim."
+      ],
+      "forbidden_overclaims": [
+        "Do not claim diagnosis or causation from the panel alone.",
+        "Do not imply the panel is unique to IBD without evidence."
+      ],
+      "kickoff_context": {
+        "disease_focus": "inflammatory bowel disease",
+        "genes": [
+          "IL23R",
+          "JAK2",
+          "STAT3",
+          "CCR6",
+          "TNF",
+          "NOD2"
+        ],
+        "study_context": "gut inflammation interpretation",
+        "target_question": "How does this panel connect to inflammatory bowel disease biology?"
+      },
+      "tags": [
+        "ibd",
+        "gut",
+        "disease-context"
+      ],
+      "task": "Interpret IL23R, JAK2, STAT3, CCR6, TNF, and NOD2 in a disease-context report focused on inflammatory bowel biology, evidence-grounded rationale, caveats, and follow-up checks.",
+      "title": "Inflammatory bowel disease panel"
+    },
+    {
+      "brief": "This microglial panel is often discussed in neurodegeneration. I need a disease-context report that explains the connection carefully and notes uncertainty.",
+      "case_id": "microglial_neurodegeneration_panel",
+      "description": "Map a microglial gene panel to neurodegenerative disease context.",
+      "expected_nuggets": [
+        "Connects the panel to microglial or neuroinflammatory disease context.",
+        "Uses retrieved disease evidence instead of pattern matching alone.",
+        "Separates broad neuroinflammation from disease-specific claims.",
+        "Includes caveats or next steps."
+      ],
+      "forbidden_overclaims": [
+        "Do not diagnose a specific neurodegenerative disease from the panel.",
+        "Do not claim direction of causality without evidence."
+      ],
+      "kickoff_context": {
+        "disease_focus": "neurodegeneration and microglial activation",
+        "genes": [
+          "TREM2",
+          "APOE",
+          "TYROBP",
+          "C1QA",
+          "C1QB",
+          "CTSB"
+        ],
+        "study_context": "microglial disease-context interpretation",
+        "target_question": "How does this panel connect to neurodegenerative disease biology?"
+      },
+      "tags": [
+        "neurodegeneration",
+        "microglia",
+        "disease-context"
+      ],
+      "task": "Interpret TREM2, APOE, TYROBP, C1QA, C1QB, and CTSB in a disease-context report focused on neurodegenerative and microglial biology, evidence-grounded rationale, caveats, and follow-up checks.",
+      "title": "Microglial neurodegeneration panel"
+    },
+    {
+      "brief": "This fibrotic lung panel needs a disease-context report that connects it to pulmonary fibrosis while being honest about what is general fibrosis biology.",
+      "case_id": "pulmonary_fibrosis_panel",
+      "description": "Relate a fibrotic ECM panel to lung fibrosis disease context.",
+      "expected_nuggets": [
+        "Explains the disease context in terms of fibrosis biology and tissue setting.",
+        "Uses disease or pathway evidence from retrieved tools.",
+        "Makes clear where the biology is broad rather than disease-specific.",
+        "Suggests useful follow-up checks."
+      ],
+      "forbidden_overclaims": [
+        "Do not equate fibrosis-associated genes with pulmonary fibrosis diagnosis.",
+        "Do not imply organ specificity without evidence."
+      ],
+      "kickoff_context": {
+        "disease_focus": "pulmonary fibrosis",
+        "genes": [
+          "COL1A1",
+          "ACTA2",
+          "TGFB1",
+          "POSTN",
+          "FN1",
+          "MMP7"
+        ],
+        "study_context": "lung fibrosis disease-context interpretation",
+        "target_question": "How does this panel connect to pulmonary fibrosis biology?"
+      },
+      "tags": [
+        "fibrosis",
+        "lung",
+        "disease-context"
+      ],
+      "task": "Interpret COL1A1, ACTA2, TGFB1, POSTN, FN1, and MMP7 in a disease-context report focused on pulmonary fibrosis biology, evidence-grounded rationale, caveats, and follow-up checks.",
+      "title": "Pulmonary fibrosis panel"
+    },
+    {
+      "brief": "This interferon-heavy panel comes up in autoimmune settings. I need a disease-context report that connects it to autoimmune disease carefully, without overcalling specificity.",
+      "case_id": "autoimmune_interferon_panel",
+      "description": "Relate an interferon signature to autoimmune disease context.",
+      "expected_nuggets": [
+        "Explains why interferon biology creates autoimmune disease context.",
+        "Uses retrieved disease evidence rather than unsupported clinical claims.",
+        "Notes overlap with infection or broader immune activation.",
+        "Suggests follow-up checks."
+      ],
+      "forbidden_overclaims": [
+        "Do not diagnose a specific autoimmune disease from this panel alone.",
+        "Do not ignore overlap with infectious or inflammatory contexts."
+      ],
+      "kickoff_context": {
+        "disease_focus": "systemic autoimmune interferon biology",
+        "genes": [
+          "IFI44L",
+          "IFIT3",
+          "OAS1",
+          "ISG15",
+          "MX1",
+          "RSAD2"
+        ],
+        "study_context": "autoimmune interferon disease-context interpretation",
+        "target_question": "How does this panel connect to autoimmune disease context?"
+      },
+      "tags": [
+        "autoimmune",
+        "interferon",
+        "disease-context"
+      ],
+      "task": "Interpret IFI44L, IFIT3, OAS1, ISG15, MX1, and RSAD2 in a disease-context report focused on autoimmune interferon biology, evidence-grounded rationale, caveats, and follow-up checks.",
+      "title": "Autoimmune interferon panel"
+    },
+    {
+      "brief": "This liver disease panel mixes genetic susceptibility and fibrotic remodeling. I need a disease-context report that makes that distinction clear.",
+      "case_id": "liver_fibrosis_panel",
+      "description": "Explain a liver disease context from susceptibility and fibrosis genes.",
+      "expected_nuggets": [
+        "Distinguishes susceptibility-related genes from downstream fibrotic remodeling genes.",
+        "Uses retrieved disease evidence to connect the panel to liver disease context.",
+        "States important interpretation caveats.",
+        "Suggests follow-up checks or missing evidence."
+      ],
+      "forbidden_overclaims": [
+        "Do not claim a specific liver disease diagnosis from the panel alone.",
+        "Do not imply that all listed genes play the same role in disease context."
+      ],
+      "kickoff_context": {
+        "disease_focus": "metabolic liver disease and fibrosis",
+        "genes": [
+          "PNPLA3",
+          "TM6SF2",
+          "SPP1",
+          "LGALS3",
+          "COL1A1",
+          "TGFBI"
+        ],
+        "study_context": "liver disease-context interpretation",
+        "target_question": "How does this panel connect to metabolic liver disease and fibrosis?"
+      },
+      "tags": [
+        "liver",
+        "fibrosis",
+        "disease-context"
+      ],
+      "task": "Interpret PNPLA3, TM6SF2, SPP1, LGALS3, COL1A1, and TGFBI in a disease-context report focused on metabolic liver disease and fibrosis, evidence-grounded rationale, caveats, and follow-up checks.",
+      "title": "Liver fibrosis and susceptibility panel"
+    }
+  ],
+  "display_name": "Disease Context",
+  "overview": "Explain how a gene panel connects to disease biology, make specificity limits explicit, and state what evidence is still missing.",
+  "grounding_requirements": [
+    "Every substantive report section after Disease Context Summary must include a visible `Sources:` line immediately after the supported content.",
+    "Disease-context claims must be tied to named evidence streams such as gene-set investigation, disease association tools, expression context, trait evidence, or retrieved literature.",
+    "When a section contains interpretation about specificity limits, missing evidence, or follow-up checks beyond direct retrieval, label it explicitly as interpretation, caveat, or next-step guidance.",
+    "Prefer human-readable provider names, paper titles, and direct links in `Sources:` lines. Keep artifact ids and tool names secondary.",
+    "Include the major disease-context evidence artifacts in `linked_artifact_ids` when saving the report."
+  ],
+  "section_grounding_expectations": [
+    {
+      "heading": "Question and Disease Scope",
+      "evidence_expectation": "Frame the disease question and scope from the task context and the most relevant retrieved disease framing evidence when available.",
+      "interpretation_expectation": "Keep this section descriptive and conservative."
+    },
+    {
+      "heading": "Dominant Disease Themes",
+      "evidence_expectation": "Summarize the main disease or condition themes using the strongest disease-relevant evidence retrieved in-session.",
+      "provenance_expectation": "Add a visible `Sources:` line naming the core evidence streams supporting the summary."
+    },
+    {
+      "heading": "Supporting Molecular Findings",
+      "evidence_expectation": "Explain how the panel connects to disease biology using retrieved pathway, disease, expression, or trait evidence rather than pattern matching alone.",
+      "provenance_expectation": "Add a visible `Sources:` line with human-readable providers, paper links, or artifact links that support the biological connection."
+    },
+    {
+      "heading": "Condition-Level Evidence",
+      "evidence_expectation": "Differentiate broad disease programs from more specific named conditions using retrieved condition-level evidence rather than unsupported specificity claims.",
+      "provenance_expectation": "Add a visible `Sources:` line that makes clear which evidence streams support the condition-level interpretation."
+    },
+    {
+      "heading": "Competing or Secondary Disease Interpretations",
+      "evidence_expectation": "Use retrieved evidence to justify why competing disease themes remain plausible or weaker.",
+      "provenance_expectation": "Add a visible `Sources:` line when alternatives are grounded in specific evidence streams.",
+      "interpretation_expectation": "Label this section clearly as competing or secondary interpretations when it goes beyond direct retrieval."
+    },
+    {
+      "heading": "Clinical and Biological Boundaries",
+      "evidence_expectation": "Tie specificity limits, confounders, or actionability boundaries to retrieved evidence when possible.",
+      "provenance_expectation": "Add a visible `Sources:` line when caveats are supported by retrieved evidence.",
+      "interpretation_expectation": "If a caution is general domain knowledge rather than directly retrieved support, keep it clearly labeled as a caveat."
+    },
+    {
+      "heading": "Next Disease-Focused Checks",
+      "evidence_expectation": "Recommend next checks that are motivated by the specific evidence gaps or ambiguities found in-session.",
+      "provenance_expectation": "If a next check is motivated by retrieved evidence, add a `Sources:` line; otherwise keep it clearly framed as next-step guidance.",
+      "interpretation_expectation": "Label this section as next checks or recommended follow-up rather than as a retrieved fact block."
+    }
+  ],
+  "report_type": "disease_context",
+  "template_id": "disease_context",
+  "workflow_steps": [
+    {
+      "allowed_tools": [
+        "list_report_templates",
+        "get_report_template"
+      ],
+      "instructions": "Load the report templates and the disease-context template before evidence gathering.",
+      "required_skill_files": [
+        "references/60_reports_and_notes.md"
+      ],
+      "required_tools": [
+        "get_report_template"
+      ],
+      "step_id": "load_template",
+      "title": "Load Template"
+    },
+    {
+      "allowed_tools": [
+        "investigate_gene_set",
+        "gene_disease_associations",
+        "variant_trait_associations",
+        "expression_context",
+        "resolve_gene"
+      ],
+      "instructions": "Start with a set-level investigation. Use targeted disease or trait follow-up only when it sharpens the disease-context interpretation or highlights important caveats. Carry the evidence forward into section-local `Sources:` lines in the saved report.",
+      "required_skill_files": [
+        "references/00_core_rules.md",
+        "references/20_gene_sets_and_signatures.md",
+        "references/40_literature_and_provenance.md"
+      ],
+      "required_tools": [
+        "investigate_gene_set"
+      ],
+      "step_id": "retrieve_evidence",
+      "title": "Gather Disease Evidence"
+    },
+    {
+      "allowed_tools": [
+        "create_session_report",
+        "get_session_report",
+        "update_session_report"
+      ],
+      "instructions": "Draft the report using the disease-context template, save it, and revise only if needed for clarity or grounding. Every substantive section should expose visible provenance and major evidence artifacts should be linked in the saved report metadata.",
+      "required_skill_files": [
+        "references/00_core_rules.md",
+        "references/40_literature_and_provenance.md",
+        "references/60_reports_and_notes.md"
+      ],
+      "required_tools": [
+        "create_session_report"
+      ],
+      "step_id": "save_report",
+      "title": "Save Report"
+    }
+  ]
+}

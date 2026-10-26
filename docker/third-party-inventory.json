@@ -1,0 +1,3503 @@
+{
+  "r": [
+    {
+      "name": "abind",
+      "version": "1.4-8",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/abind_1.4-8.tar.gz",
+      "sha256": "264a051b523ceae1795a0879e7768949ea55c586ac8db0adf1f5ebeddd2623e1"
+    },
+    {
+      "name": "AnnotationDbi",
+      "version": "1.64.1",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/AnnotationDbi_1.64.1.tar.gz",
+      "sha256": "03bff46268ad797466f445c51ab72929224514512561c43662037ca10618b9ad"
+    },
+    {
+      "name": "AnVIL",
+      "version": "1.14.3",
+      "license": "Artistic-2.0",
+      "url": "https://codeload.github.com/Bioconductor/AnVIL/tar.gz/0d452769dda3a2f5d0069cca1ab5963cd299f6aa",
+      "sha256": "cfc54e39f18d9e495ec917f0c2d654949a24954cdf3c5e78d43da736b06beead"
+    },
+    {
+      "name": "ape",
+      "version": "5.8-1",
+      "license": "GPL-2 | GPL-3",
+      "url": "https://cran.r-project.org/src/contrib/ape_5.8-1.tar.gz",
+      "sha256": "d6cde3dda751597ad741f634f143a3eb521b957fd1a23ceefba78a2716422d8e"
+    },
+    {
+      "name": "apeglm",
+      "version": "1.24.0",
+      "license": "GPL-2",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/apeglm_1.24.0.tar.gz",
+      "sha256": "a4ff49d510b9021328c9f56bfbd3af55905c8a2c53ccdaf3986ef004ebf74932"
+    },
+    {
+      "name": "aplot",
+      "version": "0.2.9",
+      "license": "Artistic-2.0",
+      "url": "https://cran.r-project.org/src/contrib/Archive/aplot/aplot_0.2.9.tar.gz",
+      "sha256": "ab0c78b25319324bc9bdbdcd7c165c0f040767c8eccca059571008128af3e57b"
+    },
+    {
+      "name": "askpass",
+      "version": "1.2.1",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/askpass_1.2.1.tar.gz",
+      "sha256": "6c2106a74c44a748f2cea795d9686e27a0058a90debcfd8558b62b06aec0c7dd"
+    },
+    {
+      "name": "base64enc",
+      "version": "0.1-3",
+      "license": "GPL-2 | GPL-3",
+      "url": "https://cran.r-project.org/src/contrib/Archive/base64enc/base64enc_0.1-3.tar.gz",
+      "sha256": "6d856d8a364bcdc499a0bf38bfd283b7c743d08f0b288174fba7dbf0a04b688d"
+    },
+    {
+      "name": "bbmle",
+      "version": "1.0.25.1",
+      "license": "GPL",
+      "url": "https://cran.r-project.org/src/contrib/Archive/bbmle/bbmle_1.0.25.1.tar.gz",
+      "sha256": "d92a0cf819fe4c08b8eb17f5e03275c8accde7f3b54f990cbba5ab926575b60b"
+    },
+    {
+      "name": "bdsmatrix",
+      "version": "1.3-7",
+      "license": "LGPL-2",
+      "url": "https://cran.r-project.org/src/contrib/bdsmatrix_1.3-7.tar.gz",
+      "sha256": "c3505e5ac06d5e01b3a6bad94177f8375cd9867bb0146cc9c63d92424ecb7922"
+    },
+    {
+      "name": "BH",
+      "version": "1.87.0-1",
+      "license": "BSL-1.0",
+      "url": "https://cran.r-project.org/src/contrib/Archive/BH/BH_1.87.0-1.tar.gz",
+      "sha256": "59829ae635f42a23289a1c51617f5f972704e1b243b604dad20ef5a812e60393"
+    },
+    {
+      "name": "Biobase",
+      "version": "2.62.0",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/Biobase_2.62.0.tar.gz",
+      "sha256": "ef753acc499c2504e226bf76e0acc08b7aa370fc60cc369bb8ebc1913f57d37e"
+    },
+    {
+      "name": "BiocBaseUtils",
+      "version": "1.4.0",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/BiocBaseUtils_1.4.0.tar.gz",
+      "sha256": "e588788262936ed9cc83ab198ec4a0e3b95f92af6cd443a66d1b6c9827fa32a1"
+    },
+    {
+      "name": "BiocFileCache",
+      "version": "2.10.2",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/BiocFileCache_2.10.2.tar.gz",
+      "sha256": "3f0cfc6dc10aaeae9f5856da1c1a4d31493222fe8be01ee0b6725fef09b3f601"
+    },
+    {
+      "name": "BiocGenerics",
+      "version": "0.48.1",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/BiocGenerics_0.48.1.tar.gz",
+      "sha256": "13e126709da888420f320353d6ea52da12a8cbd086f2e29b9cc3039a6411652b"
+    },
+    {
+      "name": "BiocIO",
+      "version": "1.12.0",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/BiocIO_1.12.0.tar.gz",
+      "sha256": "77c1dff3b789313ea5b4c9d7b171cde11cacdfc958ce63b60f4f09b9ed94c22e"
+    },
+    {
+      "name": "BiocManager",
+      "version": "1.30.26",
+      "license": "Artistic-2.0",
+      "url": "https://cran.r-project.org/src/contrib/Archive/BiocManager/BiocManager_1.30.26.tar.gz",
+      "sha256": "db9a67556f8f46f41a86dc2abb2c19d354cdf537d4a1b48132896946eb45a23e"
+    },
+    {
+      "name": "BiocParallel",
+      "version": "1.36.0",
+      "license": "GPL-2 | GPL-3",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/BiocParallel_1.36.0.tar.gz",
+      "sha256": "cbf8af552c7c30c26d8d17876245dad583f712e49e7336ef78aeb70f1c0608a6"
+    },
+    {
+      "name": "biomaRt",
+      "version": "2.58.2",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/biomaRt_2.58.2.tar.gz",
+      "sha256": "4484dd7ab2a382af67c97d97944ff4bdbdc2ff1fc5f0c4ff23dc4e772431140e"
+    },
+    {
+      "name": "Biostrings",
+      "version": "2.70.3",
+      "license": "Artistic-2.0",
+      "url": "https://ftp.gwdg.de/pub/misc/bioconductor/packages/3.18/bioc/src/contrib/Biostrings_2.70.3.tar.gz",
+      "sha256": "451c1e0a3d50f2f85a2d2b5b9688d878c5253d8959f04aa32e9e6bda8875049c"
+    },
+    {
+      "name": "bit",
+      "version": "4.6.0",
+      "license": "GPL-2 | GPL-3",
+      "url": "https://cran.r-project.org/src/contrib/bit_4.6.0.tar.gz",
+      "sha256": "48fe21c5d04c7b724d695eeb60074395c0c631a7fb234e2075de92471445de08"
+    },
+    {
+      "name": "bit64",
+      "version": "4.6.0-1",
+      "license": "GPL-2 | GPL-3",
+      "url": "https://cran.r-project.org/src/contrib/Archive/bit64/bit64_4.6.0-1.tar.gz",
+      "sha256": "fbc0ce142fc22c9a9fdcbac930a814dfb648563d4b6a77dff739c23cc81319b7"
+    },
+    {
+      "name": "bitops",
+      "version": "1.0-9",
+      "license": "GPL (>= 2)",
+      "url": "https://cran.r-project.org/src/contrib/Archive/bitops/bitops_1.0-9.tar.gz",
+      "sha256": "cff3a5b77b72bb3b8fde92b690d0f803466d218a3ead6b731ae7c77ac1740d08"
+    },
+    {
+      "name": "blob",
+      "version": "1.2.4",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/blob/blob_1.2.4.tar.gz",
+      "sha256": "d08922ebc4147d930fe4762b1b289935217308c6d3fcaa5ae028ce3f5cf2728f"
+    },
+    {
+      "name": "bslib",
+      "version": "0.9.0",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/bslib/bslib_0.9.0.tar.gz",
+      "sha256": "add7a107ff6a3185f68511cfcc45832f018917870eae06a8044f41de84ff0907"
+    },
+    {
+      "name": "cachem",
+      "version": "1.1.0",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/cachem_1.1.0.tar.gz",
+      "sha256": "550839fc2ae5d865db475ba2c1714144f07fa0c052c72135b0e4a70287492e21"
+    },
+    {
+      "name": "cBioPortalData",
+      "version": "2.14.2",
+      "license": "AGPL-3",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/cBioPortalData_2.14.2.tar.gz",
+      "sha256": "06038da253b5f99d40955b99dc8f64d9bd8bdd0e81b934ae02d8ffb896b967ad"
+    },
+    {
+      "name": "cli",
+      "version": "3.6.5",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/cli/cli_3.6.5.tar.gz",
+      "sha256": "8ebe3146e66a285d8ad6ddcff87e2a9790ea7c9cdfce7fdd8bf13095fa459679"
+    },
+    {
+      "name": "clipr",
+      "version": "0.8.0",
+      "license": "GPL-3",
+      "url": "https://cran.r-project.org/src/contrib/Archive/clipr/clipr_0.8.0.tar.gz",
+      "sha256": "32c2931992fbec9c31b71de3e27059f1cbb45b4b1f45fd42e0e8dbcec6de3be9"
+    },
+    {
+      "name": "clusterProfiler",
+      "version": "4.10.1",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/clusterProfiler_4.10.1.tar.gz",
+      "sha256": "ae47868112290cfe205765620239d5f0a9c6cf8af995b32151eff896044891cb"
+    },
+    {
+      "name": "coda",
+      "version": "0.19-4.1",
+      "license": "GPL (>= 2)",
+      "url": "https://cran.r-project.org/src/contrib/coda_0.19-4.1.tar.gz",
+      "sha256": "f4b451d86fbb56ff9ade043ddd6b0944368c37d0dad12d02837750ecdc708ad6"
+    },
+    {
+      "name": "codetools",
+      "version": "0.2-20",
+      "license": "GPL",
+      "url": "https://cran.r-project.org/src/contrib/codetools_0.2-20.tar.gz",
+      "sha256": "3be6f375ec178723ddfd559d1e8e85bfeee04a5fbaf9f53f2f844e1669fea863"
+    },
+    {
+      "name": "commonmark",
+      "version": "2.0.0",
+      "license": "BSD_2_clause + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/commonmark_2.0.0.tar.gz",
+      "sha256": "7f47d7f9f4ff5d1e2a73a69f6e233d2ddbafae97944ddf664a6000aa94936904"
+    },
+    {
+      "name": "cowplot",
+      "version": "1.2.0",
+      "license": "GPL-2",
+      "url": "https://cran.r-project.org/src/contrib/cowplot_1.2.0.tar.gz",
+      "sha256": "431d582a4fb68f005f45e0d963c19daad826289374b429b05fe168ef6f231aa1"
+    },
+    {
+      "name": "cpp11",
+      "version": "0.5.2",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/cpp11/cpp11_0.5.2.tar.gz",
+      "sha256": "0e8ac07f9d599b82e7a811f9d084e5125ae787b1ba04e5ba57f79e2642af091b"
+    },
+    {
+      "name": "crayon",
+      "version": "1.5.3",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/crayon_1.5.3.tar.gz",
+      "sha256": "3e74a0685541efb5ea763b92cfd5c859df71c46b0605967a0b5dbb7326e9da69"
+    },
+    {
+      "name": "crosstalk",
+      "version": "1.2.2",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/crosstalk_1.2.2.tar.gz",
+      "sha256": "804def71ea7508cada0eec7aa6d35b487db17a8f9e38dca34fffc236691e36fc"
+    },
+    {
+      "name": "curl",
+      "version": "6.4.0",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/curl/curl_6.4.0.tar.gz",
+      "sha256": "3bb4dbf892d2c3b4449d67553f2b3b31d9fa23c71fa6af0a287930ae8377ecdb"
+    },
+    {
+      "name": "data.table",
+      "version": "1.17.8",
+      "license": "MPL-2.0 | file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/data.table/data.table_1.17.8.tar.gz",
+      "sha256": "17f24496d548914fdac2b8ed00c7272f2e191ee32eb6bb8336f9beb6691330e0"
+    },
+    {
+      "name": "DBI",
+      "version": "1.2.3",
+      "license": "LGPL (>= 2.1)",
+      "url": "https://cran.r-project.org/src/contrib/Archive/DBI/DBI_1.2.3.tar.gz",
+      "sha256": "cf6708a7566a80929f06575aa345fae354714159ed5fab5db14306fc5d0d2dbe"
+    },
+    {
+      "name": "dbplyr",
+      "version": "2.5.0",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/dbplyr/dbplyr_2.5.0.tar.gz",
+      "sha256": "bb475bdbe89487b189ecc257b5c92007a7458803c81aa77bfc4ed46f5f24bcff"
+    },
+    {
+      "name": "DelayedArray",
+      "version": "0.28.0",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/DelayedArray_0.28.0.tar.gz",
+      "sha256": "c705055e2caf8b8ddbc9956d99a7c99415684dc7e9b31f42bd95186ddb06c355"
+    },
+    {
+      "name": "DESeq2",
+      "version": "1.42.1",
+      "license": "LGPL (>= 3)",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/DESeq2_1.42.1.tar.gz",
+      "sha256": "f79b5a96ee27f0243791f85acea635e1c447a217dc9b32b39c671532d32220e8"
+    },
+    {
+      "name": "digest",
+      "version": "0.6.37",
+      "license": "GPL (>= 2)",
+      "url": "https://cran.r-project.org/src/contrib/Archive/digest/digest_0.6.37.tar.gz",
+      "sha256": "82c4d149994b8a4a9af930f5a8e47420829935abed41f3f9030e94b6a48f0321"
+    },
+    {
+      "name": "DOSE",
+      "version": "3.28.2",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/DOSE_3.28.2.tar.gz",
+      "sha256": "ee22b726664304643116a88c40eb8b2032e2a4faa92c2b2523986ddf19a2644e"
+    },
+    {
+      "name": "downloader",
+      "version": "0.4.1",
+      "license": "GPL-2",
+      "url": "https://cran.r-project.org/src/contrib/downloader_0.4.1.tar.gz",
+      "sha256": "74595ff67e9600e3bbe25fa2daf2eec770fab9eaaea12e63b61a32086e035175"
+    },
+    {
+      "name": "dplyr",
+      "version": "1.1.4",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/dplyr/dplyr_1.1.4.tar.gz",
+      "sha256": "cf730414d5d4ab387b4e9890a4b1df9d17a3903488e8da8df1cf2e11e44558cb"
+    },
+    {
+      "name": "DT",
+      "version": "0.33",
+      "license": "GPL-3 | file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/DT/DT_0.33.tar.gz",
+      "sha256": "e145dadb1ce3db7c837f4313a8b5615b5b8ae63063ec2df93e528529717b27b8"
+    },
+    {
+      "name": "emdbook",
+      "version": "1.3.13",
+      "license": "GPL",
+      "url": "https://cran.r-project.org/src/contrib/Archive/emdbook/emdbook_1.3.13.tar.gz",
+      "sha256": "26044b7ea1b42304b4dfde48afa94dd487acf979da4db2bf670ba41222083c19"
+    },
+    {
+      "name": "enrichplot",
+      "version": "1.22.0",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/enrichplot_1.22.0.tar.gz",
+      "sha256": "9d52274b4a0b2e31c448a343f35dcd54426660a89f3a5c414490d8d59449fa16"
+    },
+    {
+      "name": "evaluate",
+      "version": "1.0.4",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/evaluate/evaluate_1.0.4.tar.gz",
+      "sha256": "08dff6dcfce3cb321ab8d6851a246e698f6f641579d75c2a6875b36a65eca4ca"
+    },
+    {
+      "name": "farver",
+      "version": "2.1.2",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/farver_2.1.2.tar.gz",
+      "sha256": "528823b95daab4566137711f1c842027a952bea1b2ae6ff098e2ca512b17fe25"
+    },
+    {
+      "name": "fastmap",
+      "version": "1.2.0",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/fastmap_1.2.0.tar.gz",
+      "sha256": "b1da04a2915d1d057f3c2525e295ef15016a64e6667eac83a14641bbd83b9246"
+    },
+    {
+      "name": "fastmatch",
+      "version": "1.1-8",
+      "license": "GPL-2",
+      "url": "https://cran.r-project.org/src/contrib/fastmatch_1.1-8.tar.gz",
+      "sha256": "2661c01bdc2383f4a30bf940e6bc3b68f1329db5f0e837df8160eb893f748d54"
+    },
+    {
+      "name": "fgsea",
+      "version": "1.28.0",
+      "license": "MIT + file LICENCE",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/fgsea_1.28.0.tar.gz",
+      "sha256": "14938064e7a492b9a0edb8ac068b107a86e613df232f58820984df672369d36b"
+    },
+    {
+      "name": "filelock",
+      "version": "1.0.3",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/filelock_1.0.3.tar.gz",
+      "sha256": "2dcd0ec453f5ec4d96f69b0c472569d57d3c5f9956a82a48492ee02f12071137"
+    },
+    {
+      "name": "fontawesome",
+      "version": "0.5.3",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/fontawesome_0.5.3.tar.gz",
+      "sha256": "1b1909d0fad5ec4c658f5c628a195b9bd93d544afa957e68e897224cfb81fb4f"
+    },
+    {
+      "name": "formatR",
+      "version": "1.14",
+      "license": "GPL",
+      "url": "https://cran.r-project.org/src/contrib/formatR_1.14.tar.gz",
+      "sha256": "4ebaab2c3f8527871655246b62abd060bc75dae1cec7f962ca4752b8080f474c"
+    },
+    {
+      "name": "fs",
+      "version": "1.6.6",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/fs/fs_1.6.6.tar.gz",
+      "sha256": "57d3a0844e2fec28e6fe9901d18e07d32a437dfe43c4b547757eb07360f5850a"
+    },
+    {
+      "name": "futile.logger",
+      "version": "1.4.3",
+      "license": "LGPL-3",
+      "url": "https://cran.r-project.org/src/contrib/Archive/futile.logger/futile.logger_1.4.3.tar.gz",
+      "sha256": "5e8b32d65f77a86d17d90fd8690fc085aa0612df8018e4d6d6c1a60fa65776e4"
+    },
+    {
+      "name": "futile.options",
+      "version": "1.0.1",
+      "license": "LGPL-3",
+      "url": "https://cran.r-project.org/src/contrib/futile.options_1.0.1.tar.gz",
+      "sha256": "7a9cc974e09598077b242a1069f7fbf4fa7f85ffe25067f6c4c32314ef532570"
+    },
+    {
+      "name": "generics",
+      "version": "0.1.4",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/generics_0.1.4.tar.gz",
+      "sha256": "bbe95a097792d38fc3b7e677738af1b95b66ea5e5017e33b8beac6a6088d0801"
+    },
+    {
+      "name": "GenomeInfoDb",
+      "version": "1.38.8",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/GenomeInfoDb_1.38.8.tar.gz",
+      "sha256": "1cedab42e51451589616b8fc85a599dcad52fd4de09881a3bc6dc0448ac0d888"
+    },
+    {
+      "name": "GenomeInfoDbData",
+      "version": "1.2.11",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/data/annotation/src/contrib/GenomeInfoDbData_1.2.11.tar.gz",
+      "sha256": "311fe287842e6161f24fc1faaa824a6d5ce88afcbf4c0203f5e309456e667bc2"
+    },
+    {
+      "name": "GenomicAlignments",
+      "version": "1.38.2",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/GenomicAlignments_1.38.2.tar.gz",
+      "sha256": "816f078886e0b2054392f1432702372be9621e0da379c1cfa3b02dd5cb389644"
+    },
+    {
+      "name": "GenomicDataCommons",
+      "version": "1.26.0",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/GenomicDataCommons_1.26.0.tar.gz",
+      "sha256": "bc54fdafd609f40a2b2cd598e332b2611d377b4c3d1aa20c345bc1f9199bd1c6"
+    },
+    {
+      "name": "GenomicFeatures",
+      "version": "1.54.4",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/GenomicFeatures_1.54.4.tar.gz",
+      "sha256": "e3fa9c9fee19be43ebfc1b0c8018384d11b9847ef52a4a95b887628132d94e3c"
+    },
+    {
+      "name": "GenomicRanges",
+      "version": "1.54.1",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/GenomicRanges_1.54.1.tar.gz",
+      "sha256": "1cecb68c906b0a565c0fef5a0a8284a513a4910979f33d34901c42df501e3aef"
+    },
+    {
+      "name": "ggforce",
+      "version": "0.5.0",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/ggforce_0.5.0.tar.gz",
+      "sha256": "41b3ea33dc4da774a0047a446676e7c4d6c41592ad9cdb21db8d4efebcfb5d53"
+    },
+    {
+      "name": "ggfun",
+      "version": "0.2.0",
+      "license": "Artistic-2.0",
+      "url": "https://cran.r-project.org/src/contrib/Archive/ggfun/ggfun_0.2.0.tar.gz",
+      "sha256": "c5d267d3152771842ac1fdd819ecb442670946b75d10e0b4866e342d441a1711"
+    },
+    {
+      "name": "ggnewscale",
+      "version": "0.5.2",
+      "license": "GPL-3",
+      "url": "https://cran.r-project.org/src/contrib/ggnewscale_0.5.2.tar.gz",
+      "sha256": "d765754060ea00a07c0fe9bb3e82e1f8b6acd18e2cbef084218c720a916358c8"
+    },
+    {
+      "name": "ggplot2",
+      "version": "3.5.2",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/ggplot2/ggplot2_3.5.2.tar.gz",
+      "sha256": "0a30024a2ff3e569412223c8f14563ed504f3e0851de03e42d1b5f73fe1f06bf"
+    },
+    {
+      "name": "ggplotify",
+      "version": "0.1.3",
+      "license": "Artistic-2.0",
+      "url": "https://cran.r-project.org/src/contrib/Archive/ggplotify/ggplotify_0.1.3.tar.gz",
+      "sha256": "87111c6dfcc34b1bce4df75d9d05e6e0f370e589e2fd92fe074161e474c10b7f"
+    },
+    {
+      "name": "ggraph",
+      "version": "2.2.2",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/ggraph_2.2.2.tar.gz",
+      "sha256": "a9414ba2f359f9263e5e49ccfe42b3fc4682958c17c826037beef3498f2f822c"
+    },
+    {
+      "name": "ggrepel",
+      "version": "0.9.8",
+      "license": "GPL-3 | file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/ggrepel_0.9.8.tar.gz",
+      "sha256": "0317dff5e11d9dae7225d5c1794fe16ea1bedc7d535ac98e990925670724c027"
+    },
+    {
+      "name": "ggtangle",
+      "version": "0.0.7",
+      "license": "Artistic-2.0",
+      "url": "https://cran.r-project.org/src/contrib/Archive/ggtangle/ggtangle_0.0.7.tar.gz",
+      "sha256": "c77c6c4c17c1ba4f60ec8ce7b4bfdcc71300fb1003010a5873ff9a3f684b7b62"
+    },
+    {
+      "name": "ggtree",
+      "version": "3.10.1",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/ggtree_3.10.1.tar.gz",
+      "sha256": "2d8cb88817ca0d14416b4c3aec17cd05e27dc599587888d6d7041f53e02e87dc"
+    },
+    {
+      "name": "glue",
+      "version": "1.8.0",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/glue/glue_1.8.0.tar.gz",
+      "sha256": "c86f364ba899b8662f5da3e1a75f43ae081ab04e0d51171d052356e7ee4b72a0"
+    },
+    {
+      "name": "GO.db",
+      "version": "3.18.0",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/data/annotation/src/contrib/GO.db_3.18.0.tar.gz",
+      "sha256": "f580341e7fd19efa3e5789b993dd8ef0cf813a45c49a647a173c6f49c451d87e"
+    },
+    {
+      "name": "GOSemSim",
+      "version": "2.28.1",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/GOSemSim_2.28.1.tar.gz",
+      "sha256": "bd27320fdadd709002a19f80e7b230b1411a4413f32a74430d6645a22232035d"
+    },
+    {
+      "name": "graph",
+      "version": "1.80.0",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/graph_1.80.0.tar.gz",
+      "sha256": "017446e90386aba89d2326d30006db14d191bc9b4ce916e0d0ebd979a73fef5c"
+    },
+    {
+      "name": "graphics",
+      "version": "4.3.2",
+      "license": "Part of R 4.3.2"
+    },
+    {
+      "name": "graphite",
+      "version": "1.48.0",
+      "license": "AGPL-3",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/graphite_1.48.0.tar.gz",
+      "sha256": "5678e693530ed9e5727e45b938ff830db24efc1bbac59f8deefa0bd0250812c1"
+    },
+    {
+      "name": "graphlayouts",
+      "version": "1.2.3",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/graphlayouts/graphlayouts_1.2.3.tar.gz",
+      "sha256": "96b5328201e9e448a5bc0cf90d0730658154fb226c08d99e3cfe2a73db767305"
+    },
+    {
+      "name": "grDevices",
+      "version": "4.3.2",
+      "license": "Part of R 4.3.2"
+    },
+    {
+      "name": "grid",
+      "version": "4.3.2",
+      "license": "Part of R 4.3.2"
+    },
+    {
+      "name": "gridExtra",
+      "version": "2.3",
+      "license": "GPL (>= 2)",
+      "url": "https://cran.r-project.org/src/contrib/Archive/gridExtra/gridExtra_2.3.tar.gz",
+      "sha256": "81b60ce6f237ec308555471ae0119158b115463df696d2eca9b177ded8988e3b"
+    },
+    {
+      "name": "gridGraphics",
+      "version": "0.5-1",
+      "license": "GPL (>= 2)",
+      "url": "https://cran.r-project.org/src/contrib/gridGraphics_0.5-1.tar.gz",
+      "sha256": "29086e94e63891884c933b186b35511aac2a2f9c56967a72e4050e2980e7da8b"
+    },
+    {
+      "name": "gson",
+      "version": "0.1.0",
+      "license": "Artistic-2.0",
+      "url": "https://cran.r-project.org/src/contrib/Archive/gson/gson_0.1.0.tar.gz",
+      "sha256": "14ddbee5be66d0b1dc178e41175a50ab6ed9ffed04d4361ecf5eef3548d9a381"
+    },
+    {
+      "name": "gtable",
+      "version": "0.3.6",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/gtable_0.3.6.tar.gz",
+      "sha256": "d305a5fa11278b649d2d8edc5288bf28009be888a42be58ff8714018e49de0ef"
+    },
+    {
+      "name": "HDO.db",
+      "version": "0.99.1",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/data/annotation/src/contrib/HDO.db_0.99.1.tar.gz",
+      "sha256": "c17cf28d06621d91148a64d47fdeaa906d8621aba7a688715fb9571a55f7cf92"
+    },
+    {
+      "name": "highr",
+      "version": "0.11",
+      "license": "GPL",
+      "url": "https://cran.r-project.org/src/contrib/Archive/highr/highr_0.11.tar.gz",
+      "sha256": "e90d14284001963325a84a9dbeef029609d52515da8d65c87ae61be21b7fe0a7"
+    },
+    {
+      "name": "hms",
+      "version": "1.1.3",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/hms/hms_1.1.3.tar.gz",
+      "sha256": "e626f4c60af46efd53ea631b316a103e089470d8fd63c0e0c0efb99364990282"
+    },
+    {
+      "name": "htmltools",
+      "version": "0.5.8.1",
+      "license": "GPL (>= 2)",
+      "url": "https://cran.r-project.org/src/contrib/Archive/htmltools/htmltools_0.5.8.1.tar.gz",
+      "sha256": "f9f62293ec06c353c4584db6ccedb06a2da12e485208bd26b856f17dd013f176"
+    },
+    {
+      "name": "htmlwidgets",
+      "version": "1.6.4",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/htmlwidgets_1.6.4.tar.gz",
+      "sha256": "7cb08f0b30485dac26f72e4056ec4ed8825d1398e8b9f25ed63db228fe3a0ed0"
+    },
+    {
+      "name": "httpuv",
+      "version": "1.6.16",
+      "license": "GPL (>= 2) | file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/httpuv/httpuv_1.6.16.tar.gz",
+      "sha256": "51f341aef9499411b4c446205c87d56dcd9e03e5e9ca2a54b33f70a67bed2f64"
+    },
+    {
+      "name": "httr",
+      "version": "1.4.7",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/httr/httr_1.4.7.tar.gz",
+      "sha256": "1555e6c2fb67bd38ff11b479f74aa287b2d93f4add487aec53b836ff07de3a3a"
+    },
+    {
+      "name": "igraph",
+      "version": "2.1.4",
+      "license": "GPL (>= 2)",
+      "url": "https://cran.r-project.org/src/contrib/Archive/igraph/igraph_2.1.4.tar.gz",
+      "sha256": "fdced402c9d2e355fd1a5cbd640639fdc97efe50f5b69e9f321a03785a7ab3ed"
+    },
+    {
+      "name": "IRanges",
+      "version": "2.36.0",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/IRanges_2.36.0.tar.gz",
+      "sha256": "58c05c3c4eb7fdee64cb027ba849de0ec57f2e4150b9aa645b62549da1401066"
+    },
+    {
+      "name": "isoband",
+      "version": "0.2.7",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/isoband/isoband_0.2.7.tar.gz",
+      "sha256": "7693223343b45b86de2b5b638ff148f0dafa6d7b1237e822c5272902f79cdf61"
+    },
+    {
+      "name": "jquerylib",
+      "version": "0.1.4",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/jquerylib_0.1.4.tar.gz",
+      "sha256": "f0bcc11dcde3a6ff180277e45c24642d3da3c8690900e38f44495efbc9064411"
+    },
+    {
+      "name": "jsonlite",
+      "version": "2.0.0",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/jsonlite_2.0.0.tar.gz",
+      "sha256": "75eb910c82b350ec33f094779da0f87bff154c232e4ae39c9896a9b89f3ac82d"
+    },
+    {
+      "name": "KEGGREST",
+      "version": "1.42.0",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/KEGGREST_1.42.0.tar.gz",
+      "sha256": "072c3f236d65479afd20ecf83e7b0e32cbd13a6e4c54922bf17b37b6420ccc15"
+    },
+    {
+      "name": "knitr",
+      "version": "1.50",
+      "license": "GPL",
+      "url": "https://cran.r-project.org/src/contrib/Archive/knitr/knitr_1.50.tar.gz",
+      "sha256": "105f5e8420ad766c94b96a787cb3ce368d12ef8702f867d0515c4fce728e2f41"
+    },
+    {
+      "name": "labeling",
+      "version": "0.4.3",
+      "license": "MIT + file LICENSE | Unlimited",
+      "url": "https://cran.r-project.org/src/contrib/labeling_0.4.3.tar.gz",
+      "sha256": "c62f4fc2cc74377d7055903c5f1913b7295f7587456fe468592738a483e264f2"
+    },
+    {
+      "name": "lambda.r",
+      "version": "1.2.4",
+      "license": "LGPL-3",
+      "url": "https://cran.r-project.org/src/contrib/Archive/lambda.r/lambda.r_1.2.4.tar.gz",
+      "sha256": "d252fee39065326c6d9f45ad798076522cec05e73b8905c1b30f95a61f7801d6"
+    },
+    {
+      "name": "later",
+      "version": "1.4.4",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/later/later_1.4.4.tar.gz",
+      "sha256": "18cec083cdbc3e5e9a491fa10af5cfcabb9cd91231e4e8a18e58e8651da7aa80"
+    },
+    {
+      "name": "lattice",
+      "version": "0.22-7",
+      "license": "GPL (>= 2)",
+      "url": "https://cran.r-project.org/src/contrib/Archive/lattice/lattice_0.22-7.tar.gz",
+      "sha256": "400fa62b95e90410d52a36cee2ddeb025dd49695e55fe3db709fe60886bff9f7"
+    },
+    {
+      "name": "lazyeval",
+      "version": "0.2.2",
+      "license": "GPL-3",
+      "url": "https://cran.r-project.org/src/contrib/Archive/lazyeval/lazyeval_0.2.2.tar.gz",
+      "sha256": "d6904112a21056222cfcd5eb8175a78aa063afe648a562d9c42c6b960a8820d4"
+    },
+    {
+      "name": "lifecycle",
+      "version": "1.0.4",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/lifecycle/lifecycle_1.0.4.tar.gz",
+      "sha256": "ada4d3c7e84b0c93105e888647c5754219a8334f6e1f82d5afaf83d4855b91cc"
+    },
+    {
+      "name": "locfit",
+      "version": "1.5-9.12",
+      "license": "GPL (>= 2)",
+      "url": "https://cran.r-project.org/src/contrib/locfit_1.5-9.12.tar.gz",
+      "sha256": "fa31b9d407f3557a6fcb7105cbd7b16a32a6fb868a7c60bc38a3e33cb7a39343"
+    },
+    {
+      "name": "magrittr",
+      "version": "2.0.3",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/magrittr/magrittr_2.0.3.tar.gz",
+      "sha256": "a2bff83f792a1acb801bfe6330bb62724c74d5308832f2cb6a6178336ace55d2"
+    },
+    {
+      "name": "MASS",
+      "version": "7.3-60",
+      "license": "GPL-2 | GPL-3",
+      "url": "https://cran.r-project.org/src/contrib/Archive/MASS/MASS_7.3-60.tar.gz",
+      "sha256": "b802410feab01464d112b27b3501176eb8e68511d4ba9d052ac4db1f2a72f0c2"
+    },
+    {
+      "name": "Matrix",
+      "version": "1.6-4",
+      "license": "GPL (>= 2) | file LICENCE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/Matrix/Matrix_1.6-4.tar.gz",
+      "sha256": "70ca7bdaece68d4837da0523d067e1553947c3c81b0b55206223bb647617bb01"
+    },
+    {
+      "name": "MatrixGenerics",
+      "version": "1.14.0",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/MatrixGenerics_1.14.0.tar.gz",
+      "sha256": "8da491661e8581adf1f2f8c5d2f46272d92b6c5a639bf4a80140c05e5694a593"
+    },
+    {
+      "name": "matrixStats",
+      "version": "1.5.0",
+      "license": "Artistic-2.0",
+      "url": "https://cran.r-project.org/src/contrib/matrixStats_1.5.0.tar.gz",
+      "sha256": "12996c5f3e6fc202a43e1087f16a71b7fa93d7e908f512542c7ee89cf95dcc15"
+    },
+    {
+      "name": "memoise",
+      "version": "2.0.1",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/memoise_2.0.1.tar.gz",
+      "sha256": "f85034ee98c8ca07fb3cd826142c1cd1e1e5747075a94c75a45783bbc4fe2deb"
+    },
+    {
+      "name": "methods",
+      "version": "4.3.2",
+      "license": "Part of R 4.3.2"
+    },
+    {
+      "name": "mgcv",
+      "version": "1.9-1",
+      "license": "GPL (>= 2)",
+      "url": "https://cran.r-project.org/src/contrib/Archive/mgcv/mgcv_1.9-1.tar.gz",
+      "sha256": "700fbc37bedd3a49505b9bc4949faee156d9cfb4f669d797d06a10a15a5bdb32"
+    },
+    {
+      "name": "mime",
+      "version": "0.13",
+      "license": "GPL",
+      "url": "https://cran.r-project.org/src/contrib/mime_0.13.tar.gz",
+      "sha256": "7132834cf3c3388eff12bad376d69fbcf8275acc37d36c290e59174fe3c7f3eb"
+    },
+    {
+      "name": "miniUI",
+      "version": "0.1.2",
+      "license": "GPL-3",
+      "url": "https://cran.r-project.org/src/contrib/miniUI_0.1.2.tar.gz",
+      "sha256": "017a481f7584d385241720f568323b8636ddad385e7098ceff5c12ebf879c22f"
+    },
+    {
+      "name": "MultiAssayExperiment",
+      "version": "1.28.0",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/MultiAssayExperiment_1.28.0.tar.gz",
+      "sha256": "904dd6bb32d22d92c71de1ade4d1fd0c88e7973d01b97699a4150004abc7b036"
+    },
+    {
+      "name": "mvtnorm",
+      "version": "1.3-3",
+      "license": "GPL-2",
+      "url": "https://cran.r-project.org/src/contrib/Archive/mvtnorm/mvtnorm_1.3-3.tar.gz",
+      "sha256": "e20e7f534bc89b9258ad63d508aabed60f3bd504a7532a33e6ea230ca8fa4171"
+    },
+    {
+      "name": "nlme",
+      "version": "3.1-168",
+      "license": "GPL (>= 2)",
+      "url": "https://cran.r-project.org/src/contrib/Archive/nlme/nlme_3.1-168.tar.gz",
+      "sha256": "23b78468344cb6775dee5e0d9c8133032d64f08ebaba20776508a0443a897362"
+    },
+    {
+      "name": "numDeriv",
+      "version": "2016.8-1.1",
+      "license": "GPL-2",
+      "url": "https://cran.r-project.org/src/contrib/numDeriv_2016.8-1.1.tar.gz",
+      "sha256": "d8c4d19ff9aeb31b0c628bd4a16378e51c1c9a3813b525469a31fe89af00b345"
+    },
+    {
+      "name": "openssl",
+      "version": "2.3.3",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/openssl/openssl_2.3.3.tar.gz",
+      "sha256": "b6b709a98dc3de47ec59adc234d8f0864c4f5b31c5e65478ec5e49c80ba7bf59"
+    },
+    {
+      "name": "org.Hs.eg.db",
+      "version": "3.18.0",
+      "license": "Artistic-2.0",
+      "url": "https://ftp.gwdg.de/pub/misc/bioconductor/packages/3.18/data/annotation/src/contrib/org.Hs.eg.db_3.18.0.tar.gz",
+      "sha256": "41dc753ed5f4d31dcf0d645ef32b6339b1b70cc48b7c4c4673767643b129c5ca"
+    },
+    {
+      "name": "org.Mm.eg.db",
+      "version": "3.18.0",
+      "license": "Artistic-2.0",
+      "url": "https://ftp.gwdg.de/pub/misc/bioconductor/packages/3.18/data/annotation/src/contrib/org.Mm.eg.db_3.18.0.tar.gz",
+      "sha256": "41ab6c87f6a8c2a13718f7b1d1bdfde37dcaf61bc34915cc3a8e2348a96b6544"
+    },
+    {
+      "name": "otel",
+      "version": "0.2.0",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/otel_0.2.0.tar.gz",
+      "sha256": "ef8afe5a1bc8074bbeb8a84134699ef348a1f8ac629ffba25ee43ea7bcd8dd17"
+    },
+    {
+      "name": "parallel",
+      "version": "4.3.2",
+      "license": "Part of R 4.3.2"
+    },
+    {
+      "name": "patchwork",
+      "version": "1.3.2",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/patchwork_1.3.2.tar.gz",
+      "sha256": "0ec469acfd69d1a4f1a6317c861e6bf000f768c2d5047e3aed6713df9afe27eb"
+    },
+    {
+      "name": "pillar",
+      "version": "1.11.0",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/pillar/pillar_1.11.0.tar.gz",
+      "sha256": "33451d2e5bee4ef327ae97df87259b67fc8174299d8030805c1fb01fbd0e5a11"
+    },
+    {
+      "name": "pkgconfig",
+      "version": "2.0.3",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/pkgconfig_2.0.3.tar.gz",
+      "sha256": "330fef440ffeb842a7dcfffc8303743f1feae83e8d6131078b5a44ff11bc3850"
+    },
+    {
+      "name": "plogr",
+      "version": "0.2.0",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/plogr/plogr_0.2.0.tar.gz",
+      "sha256": "0e63ba2e1f624005fe25c67cdd403636a912e063d682eca07f2f1d65e9870d29"
+    },
+    {
+      "name": "plyr",
+      "version": "1.8.9",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/plyr_1.8.9.tar.gz",
+      "sha256": "15b5e7f711d53bf41b8687923983b8ef424563aa2f74c5195feb5b1df1aee103"
+    },
+    {
+      "name": "png",
+      "version": "0.1-8",
+      "license": "GPL-2 | GPL-3",
+      "url": "https://cran.r-project.org/src/contrib/Archive/png/png_0.1-8.tar.gz",
+      "sha256": "5a36fabb6d62ba2533d3fc4cececd07891942cfb76fe689ec0d550d08762f61c"
+    },
+    {
+      "name": "polyclip",
+      "version": "1.10-7",
+      "license": "BSL",
+      "url": "https://cran.r-project.org/src/contrib/polyclip_1.10-7.tar.gz",
+      "sha256": "f58eaac3a5b2f6711c0c5f12fff91cf80a245ae45878f7217880ab062b5550d3"
+    },
+    {
+      "name": "prettyunits",
+      "version": "1.2.0",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/prettyunits_1.2.0.tar.gz",
+      "sha256": "f059f27e2a5c82e351fe05b87ad712f7afc273c651450453f59d99af5deeacea"
+    },
+    {
+      "name": "progress",
+      "version": "1.2.3",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/progress_1.2.3.tar.gz",
+      "sha256": "ea2b079b894de85c3ab12088c9c52aec06432245047a961d5b4b8aa6889f9276"
+    },
+    {
+      "name": "promises",
+      "version": "1.5.0",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/promises_1.5.0.tar.gz",
+      "sha256": "bb68fd4065cc072996aed416f0b2388f58738797a3a38024720c29d67164747d"
+    },
+    {
+      "name": "purrr",
+      "version": "1.0.4",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/purrr/purrr_1.0.4.tar.gz",
+      "sha256": "6c013724651c5daae56a7b8e126baef958d30d4c01dd0dda3d17fc43409b8e54"
+    },
+    {
+      "name": "qvalue",
+      "version": "2.34.0",
+      "license": "LGPL",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/qvalue_2.34.0.tar.gz",
+      "sha256": "d16fd855856b479bd8a0812bbfc2e2d918929c28fe83411a41ca059d2d9c6583"
+    },
+    {
+      "name": "R.methodsS3",
+      "version": "1.8.2",
+      "license": "LGPL (>= 2.1)",
+      "url": "https://cran.r-project.org/src/contrib/R.methodsS3_1.8.2.tar.gz",
+      "sha256": "822d5e61dad4c91e8883be2b38d7b89f87492046d0fe345704eb5d2658927c2e"
+    },
+    {
+      "name": "R.oo",
+      "version": "1.27.1",
+      "license": "LGPL (>= 2.1)",
+      "url": "https://cran.r-project.org/src/contrib/R.oo_1.27.1.tar.gz",
+      "sha256": "5faf599cc1f027d8b80e1270aa6a43e29dccd6fee8287953f13e7ab3d94270f5"
+    },
+    {
+      "name": "R.utils",
+      "version": "2.13.0",
+      "license": "LGPL (>= 2.1)",
+      "url": "https://cran.r-project.org/src/contrib/R.utils_2.13.0.tar.gz",
+      "sha256": "ab2043c34e129928ff85a037ce7a3f7791f245f49a55ee9a95bd7df0813bcf25"
+    },
+    {
+      "name": "R6",
+      "version": "2.6.1",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/R6_2.6.1.tar.gz",
+      "sha256": "59c6eba8b1b912eb7e104f65053235604be853425ee67c152ac4e86a1f2073b4"
+    },
+    {
+      "name": "RaggedExperiment",
+      "version": "1.26.0",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/RaggedExperiment_1.26.0.tar.gz",
+      "sha256": "6693a3bc4efdd5ae687848a2916014f367f353b237757678d02dbfbe59149d1f"
+    },
+    {
+      "name": "rapiclient",
+      "version": "0.1.8",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/rapiclient_0.1.8.tar.gz",
+      "sha256": "1ced6376de92f2d99bde91c94d87dd6e8fe76ee09e6cd4b0c87b48f5379b9faa"
+    },
+    {
+      "name": "rappdirs",
+      "version": "0.3.3",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/rappdirs/rappdirs_0.3.3.tar.gz",
+      "sha256": "49959f65b45b0b189a2792d6c1339bef59674ecae92f8c2ed9f26ff9e488c184"
+    },
+    {
+      "name": "RColorBrewer",
+      "version": "1.1-3",
+      "license": "Apache License 2.0",
+      "url": "https://cran.r-project.org/src/contrib/RColorBrewer_1.1-3.tar.gz",
+      "sha256": "4f42f5423c45688b39f492c7892d93f37b4541831c8ffb140364d2bd89031ac0"
+    },
+    {
+      "name": "Rcpp",
+      "version": "1.1.0",
+      "license": "GPL (>= 2)",
+      "url": "https://cran.r-project.org/src/contrib/Archive/Rcpp/Rcpp_1.1.0.tar.gz",
+      "sha256": "84211c2520ba68c839b2e75761e97afc90baeebccbaf216ac8534fa2076cfb4d"
+    },
+    {
+      "name": "RcppArmadillo",
+      "version": "14.6.0-1",
+      "license": "GPL (>= 2)",
+      "url": "https://cran.r-project.org/src/contrib/Archive/RcppArmadillo/RcppArmadillo_14.6.0-1.tar.gz",
+      "sha256": "1a2e6e2bfd117e93a6f89cf35fddd072a0ceb032c5022d6b5822a25796df2f9e"
+    },
+    {
+      "name": "RcppEigen",
+      "version": "0.3.4.0.2",
+      "license": "GPL (>= 2) | file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/RcppEigen_0.3.4.0.2.tar.gz",
+      "sha256": "ecad7ba2129fd48b7ebb825558d38492ed1f3a8934959e27fcd6688175e542bb"
+    },
+    {
+      "name": "RcppNumerical",
+      "version": "0.6-0",
+      "license": "GPL (>= 2)",
+      "url": "https://cran.r-project.org/src/contrib/Archive/RcppNumerical/RcppNumerical_0.6-0.tar.gz",
+      "sha256": "2f0715d68a975403e2aa3f087939542001921623bd1bb8d905ebaff05d82d786"
+    },
+    {
+      "name": "RCurl",
+      "version": "1.98-1.17",
+      "license": "BSD_3_clause + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/RCurl/RCurl_1.98-1.17.tar.gz",
+      "sha256": "c71874a6c116169e18bf12f023fdb79d63e92177aa7ae3858b30b60be5bc6030"
+    },
+    {
+      "name": "reactome.db",
+      "version": "1.86.2",
+      "license": "CC BY 4.0",
+      "url": "https://bioconductor.org/packages/3.18/data/annotation/src/contrib/reactome.db_1.86.2.tar.gz",
+      "sha256": "0c319b4164ab7e590233437ab715dd9a0092287611ac588b74ec42a01b8ce80a"
+    },
+    {
+      "name": "ReactomePA",
+      "version": "1.46.0",
+      "license": "GPL-2",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/ReactomePA_1.46.0.tar.gz",
+      "sha256": "4cf764415b9361d776e57a5ebed52c783a79e8adda1dd851ded14fe62be5d44d"
+    },
+    {
+      "name": "readr",
+      "version": "2.1.5",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/readr/readr_2.1.5.tar.gz",
+      "sha256": "0fa65a5fe0a46cffe221b7696b52adb82dd4d7a692a895484e438e439594e10a"
+    },
+    {
+      "name": "recount3",
+      "version": "1.12.0",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/recount3_1.12.0.tar.gz",
+      "sha256": "5446e733740000ff9917744d53a731f4bb12f4b802c2ede788f9f1930295c47e"
+    },
+    {
+      "name": "reshape2",
+      "version": "1.4.4",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/reshape2/reshape2_1.4.4.tar.gz",
+      "sha256": "d88dcf9e2530fa9695fc57d0c78adfc5e361305fe8919fe09410b17da5ca12d8"
+    },
+    {
+      "name": "restfulr",
+      "version": "0.0.16",
+      "license": "Artistic-2.0",
+      "url": "https://cran.r-project.org/src/contrib/Archive/restfulr/restfulr_0.0.16.tar.gz",
+      "sha256": "574fd11a3f23f494ff8e94ce84d767f49d3399600d617ad26fb71b8332e93725"
+    },
+    {
+      "name": "Rhtslib",
+      "version": "2.4.1",
+      "license": "LGPL (>= 2)",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/Rhtslib_2.4.1.tar.gz",
+      "sha256": "0c34b951a0f15c26222a3dfd96700a0905c16c4cbe59db36374cf1ceab2a2b21"
+    },
+    {
+      "name": "rjson",
+      "version": "0.2.23",
+      "license": "GPL-2",
+      "url": "https://cran.r-project.org/src/contrib/rjson_0.2.23.tar.gz",
+      "sha256": "55034575c854ed657e6701da278c0fdea251479624d06a963b2e58461a5f0f48"
+    },
+    {
+      "name": "RJSONIO",
+      "version": "2.0.0",
+      "license": "BSD_3_clause + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/RJSONIO/RJSONIO_2.0.0.tar.gz",
+      "sha256": "e9c7f8220478b8d659507909968517c129088b42fd1afb60319fc8af9f7b202a"
+    },
+    {
+      "name": "rlang",
+      "version": "1.1.6",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/rlang/rlang_1.1.6.tar.gz",
+      "sha256": "18544c876f4e18ec554edecc308362a52fbc7e0805c4794cf59bcc4d0b57f330"
+    },
+    {
+      "name": "rmarkdown",
+      "version": "2.29",
+      "license": "GPL-3",
+      "url": "https://cran.r-project.org/src/contrib/Archive/rmarkdown/rmarkdown_2.29.tar.gz",
+      "sha256": "6662ac85316c869caad6e3b95468cad97f6eef106d47b066db8d40c05a490928"
+    },
+    {
+      "name": "Rsamtools",
+      "version": "2.18.0",
+      "license": "Artistic-2.0 | file LICENSE",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/Rsamtools_2.18.0.tar.gz",
+      "sha256": "2f283b105ede839655bf8a3cb877f97764900486875748f4c3f9ecdf78bc8a2d"
+    },
+    {
+      "name": "RSQLite",
+      "version": "2.4.1",
+      "license": "LGPL (>= 2.1)",
+      "url": "https://cran.r-project.org/src/contrib/Archive/RSQLite/RSQLite_2.4.1.tar.gz",
+      "sha256": "47c56cccc5267e32ad0580fecb5827ae9b198904a27258bdf51eccfbb841609d"
+    },
+    {
+      "name": "RTCGAToolbox",
+      "version": "2.32.1",
+      "license": "GPL-2",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/RTCGAToolbox_2.32.1.tar.gz",
+      "sha256": "98653b3fe5f863a38c5b8e2b8336f162356233518a38192db54b3c6dc15868a8"
+    },
+    {
+      "name": "rtracklayer",
+      "version": "1.62.0",
+      "license": "Artistic-2.0 + file LICENSE",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/rtracklayer_1.62.0.tar.gz",
+      "sha256": "c28217936c81248f2576af8327356324ccf7101b04f3358d049f0a839dd8b0cb"
+    },
+    {
+      "name": "rvest",
+      "version": "1.0.4",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/rvest/rvest_1.0.4.tar.gz",
+      "sha256": "7d707c6b2994cf7b6c1d665bec872d2ef5c55f30e7c343c447a8a386a6049ca6"
+    },
+    {
+      "name": "S4Arrays",
+      "version": "1.2.1",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/S4Arrays_1.2.1.tar.gz",
+      "sha256": "ed2ac5ecf714408069fd61c217e0bb1c661a17645bd72d40a6fabbb2e463d3fc"
+    },
+    {
+      "name": "S4Vectors",
+      "version": "0.40.2",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/S4Vectors_0.40.2.tar.gz",
+      "sha256": "4cd9a63b3b41b08fca8121dc5b8f43d6f7d580842b1b000055dee90b68f49982"
+    },
+    {
+      "name": "S7",
+      "version": "0.2.0",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/S7/S7_0.2.0.tar.gz",
+      "sha256": "b8675a7fac7a396e524b21cd353ef0823d2acf76088b5f229d2a55a182a4d49b"
+    },
+    {
+      "name": "sass",
+      "version": "0.4.10",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/sass_0.4.10.tar.gz",
+      "sha256": "4adb4c243f74d811276529e346deaa064bce28dbfbb837208fc85f2c47b79b30"
+    },
+    {
+      "name": "scales",
+      "version": "1.4.0",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/scales_1.4.0.tar.gz",
+      "sha256": "d55ef5f08c92652d7a95cfa27584024723ab17873f1b2577dd488cb7c883ceee"
+    },
+    {
+      "name": "scatterpie",
+      "version": "0.2.6",
+      "license": "Artistic-2.0",
+      "url": "https://cran.r-project.org/src/contrib/scatterpie_0.2.6.tar.gz",
+      "sha256": "bbb93441b98dc8c2af0131c1ed578be4b89563c12e14a7643c411e82a018d994"
+    },
+    {
+      "name": "selectr",
+      "version": "0.4-2",
+      "license": "BSD_3_clause + file LICENCE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/selectr/selectr_0.4-2.tar.gz",
+      "sha256": "5588aed05f3f5ee63c0d29953ef53da5dac7afccfdd04b7b22ef24e1e3b0c127"
+    },
+    {
+      "name": "sessioninfo",
+      "version": "1.2.3",
+      "license": "GPL-2",
+      "url": "https://cran.r-project.org/src/contrib/Archive/sessioninfo/sessioninfo_1.2.3.tar.gz",
+      "sha256": "a02b90a8a6c49a499d972cebc5a15ab44e729b232d00516cb168414701e1c650"
+    },
+    {
+      "name": "shadowtext",
+      "version": "0.1.5",
+      "license": "Artistic-2.0",
+      "url": "https://cran.r-project.org/src/contrib/Archive/shadowtext/shadowtext_0.1.5.tar.gz",
+      "sha256": "b80a9b4ac064a0045de0720a33aaadd964b1ad48110dee647d79628cea8d723d"
+    },
+    {
+      "name": "shiny",
+      "version": "1.11.1",
+      "license": "GPL-3 | file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/shiny/shiny_1.11.1.tar.gz",
+      "sha256": "6f8c0f8618646f6b6d0c2d4ccf8b2430de6b1dc67edec19bb6b88594f4de7129"
+    },
+    {
+      "name": "snow",
+      "version": "0.4-4",
+      "license": "GPL",
+      "url": "https://cran.r-project.org/src/contrib/snow_0.4-4.tar.gz",
+      "sha256": "84587f46f222a96f3e2fde10ad6ec6ddbd878f4e917cd926d632f61a87db13c9"
+    },
+    {
+      "name": "sourcetools",
+      "version": "0.1.7-1",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/sourcetools/sourcetools_0.1.7-1.tar.gz",
+      "sha256": "96812bdb7a0dd99690d84e4b0a3def91389e4290f53f01919ef28a50554e31d1"
+    },
+    {
+      "name": "SparseArray",
+      "version": "1.2.4",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/SparseArray_1.2.4.tar.gz",
+      "sha256": "7113ab296a0603a39b21caf6bef9c8eaf598719230b75822427701011e92e13f"
+    },
+    {
+      "name": "splines",
+      "version": "4.3.2",
+      "license": "Part of R 4.3.2"
+    },
+    {
+      "name": "stats",
+      "version": "4.3.2",
+      "license": "Part of R 4.3.2"
+    },
+    {
+      "name": "stats4",
+      "version": "4.3.2",
+      "license": "Part of R 4.3.2"
+    },
+    {
+      "name": "stringi",
+      "version": "1.8.7",
+      "license": "file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/stringi/stringi_1.8.7.tar.gz",
+      "sha256": "0526decdcd41b7c42278aca96945394c2cb66ba6fdd47fd917b5d3d38ed5c8c6"
+    },
+    {
+      "name": "stringr",
+      "version": "1.5.1",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/stringr/stringr_1.5.1.tar.gz",
+      "sha256": "a4adec51bb3f04214b1d8ef40d3a58949f21b1497cbeaf2ba552e0891eef45de"
+    },
+    {
+      "name": "SummarizedExperiment",
+      "version": "1.32.0",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/SummarizedExperiment_1.32.0.tar.gz",
+      "sha256": "9f801c16adb503d7252890019b46f5583c401622c7ec9373663537548c9889a4"
+    },
+    {
+      "name": "sys",
+      "version": "3.4.3",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/sys_3.4.3.tar.gz",
+      "sha256": "051e7332e3074db826efef9059067721864f9d70adc55bbcae3a72e5ae83913a"
+    },
+    {
+      "name": "systemfonts",
+      "version": "1.3.2",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/systemfonts_1.3.2.tar.gz",
+      "sha256": "828a1780e540bd05107cd0a1ddfac6727de8aef1d6d82b43591dabaf753dd135"
+    },
+    {
+      "name": "TCGAbiolinks",
+      "version": "2.30.4",
+      "license": "GPL (>= 3)",
+      "url": "https://ftp.gwdg.de/pub/misc/bioconductor/packages/3.18/bioc/src/contrib/TCGAbiolinks_2.30.4.tar.gz",
+      "sha256": "4849e46dc74a38c2273dbd390e19cb67e9051610113147d90edef5bed95b202f"
+    },
+    {
+      "name": "TCGAbiolinksGUI.data",
+      "version": "1.22.0",
+      "license": "GPL-3",
+      "url": "https://ftp.gwdg.de/pub/misc/bioconductor/packages/3.18/data/experiment/src/contrib/TCGAbiolinksGUI.data_1.22.0.tar.gz",
+      "sha256": "cad5d078da2d9df521a4bc5398324849caf4d73c6d3c46dda362e59214b6d511"
+    },
+    {
+      "name": "TCGAutils",
+      "version": "1.22.2",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/TCGAutils_1.22.2.tar.gz",
+      "sha256": "431da846f86182834f96ef3f7ca33cd7b18e29e57e5ab6caf21a74eb45f9ec9a"
+    },
+    {
+      "name": "tibble",
+      "version": "3.3.0",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/tibble/tibble_3.3.0.tar.gz",
+      "sha256": "7f4c439f11b1aca4a45923d8d76f90fbab4e01acf0ba7ad0c38c3a7f22fee192"
+    },
+    {
+      "name": "tidygraph",
+      "version": "1.3.1",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/tidygraph_1.3.1.tar.gz",
+      "sha256": "aac1d4bb9396081bbeecbde11a3cd1a26a56bd6b1f608a628b359cb37c18ac1a"
+    },
+    {
+      "name": "tidyr",
+      "version": "1.3.1",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/tidyr/tidyr_1.3.1.tar.gz",
+      "sha256": "e820c261cb5543f572f49276a7bdc7302aa4215da4bf850b1b939a315353835d"
+    },
+    {
+      "name": "tidyselect",
+      "version": "1.2.1",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/tidyselect_1.2.1.tar.gz",
+      "sha256": "169e97ba0bbfbcdf4a80534322751f87a04370310c40e27f04aac6525d45903c"
+    },
+    {
+      "name": "tidytree",
+      "version": "0.4.7",
+      "license": "Artistic-2.0",
+      "url": "https://cran.r-project.org/src/contrib/Archive/tidytree/tidytree_0.4.7.tar.gz",
+      "sha256": "4437a98f62903cc3c1c06ce62aa905182c23cd35cbd17931d7e891c4eab0ac80"
+    },
+    {
+      "name": "tinytex",
+      "version": "0.57",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/tinytex/tinytex_0.57.tar.gz",
+      "sha256": "320de051936704a9bbf9a641771e372666f7b6ee228b4d05ffe71d1020add916"
+    },
+    {
+      "name": "tools",
+      "version": "4.3.2",
+      "license": "Part of R 4.3.2"
+    },
+    {
+      "name": "treeio",
+      "version": "1.26.0",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/treeio_1.26.0.tar.gz",
+      "sha256": "393ea7c7df0e5d40df43b63f78f4b889701ed0b359b7d6f9232793c37d6e7fcf"
+    },
+    {
+      "name": "tweenr",
+      "version": "2.0.3",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/tweenr_2.0.3.tar.gz",
+      "sha256": "efabe512a45d653787ba40f87f3e23add4037f88573a102fa9ac7a5ff43c8cbe"
+    },
+    {
+      "name": "tzdb",
+      "version": "0.5.0",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/tzdb_0.5.0.tar.gz",
+      "sha256": "380d5237dbfa722fddb7d1d9ad8520a2b26331dbbb77d51850ded332fcf347db"
+    },
+    {
+      "name": "utf8",
+      "version": "1.2.6",
+      "license": "Apache License (== 2.0) | file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/utf8_1.2.6.tar.gz",
+      "sha256": "4589f8b72291329e70b7f3a8c20f2feb4e7764eebad2e6976bc9a3eee7686ce9"
+    },
+    {
+      "name": "utils",
+      "version": "4.3.2",
+      "license": "Part of R 4.3.2"
+    },
+    {
+      "name": "vctrs",
+      "version": "0.6.5",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/vctrs/vctrs_0.6.5.tar.gz",
+      "sha256": "43167d2248fd699594044b5c8f1dbb7ed163f2d64761e08ba805b04e7ec8e402"
+    },
+    {
+      "name": "viridis",
+      "version": "0.6.5",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/viridis_0.6.5.tar.gz",
+      "sha256": "862b5cb6be115deea0207cdd3c8bb33de28552cfdc29900777512fd488d0005c"
+    },
+    {
+      "name": "viridisLite",
+      "version": "0.4.2",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/viridisLite/viridisLite_0.4.2.tar.gz",
+      "sha256": "893f111d31deccd2cc959bc9db7ba2ce9020a2dd1b9c1c009587e449c4cce1a1"
+    },
+    {
+      "name": "vroom",
+      "version": "1.6.5",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/vroom/vroom_1.6.5.tar.gz",
+      "sha256": "7bdca21e58c9c5049d7445d182f59fd399193cb2f4318d083de0a559ec9b5761"
+    },
+    {
+      "name": "withr",
+      "version": "3.0.2",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/withr/withr_3.0.2.tar.gz",
+      "sha256": "0a3a05f493d275cca4bf13c8c1b95a1a4eed7f83b2493f41fde02ce3fc92c1a3"
+    },
+    {
+      "name": "xfun",
+      "version": "0.52",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/xfun/xfun_0.52.tar.gz",
+      "sha256": "3406ff02db3131a3d3f52400ba0ebb276ad7251b60468f2a374dfb43e20f9afa"
+    },
+    {
+      "name": "XML",
+      "version": "3.99-0.18",
+      "license": "BSD_3_clause + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/XML/XML_3.99-0.18.tar.gz",
+      "sha256": "280da9a8bd2cd8c55bfe7c182ff2ccdda2bf945e00ec3290ab7101307abd534b"
+    },
+    {
+      "name": "xml2",
+      "version": "1.3.8",
+      "license": "MIT + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/xml2/xml2_1.3.8.tar.gz",
+      "sha256": "725d2243638c279d276086ddc70a2b13fb9de81e95a1d55a1156c35c32ad1007"
+    },
+    {
+      "name": "xtable",
+      "version": "1.8-4",
+      "license": "GPL (>= 2)",
+      "url": "https://cran.r-project.org/src/contrib/Archive/xtable/xtable_1.8-4.tar.gz",
+      "sha256": "5abec0e8c27865ef0880f1d19c9f9ca7cc0fd24eadaa72bcd270c3fb4075fd1c"
+    },
+    {
+      "name": "XVector",
+      "version": "0.42.0",
+      "license": "Artistic-2.0",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/XVector_0.42.0.tar.gz",
+      "sha256": "a163561e54c8a3f013e629c275f2446d25b3b56dbab53a4938de5f405b8d0340"
+    },
+    {
+      "name": "yaml",
+      "version": "2.3.10",
+      "license": "BSD_3_clause + file LICENSE",
+      "url": "https://cran.r-project.org/src/contrib/Archive/yaml/yaml_2.3.10.tar.gz",
+      "sha256": "e236d42d366e361d4855aa4f520260debd53a31e4786442b94770b045da02a6d"
+    },
+    {
+      "name": "yulab.utils",
+      "version": "0.2.4",
+      "license": "Artistic-2.0",
+      "url": "https://cran.r-project.org/src/contrib/Archive/yulab.utils/yulab.utils_0.2.4.tar.gz",
+      "sha256": "437055d75f7e81d1afd403c0eaae34780a8baf779f01fc5ef0b4b17e45407b81"
+    },
+    {
+      "name": "zlibbioc",
+      "version": "1.48.2",
+      "license": "Artistic-2.0 + file LICENSE",
+      "url": "https://bioconductor.org/packages/3.18/bioc/src/contrib/zlibbioc_1.48.2.tar.gz",
+      "sha256": "0de1bcc5b175f69216a68a721d70f3df7e02e7864c72908f7816b0cf7d0c1b1d"
+    }
+  ],
+  "r_build_only": [
+    {
+      "name": "tidytree",
+      "version": "0.4.6",
+      "license": "Artistic-2.0",
+      "url": "https://cran.r-project.org/src/contrib/Archive/tidytree/tidytree_0.4.6.tar.gz",
+      "sha256": "dba909ba767283fa76795a67e048ff1c8cd339c7e44f64c9698c70ecb3d92292",
+      "used_to_build": [
+        "treeio",
+        "ggtree"
+      ],
+      "reason": "Supplies the upstream random_ref citation closure during byte compilation only; the final runtime retains tidytree 0.4.7."
+    }
+  ],
+  "npm": [
+    {
+      "package": "@antfu/install-pkg",
+      "version": "1.1.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@braintree/sanitize-url",
+      "version": "7.1.2",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@chevrotain/cst-dts-gen",
+      "version": "11.1.2",
+      "license": "Apache-2.0",
+      "build_only": false
+    },
+    {
+      "package": "@chevrotain/gast",
+      "version": "11.1.2",
+      "license": "Apache-2.0",
+      "build_only": false
+    },
+    {
+      "package": "@chevrotain/regexp-to-ast",
+      "version": "11.1.2",
+      "license": "Apache-2.0",
+      "build_only": false
+    },
+    {
+      "package": "@chevrotain/types",
+      "version": "11.1.2",
+      "license": "Apache-2.0",
+      "build_only": false
+    },
+    {
+      "package": "@chevrotain/utils",
+      "version": "11.1.2",
+      "license": "Apache-2.0",
+      "build_only": false
+    },
+    {
+      "package": "@esbuild/aix-ppc64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/android-arm",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/android-arm64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/android-x64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/darwin-arm64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/darwin-x64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/freebsd-arm64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/freebsd-x64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/linux-arm",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/linux-arm64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/linux-ia32",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/linux-loong64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/linux-mips64el",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/linux-ppc64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/linux-riscv64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/linux-s390x",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/linux-x64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/netbsd-arm64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/netbsd-x64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/openbsd-arm64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/openbsd-x64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/openharmony-arm64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/sunos-x64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/win32-arm64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/win32-ia32",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@esbuild/win32-x64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@iconify/types",
+      "version": "2.0.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@iconify/utils",
+      "version": "3.1.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@mermaid-js/parser",
+      "version": "1.0.1",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@rollup/rollup-android-arm-eabi",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-android-arm64",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-darwin-arm64",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-darwin-x64",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-freebsd-arm64",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-freebsd-x64",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-linux-arm-gnueabihf",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-linux-arm-musleabihf",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-linux-arm64-gnu",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-linux-arm64-musl",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-linux-loong64-gnu",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-linux-loong64-musl",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-linux-ppc64-gnu",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-linux-ppc64-musl",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-linux-riscv64-gnu",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-linux-riscv64-musl",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-linux-s390x-gnu",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-linux-x64-gnu",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-linux-x64-musl",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-openbsd-x64",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-openharmony-arm64",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-win32-arm64-msvc",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-win32-ia32-msvc",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-win32-x64-gnu",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@rollup/rollup-win32-x64-msvc",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@types/d3",
+      "version": "7.4.3",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-array",
+      "version": "3.2.2",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-axis",
+      "version": "3.0.6",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-brush",
+      "version": "3.0.6",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-chord",
+      "version": "3.0.6",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-color",
+      "version": "3.1.3",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-contour",
+      "version": "3.0.6",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-delaunay",
+      "version": "6.0.4",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-dispatch",
+      "version": "3.0.7",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-drag",
+      "version": "3.0.7",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-dsv",
+      "version": "3.0.7",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-ease",
+      "version": "3.0.2",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-fetch",
+      "version": "3.0.7",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-force",
+      "version": "3.0.10",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-format",
+      "version": "3.0.4",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-geo",
+      "version": "3.1.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-hierarchy",
+      "version": "3.1.7",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-interpolate",
+      "version": "3.0.4",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-path",
+      "version": "3.1.1",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-polygon",
+      "version": "3.0.2",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-quadtree",
+      "version": "3.0.6",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-random",
+      "version": "3.0.3",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-scale",
+      "version": "4.0.9",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-scale-chromatic",
+      "version": "3.1.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-selection",
+      "version": "3.0.11",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-shape",
+      "version": "3.1.8",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-time",
+      "version": "3.0.4",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-time-format",
+      "version": "4.0.3",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-timer",
+      "version": "3.0.2",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-transition",
+      "version": "3.0.9",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/d3-zoom",
+      "version": "3.0.8",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/estree",
+      "version": "1.0.8",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "@types/geojson",
+      "version": "7946.0.16",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@types/trusted-types",
+      "version": "2.0.7",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "@upsetjs/venn.js",
+      "version": "2.0.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "acorn",
+      "version": "8.16.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "chevrotain",
+      "version": "11.1.2",
+      "license": "Apache-2.0",
+      "build_only": false
+    },
+    {
+      "package": "chevrotain-allstar",
+      "version": "0.3.1",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "commander",
+      "version": "7.2.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "confbox",
+      "version": "0.1.8",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "core-util-is",
+      "version": "1.0.3",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "cose-base",
+      "version": "1.0.3",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "cytoscape",
+      "version": "3.33.1",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "cytoscape-cose-bilkent",
+      "version": "4.1.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "cytoscape-fcose",
+      "version": "2.2.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "cytoscape-fcose/node_modules/cose-base",
+      "version": "2.2.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "cytoscape-fcose/node_modules/layout-base",
+      "version": "2.0.1",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "d3",
+      "version": "7.9.0",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-array",
+      "version": "3.2.4",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-axis",
+      "version": "3.0.0",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-brush",
+      "version": "3.0.0",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-chord",
+      "version": "3.0.1",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-color",
+      "version": "3.1.0",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-contour",
+      "version": "4.0.2",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-delaunay",
+      "version": "6.0.4",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-dispatch",
+      "version": "3.0.1",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-drag",
+      "version": "3.0.0",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-dsv",
+      "version": "3.0.1",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-ease",
+      "version": "3.0.1",
+      "license": "BSD-3-Clause",
+      "build_only": false
+    },
+    {
+      "package": "d3-fetch",
+      "version": "3.0.1",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-force",
+      "version": "3.0.0",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-format",
+      "version": "3.1.2",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-geo",
+      "version": "3.1.1",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-hierarchy",
+      "version": "3.1.2",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-interpolate",
+      "version": "3.0.1",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-path",
+      "version": "3.1.0",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-polygon",
+      "version": "3.0.1",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-quadtree",
+      "version": "3.0.1",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-random",
+      "version": "3.0.1",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-sankey",
+      "version": "0.12.3",
+      "license": "BSD-3-Clause",
+      "build_only": false
+    },
+    {
+      "package": "d3-sankey/node_modules/d3-array",
+      "version": "2.12.1",
+      "license": "BSD-3-Clause",
+      "build_only": false
+    },
+    {
+      "package": "d3-sankey/node_modules/d3-path",
+      "version": "1.0.9",
+      "license": "BSD-3-Clause",
+      "build_only": false
+    },
+    {
+      "package": "d3-sankey/node_modules/d3-shape",
+      "version": "1.3.7",
+      "license": "BSD-3-Clause",
+      "build_only": false
+    },
+    {
+      "package": "d3-sankey/node_modules/internmap",
+      "version": "1.0.1",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-scale",
+      "version": "4.0.2",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-scale-chromatic",
+      "version": "3.1.0",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-selection",
+      "version": "3.0.0",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-shape",
+      "version": "3.2.0",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-time",
+      "version": "3.1.0",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-time-format",
+      "version": "4.1.0",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-timer",
+      "version": "3.0.1",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-transition",
+      "version": "3.0.1",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "d3-zoom",
+      "version": "3.0.0",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "dagre-d3-es",
+      "version": "7.0.14",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "dayjs",
+      "version": "1.11.20",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "delaunator",
+      "version": "5.1.0",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "dompurify",
+      "version": "3.3.3",
+      "license": "(MPL-2.0 OR Apache-2.0)",
+      "build_only": false
+    },
+    {
+      "package": "esbuild",
+      "version": "0.25.12",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "fdir",
+      "version": "6.5.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "fsevents",
+      "version": "2.3.3",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "hachure-fill",
+      "version": "0.5.2",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "iconv-lite",
+      "version": "0.6.3",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "immediate",
+      "version": "3.0.6",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "inherits",
+      "version": "2.0.4",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "internmap",
+      "version": "2.0.3",
+      "license": "ISC",
+      "build_only": false
+    },
+    {
+      "package": "isarray",
+      "version": "1.0.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "jszip",
+      "version": "3.10.1",
+      "license": "(MIT OR GPL-3.0-or-later)",
+      "build_only": false
+    },
+    {
+      "package": "katex",
+      "version": "0.16.44",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "katex/node_modules/commander",
+      "version": "8.3.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "khroma",
+      "version": "2.1.0",
+      "license": null,
+      "build_only": false
+    },
+    {
+      "package": "langium",
+      "version": "4.2.1",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "layout-base",
+      "version": "1.0.2",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "lie",
+      "version": "3.3.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "lodash-es",
+      "version": "4.17.23",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "marked",
+      "version": "16.4.2",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "mermaid",
+      "version": "11.13.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "mlly",
+      "version": "1.8.2",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "nanoid",
+      "version": "3.3.11",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "package-manager-detector",
+      "version": "1.6.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "pako",
+      "version": "1.0.11",
+      "license": "(MIT AND Zlib)",
+      "build_only": false
+    },
+    {
+      "package": "path-data-parser",
+      "version": "0.1.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "pathe",
+      "version": "2.0.3",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "picocolors",
+      "version": "1.1.1",
+      "license": "ISC",
+      "build_only": true
+    },
+    {
+      "package": "picomatch",
+      "version": "4.0.4",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "pkg-types",
+      "version": "1.3.1",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "points-on-curve",
+      "version": "0.2.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "points-on-path",
+      "version": "0.2.1",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "postcss",
+      "version": "8.5.8",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "process-nextick-args",
+      "version": "2.0.1",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "readable-stream",
+      "version": "2.3.8",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "robust-predicates",
+      "version": "3.0.3",
+      "license": "Unlicense",
+      "build_only": false
+    },
+    {
+      "package": "rollup",
+      "version": "4.60.0",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "roughjs",
+      "version": "4.6.6",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "rw",
+      "version": "1.3.3",
+      "license": "BSD-3-Clause",
+      "build_only": false
+    },
+    {
+      "package": "safe-buffer",
+      "version": "5.1.2",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "safer-buffer",
+      "version": "2.1.2",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "setimmediate",
+      "version": "1.0.5",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "source-map-js",
+      "version": "1.2.1",
+      "license": "BSD-3-Clause",
+      "build_only": true
+    },
+    {
+      "package": "string_decoder",
+      "version": "1.1.1",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "stylis",
+      "version": "4.3.6",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "tinyexec",
+      "version": "1.0.4",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "tinyglobby",
+      "version": "0.2.15",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "ts-dedent",
+      "version": "2.2.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "ufo",
+      "version": "1.6.3",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "util-deprecate",
+      "version": "1.0.2",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "uuid",
+      "version": "11.1.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "vite",
+      "version": "6.4.1",
+      "license": "MIT",
+      "build_only": true
+    },
+    {
+      "package": "vscode-jsonrpc",
+      "version": "8.2.0",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "vscode-languageserver",
+      "version": "9.0.1",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "vscode-languageserver-protocol",
+      "version": "3.17.5",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "vscode-languageserver-textdocument",
+      "version": "1.0.12",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "vscode-languageserver-types",
+      "version": "3.17.5",
+      "license": "MIT",
+      "build_only": false
+    },
+    {
+      "package": "vscode-uri",
+      "version": "3.1.0",
+      "license": "MIT",
+      "build_only": false
+    }
+  ],
+  "schema": 1,
+  "status": "metadata-inventory-not-compatibility-or-redistribution-approval",
+  "platform": "linux/arm64",
+  "python": [
+    {
+      "name": "anndata",
+      "version": "0.12.17",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.7.0",
+      "license_expression": null,
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "anyio",
+      "version": "4.13.0",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "array-api-compat",
+      "version": "1.15.0",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": []
+    },
+    {
+      "name": "attrs",
+      "version": "26.1.0",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "certifi",
+      "version": "2026.2.25",
+      "license_expression": null,
+      "license_metadata": [
+        "MPL-2.0"
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "cffi",
+      "version": "2.0.0",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE",
+        "AUTHORS"
+      ]
+    },
+    {
+      "name": "click",
+      "version": "8.4.1",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE.txt"
+      ]
+    },
+    {
+      "name": "contourpy",
+      "version": "1.3.3",
+      "license_expression": null,
+      "license_metadata": [
+        "BSD 3-Clause License"
+      ],
+      "license_files": []
+    },
+    {
+      "name": "cryptography",
+      "version": "46.0.6",
+      "license_expression": "Apache-2.0 OR BSD-3-Clause",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE",
+        "LICENSE.APACHE",
+        "LICENSE.BSD"
+      ]
+    },
+    {
+      "name": "cycler",
+      "version": "0.12.1",
+      "license_expression": null,
+      "license_metadata": [
+        "Copyright (c) 2015, matplotlib project"
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "donfig",
+      "version": "0.8.1.post1",
+      "license_expression": null,
+      "license_metadata": [
+        "MIT"
+      ],
+      "license_files": [
+        "LICENSE.txt",
+        "AUTHORS.md"
+      ]
+    },
+    {
+      "name": "et_xmlfile",
+      "version": "2.0.0",
+      "license_expression": null,
+      "license_metadata": [
+        "MIT"
+      ],
+      "license_files": [
+        "LICENCE.python",
+        "LICENCE.rst",
+        "AUTHORS.txt"
+      ]
+    },
+    {
+      "name": "fonttools",
+      "version": "4.62.1",
+      "license_expression": null,
+      "license_metadata": [
+        "MIT"
+      ],
+      "license_files": [
+        "LICENSE",
+        "LICENSE.external"
+      ]
+    },
+    {
+      "name": "google-crc32c",
+      "version": "1.8.0",
+      "license_expression": null,
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "license_expression": null,
+      "license_metadata": [
+        "MIT"
+      ],
+      "license_files": [
+        "LICENSE.txt"
+      ]
+    },
+    {
+      "name": "h5py",
+      "version": "3.16.0",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE",
+        "lzf/LICENSE.txt",
+        "licenses/hdf5.txt",
+        "licenses/license.txt",
+        "licenses/pytables.txt",
+        "licenses/python.txt",
+        "licenses/stdint.txt"
+      ]
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE.md"
+      ]
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "license_expression": null,
+      "license_metadata": [
+        "BSD-3-Clause"
+      ],
+      "license_files": []
+    },
+    {
+      "name": "httpx-sse",
+      "version": "0.4.3",
+      "license_expression": null,
+      "license_metadata": [
+        "MIT"
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "idna",
+      "version": "3.11",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE.md"
+      ]
+    },
+    {
+      "name": "jaraco.classes",
+      "version": "3.4.0",
+      "license_expression": null,
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "jaraco.context",
+      "version": "6.1.2",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "jaraco.functools",
+      "version": "4.6.0",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "jeepney",
+      "version": "0.9.0",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "joblib",
+      "version": "1.5.3",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE.txt"
+      ]
+    },
+    {
+      "name": "jsonschema",
+      "version": "4.26.0",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "COPYING"
+      ]
+    },
+    {
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "COPYING"
+      ]
+    },
+    {
+      "name": "keyring",
+      "version": "25.7.0",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.5.0",
+      "license_expression": null,
+      "license_metadata": [
+        "========================="
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "legacy-api-wrap",
+      "version": "1.5",
+      "license_expression": "MPL-2.0",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE.rst"
+      ]
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.10.8",
+      "license_expression": null,
+      "license_metadata": [
+        "License agreement for matplotlib versions 1.3.0 and later"
+      ],
+      "license_files": []
+    },
+    {
+      "name": "mcp",
+      "version": "1.26.0",
+      "license_expression": null,
+      "license_metadata": [
+        "MIT"
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "more-itertools",
+      "version": "11.2.1",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "narwhals",
+      "version": "2.22.1",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE.md"
+      ]
+    },
+    {
+      "name": "natsort",
+      "version": "8.4.0",
+      "license_expression": null,
+      "license_metadata": [
+        "MIT"
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "numcodecs",
+      "version": "0.16.5",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE.txt",
+        "c-blosc/LICENSE.txt",
+        "c-blosc/LICENSES/BITSHUFFLE.txt",
+        "c-blosc/LICENSES/FASTLZ.txt",
+        "c-blosc/LICENSES/LZ4.txt",
+        "c-blosc/LICENSES/SNAPPY.txt",
+        "c-blosc/LICENSES/STDINT.txt",
+        "c-blosc/LICENSES/ZLIB-NG.txt",
+        "c-blosc/LICENSES/ZLIB.txt"
+      ]
+    },
+    {
+      "name": "numpy",
+      "version": "2.4.3",
+      "license_expression": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE.txt",
+        "numpy/_core/include/numpy/libdivide/LICENSE.txt",
+        "numpy/_core/src/common/pythoncapi-compat/COPYING",
+        "numpy/_core/src/highway/LICENSE",
+        "numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+        "numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+        "numpy/_core/src/umath/svml/LICENSE",
+        "numpy/fft/pocketfft/LICENSE.md",
+        "numpy/linalg/lapack_lite/LICENSE.txt",
+        "numpy/ma/LICENSE",
+        "numpy/random/LICENSE.md",
+        "numpy/random/src/distributions/LICENSE.md",
+        "numpy/random/src/mt19937/LICENSE.md",
+        "numpy/random/src/pcg64/LICENSE.md",
+        "numpy/random/src/philox/LICENSE.md",
+        "numpy/random/src/sfc64/LICENSE.md",
+        "numpy/random/src/splitmix64/LICENSE.md"
+      ]
+    },
+    {
+      "name": "openpyxl",
+      "version": "3.1.5",
+      "license_expression": null,
+      "license_metadata": [
+        "MIT"
+      ],
+      "license_files": [
+        "LICENCE.rst"
+      ]
+    },
+    {
+      "name": "packaging",
+      "version": "26.0",
+      "license_expression": "Apache-2.0 OR BSD-2-Clause",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE",
+        "LICENSE.APACHE",
+        "LICENSE.BSD"
+      ]
+    },
+    {
+      "name": "pandas",
+      "version": "2.3.3",
+      "license_expression": null,
+      "license_metadata": [
+        "BSD 3-Clause License"
+      ],
+      "license_files": []
+    },
+    {
+      "name": "pillow",
+      "version": "12.1.1",
+      "license_expression": "MIT-CMU",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "pip",
+      "version": "25.0.1",
+      "license_expression": null,
+      "license_metadata": [
+        "MIT"
+      ],
+      "license_files": [
+        "LICENSE.txt",
+        "AUTHORS.txt"
+      ]
+    },
+    {
+      "name": "pycparser",
+      "version": "3.0",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "pydantic",
+      "version": "2.12.5",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "pydantic-settings",
+      "version": "2.13.1",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.41.5",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "PyJWT",
+      "version": "2.12.1",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE",
+        "AUTHORS.rst"
+      ]
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.2",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "license_expression": null,
+      "license_metadata": [
+        "Dual License"
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.2.2",
+      "license_expression": null,
+      "license_metadata": [
+        "BSD-3-Clause"
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "python-multipart",
+      "version": "0.0.22",
+      "license_expression": "Apache-2.0",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE.txt"
+      ]
+    },
+    {
+      "name": "pytz",
+      "version": "2026.2",
+      "license_expression": null,
+      "license_metadata": [
+        "MIT"
+      ],
+      "license_files": [
+        "LICENSE.txt"
+      ]
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "license_expression": null,
+      "license_metadata": [
+        "MIT"
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "referencing",
+      "version": "0.37.0",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "COPYING"
+      ]
+    },
+    {
+      "name": "rpds-py",
+      "version": "0.30.0",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "scikit-learn",
+      "version": "1.9.0",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": [],
+      "license_files": [
+        "COPYING"
+      ]
+    },
+    {
+      "name": "scipy",
+      "version": "1.17.1",
+      "license_expression": null,
+      "license_metadata": [
+        "Copyright (c) 2001-2002 Enthought, Inc. 2003, SciPy Developers."
+      ],
+      "license_files": []
+    },
+    {
+      "name": "scverse-misc",
+      "version": "0.0.9",
+      "license_expression": null,
+      "license_metadata": [
+        "BSD 3-Clause License"
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "SecretStorage",
+      "version": "3.5.0",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "session-info2",
+      "version": "0.4.1",
+      "license_expression": "MPL-2.0",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE.rst"
+      ]
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "license_expression": null,
+      "license_metadata": [
+        "MIT"
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "sse-starlette",
+      "version": "3.3.3",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE",
+        "AUTHORS"
+      ]
+    },
+    {
+      "name": "starlette",
+      "version": "1.0.0",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE.md"
+      ]
+    },
+    {
+      "name": "threadpoolctl",
+      "version": "3.6.0",
+      "license_expression": null,
+      "license_metadata": [
+        "BSD-3-Clause"
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.2",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.15.0",
+      "license_expression": "PSF-2.0",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.1",
+      "license_expression": null,
+      "license_metadata": [
+        "Apache-2.0"
+      ],
+      "license_files": [
+        "LICENSE",
+        "licenses/LICENSE_APACHE"
+      ]
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.42.0",
+      "license_expression": "BSD-3-Clause",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE.md"
+      ]
+    },
+    {
+      "name": "xlrd",
+      "version": "2.0.2",
+      "license_expression": null,
+      "license_metadata": [
+        "BSD"
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "name": "zarr",
+      "version": "3.2.1",
+      "license_expression": "MIT",
+      "license_metadata": [],
+      "license_files": [
+        "LICENSE.txt"
+      ]
+    }
+  ],
+  "os_packages": "Exact Ubuntu package versions and frozen source snapshot: docker/runtime.json",
+  "opencode": {
+    "version": "1.18.23",
+    "license": "MIT",
+    "license_url": "https://github.com/anomalyco/opencode/blob/v1.18.23/LICENSE",
+    "bundled_dependencies_review_complete": false
+  },
+  "unresolved": [
+    "Bundled native-library notices and corresponding source obligations",
+    "Ubuntu/Rocker/CPython/OpenCode complete redistribution notices",
+    "CC-BY-NC-SA integration compatibility and asset rights"
+  ]
+}

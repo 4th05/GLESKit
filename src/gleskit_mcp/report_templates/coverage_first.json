@@ -1,0 +1,32 @@
+{
+  "id": "coverage_first",
+  "label": "Coverage-first",
+  "description": "Prioritize complete gene accounting, dominant biological themes, and clear handling of orphans/evidence-sparse genes.",
+  "intent": "Use this when the main goal is to account for every relevant gene or finding before moving to narrower mechanistic claims.",
+  "sections": [
+    {
+      "heading": "Question and Scope",
+      "guidance": "State the analysis question, cohort or context, and what evidence sources are currently in scope."
+    },
+    {
+      "heading": "Gene-by-Gene Coverage",
+      "guidance": "Walk through the major genes or findings one by one, noting what evidence exists for each and what remains thin."
+    },
+    {
+      "heading": "Dominant Biological Themes",
+      "guidance": "Summarize the strongest recurring pathways, programs, or disease themes that appear across the evidence."
+    },
+    {
+      "heading": "Orphans and Sparse Evidence",
+      "guidance": "Call out genes or observations that do not yet fit the main themes or lack enough support for interpretation."
+    },
+    {
+      "heading": "Confidence and Gaps",
+      "guidance": "Explain which parts of the interpretation are well supported versus provisional, and what evidence is still missing."
+    },
+    {
+      "heading": "Bottom Line",
+      "guidance": "End with a concise coverage-oriented synthesis that reflects both what is supported and what remains unresolved."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "mechanism",
+  "label": "Mechanism",
+  "description": "Prioritize mechanistic hypotheses and alternative explanations. Keep causal language conservative and explicitly hypothesis-tiered.",
+  "intent": "Use this when the user wants a mechanistic story, but the report should clearly separate evidence from causal speculation.",
+  "sections": [
+    {
+      "heading": "Question and Context",
+      "guidance": "Frame the biological question, sample context, and the key signals that motivate a mechanistic interpretation."
+    },
+    {
+      "heading": "Mechanistic Hypotheses",
+      "guidance": "Lay out the main mechanism candidates in plain language, making clear what each hypothesis is trying to explain."
+    },
+    {
+      "heading": "Supporting Evidence",
+      "guidance": "Tie each hypothesis to the strongest artifacts, literature findings, pathways, or disease associations currently available."
+    },
+    {
+      "heading": "Alternative Explanations",
+      "guidance": "Describe plausible competing explanations, including technical, biological, or cohort-level alternatives."
+    },
+    {
+      "heading": "Hypothesis Tiers",
+      "guidance": "Rank the mechanism ideas by confidence, explicitly distinguishing supported interpretations from weaker hypotheses."
+    },
+    {
+      "heading": "Critical Next Checks",
+      "guidance": "List the most useful next searches, validations, or experiments that would strengthen or falsify the leading mechanism."
+    }
+  ]
+}

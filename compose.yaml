@@ -1,0 +1,36 @@
+name: gleskit-local
+
+services:
+  gleskit:
+    image: gleskit-local:arm64
+    build:
+      context: .
+      dockerfile: Dockerfile
+    platform: linux/arm64
+    pull_policy: never
+    init: true
+    user: "10001:10001"
+    read_only: true
+    restart: "no"
+    stop_grace_period: 20s
+    cpus: 2
+    mem_limit: 6g
+    pids_limit: 256
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    ports:
+      - "127.0.0.1:8123:8123"
+    volumes:
+      - state:/app/var
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,nodev,size=512m,mode=1777
+    logging:
+      driver: local
+      options:
+        max-size: 5m
+        max-file: "2"
+
+volumes:
+  state:

@@ -1,0 +1,55 @@
+{
+  "execution": {
+    "finalization_start_loop": 3,
+    "max_loops": 8,
+    "max_tool_calls": 30,
+    "report_save_reserve_calls": 6,
+    "temperature": 0.2
+  },
+  "judging": {
+    "enabled": true,
+    "model": "gpt-5-mini"
+  },
+  "prompt": {
+    "mode": "neutral_eval",
+    "override_text": ""
+  },
+  "run_name": "two-report-types-four-models-32-episodes",
+  "selection": {
+    "case_ids": [
+      "epithelial_tumor_panel",
+      "inflammatory_serum_panel",
+      "emt_hypoxia_program",
+      "interferon_program"
+    ],
+    "default_provider_only": true,
+    "max_cases_per_report_type": 2,
+    "models": [
+      "gpt-4.1-nano",
+      "gpt-4.1-mini",
+      "gpt-5-nano",
+      "gpt-5-mini"
+    ],
+    "provider_ids": [],
+    "report_types": [
+      "biomarker",
+      "mechanism"
+    ],
+    "seeds": [
+      1
+    ],
+    "skills_modes": [
+      "off",
+      "on"
+    ]
+  },
+  "skills": {
+    "active_skill_ids": [
+      "gleskit-research-assistant"
+    ],
+    "snapshot_variant": "eval_adapted"
+  },
+  "storage": {
+    "eval_root": "${PROJECT_ROOT}/var/gleskit_eval"
+  }
+}

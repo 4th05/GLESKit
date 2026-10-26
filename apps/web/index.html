@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f8fc" />
+    <title>GLESKit Local</title>
+    <script>
+      (() => {
+        try {
+          const stored = window.localStorage.getItem("gleskit-theme-v2");
+          const theme = stored === "dark" ? "dark" : "light";
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+          document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.toggle("theme-dark", theme === "dark");
+            document.body.classList.toggle("theme-light", theme !== "dark");
+            const meta = document.querySelector('meta[name="theme-color"]');
+            if (meta) {
+              meta.setAttribute("content", theme === "dark" ? "#0d1117" : "#f5f8fc");
+            }
+          }, { once: true });
+        } catch {
+          // Ignore storage failures; the app will fall back to the default theme.
+        }
+      })();
+    </script>
+    <style>
+      :root {
+        color-scheme: light;
+        --startup-bg: linear-gradient(180deg, rgba(251, 253, 255, 0.98), rgba(238, 243, 248, 0.98));
+        --startup-bg-dark: linear-gradient(180deg, rgba(12, 17, 24, 0.98), rgba(6, 10, 15, 0.98));
+        --startup-shell-bg: rgba(255, 255, 255, 0.84);
+        --startup-shell-border: rgba(95, 170, 241, 0.18);
+        --startup-copy-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 250, 255, 0.98));
+        --startup-copy-border: rgba(95, 170, 241, 0.14);
+        --startup-art-bg: linear-gradient(180deg, #fcfeff 0%, #ebf3fb 100%);
+        --startup-log-bg: rgba(255, 255, 255, 0.76);
+        --startup-log-border: rgba(95, 170, 241, 0.14);
+        --startup-log-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+        --startup-error-bg: rgba(255, 239, 239, 0.9);
+        --startup-error-border: rgba(211, 101, 101, 0.22);
+        --startup-error-text: #9e4f4f;
+        --startup-dot-info: rgba(95, 170, 241, 0.94);
+        --startup-dot-success: rgba(60, 168, 122, 0.94);
+        --startup-dot-warning: rgba(211, 141, 56, 0.94);
+        --startup-dot-error: rgba(211, 101, 101, 0.94);
+      }
+
+      html[data-theme="dark"] {
+        color-scheme: dark;
+        --startup-bg: linear-gradient(180deg, rgba(12, 17, 24, 0.98), rgba(6, 10, 15, 0.98));
+        --startup-shell-bg: rgba(9, 13, 18, 0.82);
+        --startup-shell-border: rgba(124, 199, 255, 0.18);
+        --startup-copy-bg: linear-gradient(180deg, rgba(17, 22, 29, 0.98), rgba(13, 17, 23, 0.98));
+        --startup-copy-border: rgba(124, 199, 255, 0.16);
+        --startup-art-bg: linear-gradient(180deg, #161d29 0%, #0b0f15 100%);
+        --startup-log-bg: rgba(17, 22, 29, 0.84);
+        --startup-log-border: rgba(124, 199, 255, 0.16);
+        --startup-log-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+        --startup-error-bg: rgba(58, 24, 26, 0.86);
+        --startup-error-border: rgba(248, 81, 73, 0.24);
+        --startup-error-text: #ff9a95;
+        --startup-dot-info: rgba(124, 199, 255, 0.94);
+        --startup-dot-success: rgba(63, 185, 80, 0.94);
+        --startup-dot-warning: rgba(230, 182, 79, 0.94);
+        --startup-dot-error: rgba(248, 81, 73, 0.94);
+      }
+
+      html,
+      body,
+      #app {
+        margin: 0;
+        min-height: 100vh;
+      }
+
+      body {
+        overflow: hidden;
+        font-family: "Avenir Next", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+        color: #152030;
+        background:
+          radial-gradient(circle at top left, rgba(95, 170, 241, 0.1), transparent 30%),
+          radial-gradient(circle at top right, rgba(60, 168, 122, 0.08), transparent 24%),
+          radial-gradient(circle at bottom left, rgba(211, 101, 101, 0.05), transparent 26%),
+          var(--startup-bg);
+      }
+
+      html[data-theme="dark"] body {
+        color: #e6edf3;
+        background:
+          radial-gradient(circle at top left, rgba(124, 199, 255, 0.1), transparent 30%),
+          radial-gradient(circle at top right, rgba(63, 185, 80, 0.08), transparent 24%),
+          radial-gradient(circle at bottom left, rgba(248, 81, 73, 0.06), transparent 26%),
+          var(--startup-bg);
+      }
+
+      #app,
+      .startup-screen {
+        min-height: 100vh;
+      }
+
+      .startup-screen {
+        display: grid;
+        place-items: center;
+        padding: 14px;
+      }
+
+      .frame {
+        min-width: 0;
+        border: 1px solid var(--startup-shell-border);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 18px 44px rgba(65, 97, 134, 0.14);
+      }
+
+      .startup-card {
+        width: min(1180px, calc(100vw - 24px));
+        min-height: min(720px, calc(100vh - 24px));
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+        overflow: hidden;
+        border-radius: 28px;
+        background: var(--startup-shell-bg);
+        box-shadow: 0 28px 72px rgba(65, 97, 134, 0.16);
+        backdrop-filter: blur(24px);
+      }
+
+      html[data-theme="dark"] .frame {
+        background: rgba(22, 27, 34, 0.98);
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+      }
+
+      html[data-theme="dark"] .startup-card {
+        box-shadow: 0 28px 72px rgba(0, 0, 0, 0.42);
+      }
+
+      .startup-copy {
+        display: grid;
+        gap: 18px;
+        align-content: start;
+        padding: clamp(28px, 4vw, 46px);
+        background: var(--startup-copy-bg);
+        border-right: 1px solid var(--startup-copy-border);
+      }
+
+      .startup-brand {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .startup-brand-mark {
+        width: 92px;
+        height: 92px;
+        flex: 0 0 auto;
+        overflow: hidden;
+        border-radius: 18px;
+        border: 1px solid var(--startup-copy-border);
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 12px 28px rgba(95, 170, 241, 0.16);
+      }
+
+      .startup-brand-mark img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .eyebrow {
+        font-family: "SFMono-Regular", "JetBrains Mono", "Menlo", monospace;
+        font-size: 0.64rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #607588;
+      }
+
+      .startup-brand h1 {
+        margin: 2px 0 0;
+        font-size: clamp(2.2rem, 4vw, 3.7rem);
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+        color: #152030;
+      }
+
+      html[data-theme="dark"] .startup-brand h1 {
+        color: #e6edf3;
+      }
+
+      .startup-message {
+        max-width: 34rem;
+        color: #152030;
+        font-size: clamp(1.02rem, 1.7vw, 1.16rem);
+        line-height: 1.45;
+        font-weight: 650;
+      }
+
+      html[data-theme="dark"] .startup-message {
+        color: #e6edf3;
+      }
+
+      .startup-subhead {
+        max-width: 32rem;
+        color: #607588;
+        font-size: 0.92rem;
+        line-height: 1.6;
+      }
+
+      .startup-progress-block {
+        display: grid;
+        gap: 8px;
+        margin-top: 4px;
+      }
+
+      .startup-progress-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        color: #607588;
+        font-family: "SFMono-Regular", "JetBrains Mono", "Menlo", monospace;
+        font-size: 0.68rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .progress-track {
+        width: 100%;
+        height: 12px;
+        border-radius: 999px;
+        border: 1px solid var(--startup-log-border);
+        background: var(--startup-log-bg);
+        overflow: hidden;
+        box-shadow: var(--startup-log-shadow);
+      }
+
+      .progress-fill {
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, rgba(95, 170, 241, 0.92), rgba(60, 168, 122, 0.92));
+      }
+
+      .startup-log {
+        display: grid;
+        gap: 10px;
+        min-height: 0;
+      }
+
+      .startup-log-head {
+        color: #607588;
+        font-family: "SFMono-Regular", "JetBrains Mono", "Menlo", monospace;
+        font-size: 0.68rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .startup-log-list {
+        display: grid;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        max-height: 260px;
+        overflow: auto;
+        scrollbar-width: thin;
+      }
+
+      .startup-log-item {
+        display: grid;
+        grid-template-columns: 10px minmax(0, 1fr);
+        gap: 10px;
+        align-items: start;
+        padding: 10px 12px;
+        border: 1px solid var(--startup-log-border);
+        border-radius: 14px;
+        background: var(--startup-log-bg);
+        box-shadow: var(--startup-log-shadow);
+      }
+
+      .startup-log-dot {
+        width: 10px;
+        height: 10px;
+        margin-top: 4px;
+        border-radius: 999px;
+        background: var(--startup-dot-info);
+      }
+
+      .startup-log-item.success .startup-log-dot {
+        background: var(--startup-dot-success);
+      }
+
+      .startup-log-item.warning .startup-log-dot {
+        background: var(--startup-dot-warning);
+      }
+
+      .startup-log-item.error .startup-log-dot {
+        background: var(--startup-dot-error);
+      }
+
+      .startup-log-copy {
+        display: grid;
+        gap: 2px;
+        min-width: 0;
+      }
+
+      .startup-log-message {
+        color: #152030;
+        font-size: 0.82rem;
+        font-weight: 600;
+        line-height: 1.45;
+      }
+
+      html[data-theme="dark"] .startup-log-message {
+        color: #e6edf3;
+      }
+
+      .startup-log-detail {
+        color: #607588;
+        font-family: "SFMono-Regular", "JetBrains Mono", "Menlo", monospace;
+        font-size: 0.68rem;
+        line-height: 1.45;
+        overflow-wrap: anywhere;
+      }
+
+      .startup-error {
+        padding: 12px 14px;
+        border-radius: 14px;
+        border: 1px solid var(--startup-error-border);
+        background: var(--startup-error-bg);
+        color: var(--startup-error-text);
+        font-size: 0.82rem;
+        line-height: 1.45;
+        overflow-wrap: anywhere;
+      }
+
+      .startup-art {
+        display: grid;
+        place-items: center;
+        padding: clamp(28px, 5vw, 72px);
+        position: relative;
+        min-height: 100%;
+        overflow: hidden;
+        background: var(--startup-art-bg);
+      }
+
+        .startup-art-logo {
+          position: static;
+          width: min(84%, 620px);
+          max-width: 620px;
+          max-height: 84%;
+          height: auto;
+          object-fit: contain;
+          filter: drop-shadow(0 24px 42px rgba(65, 97, 134, 0.16));
+        }
+
+      @media (max-width: 1220px) {
+        .startup-card {
+          grid-template-columns: 1fr;
+          min-height: min(760px, calc(100vh - 24px));
+        }
+
+        .startup-copy {
+          border-right: 0;
+          border-bottom: 1px solid var(--startup-copy-border);
+        }
+
+        .startup-art {
+          padding: clamp(24px, 5vw, 56px);
+          min-height: 320px;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .startup-screen {
+          padding: 8px;
+        }
+
+        .startup-card {
+          width: min(100vw - 16px, 1180px);
+          min-height: calc(100vh - 16px);
+          border-radius: 22px;
+        }
+
+        .startup-copy {
+          padding: 24px 18px;
+        }
+
+        .startup-brand {
+          align-items: flex-start;
+        }
+
+        .startup-brand-mark {
+          width: 76px;
+          height: 76px;
+          border-radius: 16px;
+        }
+
+        .startup-brand h1 {
+          font-size: clamp(1.9rem, 8vw, 2.8rem);
+        }
+
+        .startup-art {
+          padding: 20px;
+          min-height: 260px;
+        }
+
+        .startup-art-logo {
+          width: min(92%, 420px);
+          max-width: 420px;
+          max-height: 86%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="startup-screen" aria-busy="true" aria-label="Launching GLESKit Local">
+        <section class="frame startup-card">
+          <div class="startup-copy">
+            <div class="startup-brand">
+              <div class="brand-mark startup-brand-mark" aria-hidden="true">
+                <img src="./src/assets/GESKit_icon.svg" alt="" style="width: 100%; height: 100%; object-fit: cover;" />
+              </div>
+              <div>
+                <div class="eyebrow">GLESKit Local</div>
+                <h1>Preparing your workspace</h1>
+              </div>
+            </div>
+            <div class="startup-message">Loading workspace metadata</div>
+            <div class="startup-progress-block">
+              <div class="startup-progress-meta">
+                <span>6%</span>
+                <span>Booting</span>
+              </div>
+              <div class="progress-track startup-progress-track" aria-hidden="true">
+                <div class="progress-fill" style="width: 6%"></div>
+              </div>
+            </div>
+            <div class="startup-log" aria-label="Startup log">
+              <div class="startup-log-head">Startup log</div>
+              <ul class="startup-log-list">
+                <li class="startup-log-item info">
+                  <span class="startup-log-dot"></span>
+                  <span class="startup-log-message">Preparing desktop shell</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="startup-art" aria-hidden="true">
+            <img class="startup-art-logo" src="./src/assets/GESKit_icon_no_bg.png" alt="" style="width: min(84%, 620px); max-width: 620px; max-height: 84%; height: auto; object-fit: contain; filter: drop-shadow(0 24px 42px rgba(65, 97, 134, 0.16));" />
+          </div>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+  </html>

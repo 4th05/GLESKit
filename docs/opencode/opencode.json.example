@@ -1,0 +1,43 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "autoupdate": false,
+  "default_agent": "gleskit",
+  "provider": {},
+  "agent": {
+    "gleskit": {
+      "description": "GLESKit biomedical research assistant",
+      "mode": "all",
+      "prompt": "{file:@@PROJECT_ROOT@@/docs/opencode/prompts/agents/gleskit-agent-prompt.md}",
+      "tools": {
+        "bash": false, "codesearch": false, "edit": false, "glob": false,
+        "grep": false, "list": false, "lsp": false, "read": false,
+        "task": false, "webfetch": false, "websearch": false
+      },
+      "permission": {
+        "bash": "deny", "codesearch": "deny", "edit": "deny", "glob": "deny",
+        "grep": "deny", "list": "deny", "lsp": "deny", "task": "deny",
+        "webfetch": "deny", "websearch": "deny",
+        "read": {"*": "deny", "@@PROJECT_ROOT@@/docs/opencode/skills/**": "allow"},
+        "external_directory": {"*": "deny", "@@PROJECT_ROOT@@/docs/opencode/skills/**": "allow"},
+        "skill": {"*": "deny", "gleskit-research-assistant": "allow"}
+      }
+    },
+    "bixbench-eval": {
+      "mode": "all",
+      "prompt": "{file:@@PROJECT_ROOT@@/docs/opencode/prompts/agents/bixbench-eval-agent-prompt.md}"
+    },
+    "repobench-eval": {
+      "mode": "all",
+      "prompt": "{file:@@PROJECT_ROOT@@/docs/opencode/prompts/agents/repobench-eval-agent-prompt.md}"
+    }
+  },
+  "mcp": {
+    "gleskit": {
+      "type": "local",
+      "command": ["@@PYTHON_PATH@@", "-m", "gleskit_mcp", "--project-root", "@@PROJECT_ROOT@@", "serve", "--transport", "stdio"],
+      "environment": {"PYTHONPATH": "@@PROJECT_ROOT@@/src"},
+      "enabled": true,
+      "timeout": 120000
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "custom",
+  "label": "Custom",
+  "description": "Define your own report guidance from scratch.",
+  "intent": "Use this when the user wants a bespoke structure, audience, or reporting style that is not captured by the standard templates.",
+  "sections": [],
+  "custom_guidance_allowed": true,
+  "custom_guidance_required": true
+}

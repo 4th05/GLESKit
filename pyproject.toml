@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gleskit-mcp"
+version = "0.2.0"
+description = "Stateless-first biology MCP bridge with an optional local workspace runtime."
+readme = "README.md"
+license = "CC-BY-NC-SA-4.0"
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"]
+requires-python = ">=3.11"
+dependencies = [
+  "anndata>=0.10",
+  "matplotlib>=3.8",
+  "openpyxl>=3.1",
+  "pandas>=2.2",
+  "scikit-learn>=1.5",
+  "scipy>=1.11",
+  "xlrd>=2.0",
+]
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.6.0"]
+web = ["starlette>=0.52,<2", "uvicorn>=0.34,<1", "httpx>=0.28,<1", "keyring>=25,<26"]
+eval = [
+  "ipykernel>=6.29",
+  "jupyter>=1.1",
+  "langchain>=0.3.27",
+  "langchain-openai>=0.3.35",
+  "langgraph>=0.6.6",
+  "openai>=1.107.0",
+  "pandas>=2.2",
+  "rapidfuzz>=3.10",
+]
+
+[project.scripts]
+gleskit-mcp = "gleskit_mcp.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"gleskit_mcp" = ["r/*.R"]
+"gleskit_mcp.eval" = ["assets/*.md", "assets/*.json"]
+"gleskit_mcp.report_templates" = ["*.json"]

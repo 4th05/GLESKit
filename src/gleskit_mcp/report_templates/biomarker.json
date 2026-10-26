@@ -1,0 +1,32 @@
+{
+  "id": "biomarker",
+  "label": "Biomarker",
+  "description": "Prioritize marker panel quality, reproducibility caveats, and translational plausibility over mechanistic certainty.",
+  "intent": "Use this when the user cares most about whether a signal could work as a marker, panel, or stratification aid.",
+  "sections": [
+    {
+      "heading": "Use Case",
+      "guidance": "State the intended biomarker use case, such as stratification, diagnosis, prognosis, response prediction, or monitoring."
+    },
+    {
+      "heading": "Marker Candidates",
+      "guidance": "Identify candidate markers or panels and explain why they are being considered. When more than one modality is available, distinguish RNA-only, protein-only, concordant, discordant, and direction-not-comparable evidence; do not present a candidate as clinically validated from differential tables alone."
+    },
+    {
+      "heading": "Panel Behavior",
+      "guidance": "Describe how the candidate markers behave together, including coherence, redundancy, and separation of signal."
+    },
+    {
+      "heading": "Reproducibility Caveats",
+      "guidance": "Highlight confounders, missing validation, cross-cohort uncertainty, or technical issues that could weaken the panel."
+    },
+    {
+      "heading": "Translational Plausibility",
+      "guidance": "Discuss whether the markers are plausible for real-world use, even if the mechanism remains incomplete."
+    },
+    {
+      "heading": "Recommended Validation",
+      "guidance": "Suggest concrete next studies, datasets, or assay checks needed before making strong biomarker claims."
+    }
+  ]
+}

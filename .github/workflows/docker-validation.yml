@@ -1,0 +1,45 @@
+name: GLESKit source and Docker validation
+
+on:
+  workflow_dispatch:
+    inputs:
+      docker_validation:
+        description: Build and smoke-test the full native ARM64 runtime (slow, no publication)
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  source:
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7, immutable upstream commit
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Audit the source-only release boundary
+        run: |
+          python3 scripts/release/asset_metadata.py
+          python3 scripts/release/licensing_gate.py --distribution source
+          python3 scripts/release/privacy_gate.py --report tmp/ci-source-privacy.json
+          python3 scripts/release/publication.py --verify-boundary
+      - name: Test release guards without model credentials
+        run: |
+          PYTHONPATH=src python3 -m unittest tests.test_asset_metadata tests.test_release_privacy tests.test_release_publication tests.test_release_licensing tests.test_release_runtime_privacy tests.test_docker_launcher tests.test_docker_smoke -v
+
+  docker:
+    needs: source
+    if: ${{ inputs.docker_validation }}
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Build and validate without host scientific dependencies or paid providers
+        run: python3 scripts/release/docker_smoke.py --context default --build --report tmp/ci-docker-validation.json

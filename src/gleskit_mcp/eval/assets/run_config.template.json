@@ -1,0 +1,46 @@
+{
+  "execution": {
+    "finalization_start_loop": 3,
+    "max_loops": 8,
+    "max_tool_calls": 30,
+    "report_save_reserve_calls": 6,
+    "temperature": 0.2
+  },
+  "judging": {
+    "enabled": true,
+    "model": "gpt-5-mini"
+  },
+  "prompt": {
+    "mode": "neutral_eval",
+    "override_text": ""
+  },
+  "run_name": "desktop-parity-controlled-eval",
+  "selection": {
+    "case_ids": [],
+    "default_provider_only": false,
+    "max_cases_per_report_type": 5,
+    "models": [],
+    "provider_ids": [],
+    "report_types": [
+      "biomarker",
+      "mechanism",
+      "disease_context"
+    ],
+    "seeds": [
+      1
+    ],
+    "skills_modes": [
+      "off",
+      "on"
+    ]
+  },
+  "skills": {
+    "active_skill_ids": [
+      "gleskit-research-assistant"
+    ],
+    "snapshot_variant": "eval_adapted"
+  },
+  "storage": {
+    "eval_root": "${PROJECT_ROOT}/var/gleskit_eval"
+  }
+}

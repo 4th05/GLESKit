@@ -1,0 +1,282 @@
+{
+  "cases": [
+    {
+      "brief": "I have an EMT- and hypoxia-like panel and need a mechanism report that explains the main biological program instead of just summarizing each gene.",
+      "case_id": "emt_hypoxia_program",
+      "description": "Infer the dominant mechanism from an EMT and hypoxia-associated gene panel.",
+      "expected_nuggets": [
+        "Summarizes the dominant biological program rather than listing genes independently.",
+        "Uses pathway or interaction context from retrieved evidence.",
+        "Explains plausible mechanistic coherence across the panel.",
+        "Mentions uncertainty or competing interpretations."
+      ],
+      "forbidden_overclaims": [
+        "Do not claim direct causality without evidence.",
+        "Do not frame the panel as disease-specific if the evidence is broader."
+      ],
+      "kickoff_context": {
+        "genes": [
+          "VIM",
+          "ZEB1",
+          "SNAI1",
+          "AXL",
+          "ITGA5",
+          "LOX",
+          "VEGFA",
+          "CA9"
+        ],
+        "study_context": "tumor-state signature interpretation",
+        "target_question": "What dominant mechanism best explains this panel?"
+      },
+      "tags": [
+        "emt",
+        "hypoxia",
+        "mechanism"
+      ],
+      "task": "Interpret VIM, ZEB1, SNAI1, AXL, ITGA5, LOX, VEGFA, and CA9 as a mechanism-oriented gene program. Produce a mechanism report that explains the dominant biology, pathway context, caveats, and follow-up checks.",
+      "title": "EMT and hypoxia program"
+    },
+    {
+      "brief": "This looks like a strong interferon response signature, but I need a mechanism report that distinguishes antiviral signaling from generic inflammation.",
+      "case_id": "interferon_program",
+      "description": "Explain interferon-dominant biology from a canonical response panel.",
+      "expected_nuggets": [
+        "Recognizes interferon or antiviral signaling as a dominant theme.",
+        "Separates core mechanism from broader inflammatory context.",
+        "Uses retrieved evidence rather than memory-only pattern matching.",
+        "Includes caveats or next checks."
+      ],
+      "forbidden_overclaims": [
+        "Do not infer infection or treatment exposure without evidence.",
+        "Do not imply a specific disease diagnosis from the panel alone."
+      ],
+      "kickoff_context": {
+        "genes": [
+          "IFIT1",
+          "IFIT3",
+          "ISG15",
+          "MX1",
+          "OAS1",
+          "CXCL10",
+          "STAT1"
+        ],
+        "study_context": "immune-activation signature interpretation",
+        "target_question": "What mechanism best explains this interferon-like panel?"
+      },
+      "tags": [
+        "interferon",
+        "antiviral",
+        "mechanism"
+      ],
+      "task": "Interpret IFIT1, IFIT3, ISG15, MX1, OAS1, CXCL10, and STAT1 as a mechanism-oriented gene program. Produce a mechanism report that explains the dominant biology, pathway context, caveats, and next validation checks.",
+      "title": "Interferon response program"
+    },
+    {
+      "brief": "This proliferation-heavy panel needs a mechanism report that explains what kind of program is active and what the main caveats are.",
+      "case_id": "cell_cycle_program",
+      "description": "Explain a cell-cycle and mitotic program from proliferative genes.",
+      "expected_nuggets": [
+        "Identifies a proliferation or cell-cycle dominant mechanism.",
+        "Uses pathway-level or interaction-level evidence.",
+        "Avoids reducing the report to a gene list.",
+        "Mentions uncertainty or biological alternatives."
+      ],
+      "forbidden_overclaims": [
+        "Do not infer tumor aggressiveness or outcome without explicit evidence.",
+        "Do not imply a single upstream driver unless supported."
+      ],
+      "kickoff_context": {
+        "genes": [
+          "MKI67",
+          "TOP2A",
+          "CCNB1",
+          "CDC20",
+          "BUB1",
+          "CDK1",
+          "MCM2"
+        ],
+        "study_context": "high-proliferation signature interpretation",
+        "target_question": "What mechanism best explains this proliferative panel?"
+      },
+      "tags": [
+        "cell-cycle",
+        "mitosis",
+        "mechanism"
+      ],
+      "task": "Interpret MKI67, TOP2A, CCNB1, CDC20, BUB1, CDK1, and MCM2 as a mechanism-oriented gene program. Produce a mechanism report that explains dominant biology, pathway context, caveats, and useful follow-up checks.",
+      "title": "Cell-cycle and mitotic program"
+    },
+    {
+      "brief": "This stress-response panel may reflect p53 signaling, integrated stress, or apoptosis. I need a mechanism report that weighs those possibilities.",
+      "case_id": "stress_apoptosis_program",
+      "description": "Interpret a stress and apoptosis-associated panel with competing mechanisms.",
+      "expected_nuggets": [
+        "Considers more than one plausible mechanism where appropriate.",
+        "Uses evidence to weigh the dominant interpretation.",
+        "Links the panel to coherent programs instead of isolated genes.",
+        "Includes uncertainty and next checks."
+      ],
+      "forbidden_overclaims": [
+        "Do not claim TP53 mutation or a specific insult without evidence.",
+        "Do not overstate apoptosis as proven if the evidence is mixed."
+      ],
+      "kickoff_context": {
+        "genes": [
+          "CDKN1A",
+          "GADD45A",
+          "MDM2",
+          "BAX",
+          "BBC3",
+          "DDIT3"
+        ],
+        "study_context": "cell-stress signature interpretation",
+        "target_question": "What mechanism best explains this stress and apoptosis-associated panel?"
+      },
+      "tags": [
+        "stress",
+        "apoptosis",
+        "mechanism"
+      ],
+      "task": "Interpret CDKN1A, GADD45A, MDM2, BAX, BBC3, and DDIT3 as a mechanism-oriented gene program. Produce a mechanism report that explains the dominant biology, weighs alternatives, states caveats, and suggests next checks.",
+      "title": "Stress and apoptosis program"
+    },
+    {
+      "brief": "This mitochondrial panel may reflect oxidative phosphorylation, mitochondrial biogenesis, or a compensatory stress program. I need a mechanism report that sorts that out.",
+      "case_id": "mitochondrial_program",
+      "description": "Interpret a mitochondrial and respiratory gene panel mechanistically.",
+      "expected_nuggets": [
+        "Summarizes the dominant mitochondrial or metabolic program.",
+        "Uses retrieved pathway context to justify interpretation.",
+        "Discusses plausible alternatives such as stress adaptation.",
+        "Includes follow-up checks."
+      ],
+      "forbidden_overclaims": [
+        "Do not infer metabolic phenotype at the organism or patient level without evidence.",
+        "Do not overstate a specific upstream master regulator unless supported."
+      ],
+      "kickoff_context": {
+        "genes": [
+          "PPARGC1A",
+          "NDUFS1",
+          "ATP5F1B",
+          "COX7A2L",
+          "TFAM",
+          "TOMM20",
+          "SOD2"
+        ],
+        "study_context": "mitochondrial signature interpretation",
+        "target_question": "What mechanism best explains this mitochondrial gene panel?"
+      },
+      "tags": [
+        "mitochondria",
+        "respiration",
+        "mechanism"
+      ],
+      "task": "Interpret PPARGC1A, NDUFS1, ATP5F1B, COX7A2L, TFAM, TOMM20, and SOD2 as a mechanism-oriented gene program. Produce a mechanism report that explains the dominant biology, pathway context, caveats, and next validation checks.",
+      "title": "Mitochondrial respiratory program"
+    }
+  ],
+  "display_name": "Mechanism Interpretation",
+  "overview": "Explain the dominant biological program behind a gene set, connect it to pathway evidence, and make uncertainty explicit.",
+  "grounding_requirements": [
+    "Every substantive report section after Question and Context must include a visible `Sources:` line immediately after the supported content.",
+    "Mechanistic claims must be tied to named evidence streams such as investigation bundles, pathway context, interaction networks, or retrieved literature.",
+    "When a section contains synthesis, alternative explanations, hypothesis ranking, or next-step recommendations beyond direct retrieval, label it explicitly as interpretation, alternative explanation, or critical next check.",
+    "Prefer human-readable provider names, paper titles, figure links, and artifact links in `Sources:` lines. Keep raw ids and tool names secondary.",
+    "Include the major mechanistic evidence artifacts in `linked_artifact_ids` when saving the report."
+  ],
+  "section_grounding_expectations": [
+    {
+      "heading": "Question and Context",
+      "evidence_expectation": "Frame the panel and question from the task context; retrieval is optional if this section only establishes scope.",
+      "interpretation_expectation": "Keep this section descriptive rather than argumentative."
+    },
+    {
+      "heading": "Mechanistic Hypotheses",
+      "evidence_expectation": "State the leading mechanism using the strongest retrieved pathway, network, and literature evidence from the current session.",
+      "provenance_expectation": "Add a visible `Sources:` line naming the main evidence streams that support the leading hypothesis.",
+      "interpretation_expectation": "If the mechanism statement integrates multiple evidence streams into a higher-level biological synthesis, keep that explicit as interpretation rather than direct fact."
+    },
+    {
+      "heading": "Supporting Evidence",
+      "evidence_expectation": "This section should be the most directly grounded part of the report, tying hypotheses to retrieved pathway, interaction, enrichment, or literature evidence.",
+      "provenance_expectation": "Add a visible `Sources:` line with human-readable providers, paper links, figure links, and artifact links when available."
+    },
+    {
+      "heading": "Alternative Explanations",
+      "evidence_expectation": "Use retrieved evidence to justify why competing explanations remain plausible or weaker.",
+      "provenance_expectation": "Add a visible `Sources:` line when alternatives are grounded in specific evidence streams.",
+      "interpretation_expectation": "Label this section clearly as alternative explanations or interpretation when it goes beyond direct retrieval."
+    },
+    {
+      "heading": "Hypothesis Tiers",
+      "evidence_expectation": "Rank the mechanism ideas according to the evidence already gathered rather than unsupported confidence.",
+      "provenance_expectation": "Add a visible `Sources:` line pointing to the evidence streams used for the ranking.",
+      "interpretation_expectation": "Make clear that the tiering is a synthesis judgment over the retrieved evidence."
+    },
+    {
+      "heading": "Critical Next Checks",
+      "evidence_expectation": "Keep next checks aligned with evidence gaps or ambiguities uncovered in-session.",
+      "provenance_expectation": "If specific next checks are motivated by retrieved evidence, add a `Sources:` line; otherwise keep the section clearly framed as next-step guidance.",
+      "interpretation_expectation": "Label this section as critical next checks rather than as retrieved findings."
+    }
+  ],
+  "report_type": "mechanism",
+  "template_id": "mechanism",
+  "workflow_steps": [
+    {
+      "allowed_tools": [
+        "list_report_templates",
+        "get_report_template"
+      ],
+      "instructions": "Load the report templates and the mechanism template before evidence gathering.",
+      "required_skill_files": [
+        "references/60_reports_and_notes.md"
+      ],
+      "required_tools": [
+        "get_report_template"
+      ],
+      "step_id": "load_template",
+      "title": "Load Template"
+    },
+    {
+      "allowed_tools": [
+        "investigate_gene_set",
+        "search_papers",
+        "pathway_context",
+        "interaction_network",
+        "resolve_gene"
+      ],
+      "instructions": "Start with a set-level investigation. Then run at least one grouped literature search anchored to the panel and dominant biological themes. Use pathway or interaction follow-up to strengthen the mechanistic explanation, distinguish alternatives, and carry named, section-local `Sources:` lines into the final report rather than relying on the tool trace alone.",
+      "required_skill_files": [
+        "references/00_core_rules.md",
+        "references/20_gene_sets_and_signatures.md",
+        "references/40_literature_and_provenance.md"
+      ],
+      "required_tools": [
+        "investigate_gene_set",
+        "search_papers"
+      ],
+      "step_id": "retrieve_evidence",
+      "title": "Gather Mechanism Evidence"
+    },
+    {
+      "allowed_tools": [
+        "create_session_report",
+        "get_session_report",
+        "update_session_report"
+      ],
+      "instructions": "Draft the report using the mechanism template, save it, and revise only if needed for clarity or grounding. Every substantive section should expose visible provenance and major evidence artifacts should be linked in the saved report metadata.",
+      "required_skill_files": [
+        "references/00_core_rules.md",
+        "references/40_literature_and_provenance.md",
+        "references/60_reports_and_notes.md"
+      ],
+      "required_tools": [
+        "create_session_report"
+      ],
+      "step_id": "save_report",
+      "title": "Save Report"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "disease_context",
+  "label": "Disease context",
+  "description": "Prioritize diseases, conditions, and phenotypic themes most strongly supported by the molecular findings, while keeping mechanistic and clinical claims conservative.",
+  "intent": "Use this when the user wants the report to focus on which diseases or conditions best fit the genes, pathways, signatures, or omics findings.",
+  "sections": [
+    {
+      "heading": "Question and Disease Scope",
+      "guidance": "State the biological question, the molecular findings under review, and which diseases or condition families are in scope."
+    },
+    {
+      "heading": "Dominant Disease Themes",
+      "guidance": "Summarize the diseases, conditions, or phenotype programs most strongly supported by current enrichment, association, and literature evidence."
+    },
+    {
+      "heading": "Supporting Molecular Findings",
+      "guidance": "Tie the leading disease themes back to the strongest genes, pathways, signatures, or omics patterns that support them."
+    },
+    {
+      "heading": "Condition-Level Evidence",
+      "guidance": "Differentiate broad disease programs from more specific named conditions, and explain how strong or weak the condition-level support is."
+    },
+    {
+      "heading": "Competing or Secondary Disease Interpretations",
+      "guidance": "List plausible alternative disease themes, overlaps, or confounders that could explain parts of the signal."
+    },
+    {
+      "heading": "Clinical and Biological Boundaries",
+      "guidance": "State clearly what the current evidence does and does not justify, especially around diagnosis, causality, stratification, or actionability."
+    },
+    {
+      "heading": "Next Disease-Focused Checks",
+      "guidance": "Suggest the next lookups, datasets, comparisons, or validations that would strengthen or falsify the leading disease interpretation."
+    }
+  ]
+}
