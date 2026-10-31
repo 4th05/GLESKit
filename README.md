@@ -4,7 +4,10 @@
 
 **Gene-Level Evidence Synthesis Toolkit**
 
-**Contents:** [Overview](#overview) | [Architecture](#system-architecture) | [Installation](#installation) | [Usage](#usage) | [MCP server](#mcp-server) | [Data](#data-and-configuration) | [Guides](#documentation) | [Development](#development) | [License](#license)
+**Paper:** [GLESKit: an MCP-based system for gene-level biomedical investigation and evidence synthesis](https://www.biorxiv.org/content/10.64898/2026.10.25.761689v1)<br />
+Athos Moraes and Pedro G. Ferreira. *bioRxiv*, 2026.
+
+**Contents:** [Overview](#overview) | [Architecture](#system-architecture) | [Installation](#installation) | [Usage](#usage) | [MCP server](#mcp-server) | [Data](#data-and-configuration) | [Guides](#documentation) | [Development](#development) | [Citation](#citation) | [License](#license)
 
 GLESKit is an integrated environment for **human-in-the-loop, gene-level biomedical
 investigation**. It helps researchers connect gene-expression data with functional
@@ -184,6 +187,21 @@ npm --prefix apps/web run build
 Use the [release tools](scripts/release/README.md) for source/history privacy,
 metadata and reviewed-export checks. Prebuilt-image distribution needs a separate
 review; this repository supplies source and pinned build instructions.
+
+## Citation
+
+If you use GLESKit in your research, please cite our preprint:
+
+```bibtex
+@article{moraes2026gleskit,
+  author = {Moraes, Athos and Ferreira, Pedro G.},
+  title = {{GLESKit}: an {MCP}-based system for gene-level biomedical investigation and evidence synthesis},
+  journal = {bioRxiv},
+  year = {2026},
+  doi = {10.64898/2026.10.25.761689},
+  url = {https://www.biorxiv.org/content/10.64898/2026.10.25.761689v1}
+}
+```
 
 ## License
 

@@ -12,7 +12,7 @@
     "LICENSE": "e66c269d4819aaab34b49ef5220c4ddab6756f21bb5180761a4eb8561f2b7bbd",
     "Makefile": "2c452b903eb086db615701439e73c5b23080d9a434863c76fc4c196e952fa8c1",
     "NOTICE": "f2d593a4d4de0eff4e6011745c043552020f5504ee6136323145bce7ebafca09",
-    "README.md": "5a6b0f347aa2657fb155f0df139dce5aebb83a07fa7d7c32f9aa8b72e4a087b5",
+    "README.md": "72eeb90e29c2bede8a0c2ce5ab6cfb1fb45bb90eb1b0d48c59c121d77bab6d35",
     "THIRD_PARTY_NOTICES.md": "bacd6af4d09ec63c6f1672693d32673e46ea5a5af96c0ea0e1275c7dca101eca",
     "apps/web/index.html": "58e566f43df841f039a9d93a020a00eb8f4f76aef96034893e02a5f15a789fe1",
     "apps/web/package-lock.json": "b4be4a7ad3587cc62507b5c197b4af860f3d22e47fdd3b83b1d5ebc95a06093e",
@@ -402,6 +402,16 @@
         "scripts/release/publication.py": "31f96e3fb4075bec18a77004b59f96c88f03082d7d49cf6ef0c869864924323b",
         "tests/test_asset_metadata.py": "3ca38ceeaf343f0686f6942a0f783d2c7e36169626a4983202bff6ac960cba39",
         "tests/test_release_publication.py": "c697027b7658f108f9d283d60c973b0d57ccde17f162ea96458a84bf50354d11"
+      }
+    },
+    {
+      "base_commit": "cb72a6c7e80a264a6e6824dd46203ee6d5c19f20",
+      "reason": "Public bioRxiv paper reference and citation request with BibTeX. Title, authors, year and DOI verified against Crossref metadata. Only public bibliographic details added; runtime and installation instructions unchanged.",
+      "previous_files": {
+        "README.md": "5a6b0f347aa2657fb155f0df139dce5aebb83a07fa7d7c32f9aa8b72e4a087b5"
+      },
+      "files": {
+        "README.md": "72eeb90e29c2bede8a0c2ce5ab6cfb1fb45bb90eb1b0d48c59c121d77bab6d35"
       }
     }
   ]
