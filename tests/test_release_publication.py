@@ -9,6 +9,21 @@ from tests.test_release_licensing import approved_licensing_fixture, write_licen
 
 
 class PublicationTests(unittest.TestCase):
+    def test_only_manuscript_notebook_can_be_exported_from_notebooks(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder) / "source"; root.mkdir(); git = self.fixture(root)
+            name = "notebooks/eval/ncs_manuscript_figures_and_tables.ipynb"
+            notebook = root / name
+            notebook.parent.mkdir()
+            notebook.write_text('{"cells": [], "metadata": {}, "nbformat": 4, "nbformat_minor": 5}')
+            git("add", name); git("commit", "-qm", "manuscript fixture")
+            target = Path(folder) / "export"
+            selected = export(root, self.reviewed(root), target)
+            self.assertIn(name, selected)
+            self.assertEqual(list((target / "notebooks").rglob("*.*")), [target / name])
+            for private in ("notebooks/eval/draft.ipynb", "notebooks/eval/paper_outputs/figures/fig3.png"):
+                self.assertEqual(classification(private)[0], "EXCLUDE")
+
     def test_only_named_architecture_export_is_eligible(self):
         self.assertEqual(classification("docs/assets/gleskit-architecture.png")[0], "INCLUDE")
         for name in ("docs/assets/fig1_architecture.pdf", "docs/assets/draft.png", "docs/assets/private.json"):

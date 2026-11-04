@@ -170,8 +170,11 @@ clinical diagnostic system.
 | Read and compare saved benchmark runs | [Results API](docs/evaluation_results.md) |
 | Check source-release boundaries | [Release scope](docs/release-privacy-status.md) |
 
-Paper notebooks and saved research/evaluation outputs are separate materials;
-this product source repository does not bundle them.
+The [manuscript notebook](notebooks/eval/ncs_manuscript_figures_and_tables.ipynb)
+shows the analysis code and saved figures and tables. You can view its outputs
+directly on GitHub. Executing the notebook requires the original evaluation runs
+and session exports. Numerical source data and reviewed evaluation records are
+available in the [Zenodo supplement](https://doi.org/10.5281/zenodo.23592806).
 
 ## Development
 

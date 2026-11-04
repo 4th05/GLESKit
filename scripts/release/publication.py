@@ -30,6 +30,7 @@ DOCS = {"docs/mcp_contract.md", "docs/tools_providers.md", "docs/opencode/README
         "docs/licensing.md", "docs/licensing-review.json", "docs/release-privacy-status.md", "docs/runtime-baseline.md",
         "docs/assets/gleskit-architecture.png"}
 NEVER_EXPORT = ("var/", ".gleskit/", "notebooks/", "tmp/", ".agents/", ".venv/", "node_modules/")
+MANUSCRIPT_NOTEBOOK = "notebooks/eval/ncs_manuscript_figures_and_tables.ipynb"
 TEXT_SUFFIXES = {".py", ".R", ".rs", ".js", ".mjs", ".css", ".html", ".json", ".md",
                  ".toml", ".lock", ".sh", ".spec", ".xml", ".svg"}
 
@@ -49,9 +50,15 @@ def safe_name(name):
     return name
 
 
+def forbidden_export(name):
+    return private_filename(name) or (name.startswith(NEVER_EXPORT) and name != MANUSCRIPT_NOTEBOOK)
+
+
 def classification(name):
-    if private_filename(name) or name.startswith(NEVER_EXPORT) or name == ".openclaude-profile.json":
+    if forbidden_export(name):
         return "EXCLUDE", "private or unapproved research/developer artifact"
+    if name == MANUSCRIPT_NOTEBOOK:
+        return "INCLUDE", "manuscript notebook; code and saved outputs require privacy review"
     if name.startswith("docs/") and name not in DOCS and not name.startswith("docs/opencode/"):
         return "EXCLUDE", "unapproved manuscript/design/research material"
     if name in ROOT_FILES | DOCKER_FILES | CI_FILES or name in DOCS or name.startswith("config/") or name.startswith("docs/opencode/"):
@@ -102,13 +109,13 @@ def validate(root, manifest):
         if row["decision"] not in {"INCLUDE", "SANITIZE", "EXCLUDE"} or row.get("reviewed") is not True:
             raise RuntimeError("An explicit hash-bound review decision is required")
         if row["decision"] == "EXCLUDE": continue
-        if private_filename(name) or name.startswith(NEVER_EXPORT) or name == ".openclaude-profile.json" or row["mode"] not in {"100644", "100755"}:
+        if forbidden_export(name) or row["mode"] not in {"100644", "100755"}:
             raise RuntimeError("Private state or non-regular input cannot be exported")
         if row["decision"] == "INCLUDE" and actual[name]["rules"]:
             raise RuntimeError("Included source has privacy findings")
         if row["decision"] == "SANITIZE":
             replacement = safe_name(row.get("replacement", ""))
-            if private_filename(replacement) or replacement.startswith(NEVER_EXPORT):
+            if forbidden_export(replacement):
                 raise RuntimeError("Private state cannot be used as a publication replacement")
             if replacement not in actual or row.get("replacement_sha256") != actual[replacement]["sha256"]:
                 raise RuntimeError("Replacement must be reviewed committed bytes with an exact hash")
@@ -166,7 +173,7 @@ def require_publication_boundary(root):
     for name, expected in files.items():
         safe_name(name)
         target = root / name
-        if private_filename(name) or name.startswith(NEVER_EXPORT) or target.is_symlink() or not target.is_file():
+        if forbidden_export(name) or target.is_symlink() or not target.is_file():
             raise RuntimeError("Publication boundary includes a forbidden input")
         data = target.read_bytes()
         if not target.resolve().is_relative_to(root) or digest(data) != expected:

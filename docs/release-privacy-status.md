@@ -57,7 +57,9 @@ providers still receive intentionally submitted requests.
   notice obligations before opening the separate image-distribution gate.
 - **Public MCP/ngrok:** authenticated remote deployment is not implemented.
 - **Other platforms:** Intel, emulation, Windows and other hosts need validation.
-- **Research outputs:** notebooks, raw data and paper results remain separate.
+- **Research outputs:** the reviewed manuscript notebook includes saved figures
+  and tables. Original evaluation runs, private session exports and other
+  notebooks remain separate.
 - **Automatic publication:** no tool/CI step pushes repositories, publishes images
   or uploads private reports. Manual CI is read-only and has no model secrets.
 

@@ -12,7 +12,7 @@
     "LICENSE": "e66c269d4819aaab34b49ef5220c4ddab6756f21bb5180761a4eb8561f2b7bbd",
     "Makefile": "2c452b903eb086db615701439e73c5b23080d9a434863c76fc4c196e952fa8c1",
     "NOTICE": "f2d593a4d4de0eff4e6011745c043552020f5504ee6136323145bce7ebafca09",
-    "README.md": "72eeb90e29c2bede8a0c2ce5ab6cfb1fb45bb90eb1b0d48c59c121d77bab6d35",
+    "README.md": "ace7b1cc8688266b6cca22631467cba6295593798fde3670fbc58db15353d65d",
     "THIRD_PARTY_NOTICES.md": "bacd6af4d09ec63c6f1672693d32673e46ea5a5af96c0ea0e1275c7dca101eca",
     "apps/web/index.html": "58e566f43df841f039a9d93a020a00eb8f4f76aef96034893e02a5f15a789fe1",
     "apps/web/package-lock.json": "b4be4a7ad3587cc62507b5c197b4af860f3d22e47fdd3b83b1d5ebc95a06093e",
@@ -96,10 +96,11 @@
     "docs/opencode/skills/gleskit-research-assistant/references/70_examples.md": "378a3261b5151346af2da07d0abcd8a5860ee3297b09236bc34033627d732cf6",
     "docs/opencode/skills/gleskit-research-assistant/references/pipeline/10_matrix_mode.md": "47d12b4fbc6c0a52939b755af0bbbefe9685f316094108d601fc9d24d26191de",
     "docs/privacy.md": "76b370ccec8027c02c7b9a3f9be4c3b69f48627d4971efce613d76156b2603f0",
-    "docs/release-privacy-status.md": "d5db7698a31e15fcb7efdb8f9fbe206f7ee27ffd35aaa935f5dea7507a2c4826",
+    "docs/release-privacy-status.md": "ede26e2c3bdccf177351d89b4ab3f7fb26512d5b65cfeb2cb8a45f3277860a52",
     "docs/repobench_evaluation.md": "1ffa8f17b8cf16eb63adceb955ba709ba3772ac8b611af5dbf434a360897fb73",
     "docs/runtime-baseline.md": "0876d72f8d1cc8cb0a0f8d67d62f39f6b2a89b792c430df802877e23a312c5bb",
     "docs/tools_providers.md": "9311bb5f618b7d7dcb727e99254b75f68ccb33c4e7ba6552ccd408c42cc5d0cf",
+    "notebooks/eval/ncs_manuscript_figures_and_tables.ipynb": "18996fb5375ec553b7060b7d7fa9d8f753d095d289d7880cdcd1788a442ffc5a",
     "pyproject.toml": "6a5114d287bb6a6131b2bf2bbccedfb30b12a2709d4fca3f33edbd54ef22dee3",
     "scripts/annotate_bixbench_scope.py": "91c695f347745740b1930a858ae79bd7f2a6147d7797ffdbf264aca68a162103",
     "scripts/close_local_web.py": "7ff91c4994452526e4d90930345d29c8a08c03f34e2253aecf20f105456b294f",
@@ -115,7 +116,7 @@
     "scripts/release/licensing_gate.py": "524f73938502a144dd4d3bc4ce929fe1ac4ea66c6105316ed917776cf321fb11",
     "scripts/release/patterns.py": "a1321d9317d7954cf9523afe552ef915f6e316c8efd83024b2e47e83f6230def",
     "scripts/release/privacy_gate.py": "1bc153e16e8a245c1d002036dfda77a47849e0f5e1599582e0b4126acff9d15c",
-    "scripts/release/publication.py": "31f96e3fb4075bec18a77004b59f96c88f03082d7d49cf6ef0c869864924323b",
+    "scripts/release/publication.py": "6436b2387b48debe27ad2de9ab5a736e3d73c60400fcfa540c8764a435202bac",
     "scripts/release/runtime_privacy_gate.py": "f95854b8064fad5ae4e610797a502806f208769291443383689c2e68412aaf3c",
     "scripts/run_local_web.py": "2768565707f59eeea051dbfdaf5cbf4d1513239a807633f341c12d1131bf2d05",
     "src/gleskit_mcp/__init__.py": "086352e60c515d2506e3f3ce03e43a2fb02885ecd70720332a447f9460ad1d40",
@@ -260,7 +261,7 @@
     "tests/test_reference_data.py": "db6b869c10ba121919afe66ebcf04b8dbb35098288243d4993641a3af1052121",
     "tests/test_release_licensing.py": "919cd06bd60c6999dd6c8a970982e4294416bc69f14a9e3502f6ba8371979bdc",
     "tests/test_release_privacy.py": "07f312b5a8a8ec1080f7bfe51467e1b59033218ed6f4839d3ba9a1d2dd8d18d1",
-    "tests/test_release_publication.py": "c697027b7658f108f9d283d60c973b0d57ccde17f162ea96458a84bf50354d11",
+    "tests/test_release_publication.py": "c07a7bb8efeb7d6ca9579a136b1201653c1fff86daace629ea8876e8fd0b5e39",
     "tests/test_release_runtime_privacy.py": "87cd58833b75fdd3ab31f2c00d379bd3c83d9a34a1350f78c9cc4933fe7a24ac",
     "tests/test_repo_layout.py": "df156233b22c12a84cadd482de7062b24f8778da65a52fc27ef955ca275d0928",
     "tests/test_repobench_eval.py": "6292e639aaef4418c4442a8b8568ad6b964acec9d6020f5c76bba6810540c9da",
@@ -412,6 +413,23 @@
       },
       "files": {
         "README.md": "72eeb90e29c2bede8a0c2ce5ab6cfb1fb45bb90eb1b0d48c59c121d77bab6d35"
+      }
+    },
+    {
+      "base_commit": "5e2a7bde058f79d986b844e4c7e23207b529299b",
+      "reason": "One reviewed manuscript notebook with analysis code, sanitized tables and previews from eight compiled figure exports verified against the manuscript. Execution metadata, local synchronization code and PNG metadata removed. Original run data and session exports remain excluded. Exact notebook path is eligible for reviewed source export.",
+      "previous_files": {
+        "README.md": "72eeb90e29c2bede8a0c2ce5ab6cfb1fb45bb90eb1b0d48c59c121d77bab6d35",
+        "docs/release-privacy-status.md": "d5db7698a31e15fcb7efdb8f9fbe206f7ee27ffd35aaa935f5dea7507a2c4826",
+        "scripts/release/publication.py": "31f96e3fb4075bec18a77004b59f96c88f03082d7d49cf6ef0c869864924323b",
+        "tests/test_release_publication.py": "c697027b7658f108f9d283d60c973b0d57ccde17f162ea96458a84bf50354d11"
+      },
+      "files": {
+        "README.md": "ace7b1cc8688266b6cca22631467cba6295593798fde3670fbc58db15353d65d",
+        "docs/release-privacy-status.md": "ede26e2c3bdccf177351d89b4ab3f7fb26512d5b65cfeb2cb8a45f3277860a52",
+        "notebooks/eval/ncs_manuscript_figures_and_tables.ipynb": "18996fb5375ec553b7060b7d7fa9d8f753d095d289d7880cdcd1788a442ffc5a",
+        "scripts/release/publication.py": "6436b2387b48debe27ad2de9ab5a736e3d73c60400fcfa540c8764a435202bac",
+        "tests/test_release_publication.py": "c07a7bb8efeb7d6ca9579a136b1201653c1fff86daace629ea8876e8fd0b5e39"
       }
     }
   ]
