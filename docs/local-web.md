@@ -25,7 +25,7 @@ Run the commands below from the project root unless another directory is specifi
 3. Run:
 
    ```sh
-   sh scripts/docker_ui.sh open
+   make ui_docker
    ```
 
 The first launch builds the pinned environment and can take 20 minutes or more.
@@ -34,10 +34,10 @@ first-build peak disk usage have not been measured. See [runtime versions](runti
 
 | To do this | Run this |
 | --- | --- |
-| Open or reuse the app | `sh scripts/docker_ui.sh open` or `make ui_docker` |
-| Check status | `sh scripts/docker_ui.sh status` or `make status_ui_docker` |
-| Stop the app and all its children | `sh scripts/docker_ui.sh stop` or `make close_ui_docker` |
-| Select Docker Desktop's local context explicitly | `DOCKER_CONTEXT=desktop-linux sh scripts/docker_ui.sh open` |
+| Open or reuse the app | `make ui_docker` |
+| Check status | `make status_ui_docker` |
+| Stop the app and all its children | `make close_ui_docker` |
+| Select Docker Desktop's local context explicitly | `DOCKER_CONTEXT=desktop-linux make ui_docker` |
 
 Only `127.0.0.1:8123` is published. The launcher opens an authenticated browser
 session; typing that address alone does not bypass authentication. Keep the

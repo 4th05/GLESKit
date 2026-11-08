@@ -82,7 +82,7 @@ emulation are not validated.
 3. Run:
 
    ```sh
-   sh scripts/docker_ui.sh open
+   make ui_docker
    ```
 
 First launch builds the pinned environment and can take **20 minutes or more**.
@@ -90,13 +90,13 @@ The final image is **about 6 GB**, excluding research data. Extra build/cache
 space is needed; the first-build peak has not been measured. Host Python, R,
 Node.js and OpenCode are not required.
 
-| To do this | Command | Make alias |
-| --- | --- | --- |
-| Open or reuse the app | `sh scripts/docker_ui.sh open` | `make ui_docker` |
-| Check status | `sh scripts/docker_ui.sh status` | `make status_ui_docker` |
-| Stop the app and its children | `sh scripts/docker_ui.sh stop` | `make close_ui_docker` |
+| To do this | Make alias |
+| --- | --- |
+| Open or reuse the app | `make ui_docker` |
+| Check status | `make status_ui_docker` |
+| Stop the app and its children | `make close_ui_docker` |
 
-The helper opens an authenticated browser session on `127.0.0.1:8123`. Closing
+The app opens an authenticated browser session on `127.0.0.1:8123`. Closing
 its tab leaves analyses running; **stop** quits the app and preserves saved data.
 See [backups, input mounts and rebuilds](docs/local-web.md).
 
