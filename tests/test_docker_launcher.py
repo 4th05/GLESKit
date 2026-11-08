@@ -76,7 +76,8 @@ elif args[0] == "compose":
     if args[:2] == ["version", "--short"]:
         if state.get("no_compose"): sys.exit(1)
     elif args[0] == "build":
-        assert args[1:] == ["--builder", "desktop-linux", "--provenance=false", "gleskit"], args
+        assert os.environ.get("DOCKER_CONTEXT") == "desktop-linux", os.environ.get("DOCKER_CONTEXT")
+        assert args[1:] == ["--provenance=false", "gleskit"], args
         if state.get("build_error"): sys.exit(1)
         state["image"] = True
     elif args[0] == "up":

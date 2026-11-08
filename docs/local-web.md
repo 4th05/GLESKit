@@ -191,7 +191,7 @@ Normal open does not rebuild an existing image. After updating source:
 
 ```sh
 sh scripts/docker_ui.sh stop
-docker --context desktop-linux compose --env-file /dev/null -p gleskit-local -f compose.yaml build --builder desktop-linux --provenance=false gleskit
+DOCKER_CONTEXT=desktop-linux docker --context desktop-linux compose --env-file /dev/null -p gleskit-local -f compose.yaml build --provenance=false gleskit
 sh scripts/docker_ui.sh open
 ```
 

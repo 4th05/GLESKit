@@ -128,8 +128,11 @@ if [ -z "$task_container" ] || [ "$task_state" != 'running|healthy' ]; then
         ' ||
             fail 'Cannot verify a context-local Docker builder. No source files were sent to a builder.'
         printf '%s\n' 'First launch: building the pinned Python/R/OpenCode runtime locally. This can take 20 minutes or more and several GB; later opens reuse it.'
-        DOCKER_BUILDKIT=1 BUILDX_GIT_INFO=0 BUILDX_GIT_LABELS=0 BUILDX_NO_DEFAULT_ATTESTATIONS=1 \
-            compose build --builder "$task_context" --provenance=false gleskit || fail 'The initial local build failed; no browser was opened.'
+        # Compose infers the builder from the context it runs under; the context-local
+        # docker driver was verified above. DOCKER_CONTEXT is exported because newer
+        # Compose spawns nested buildx processes that must resolve the same context.
+        DOCKER_CONTEXT="$task_context" DOCKER_BUILDKIT=1 BUILDX_GIT_INFO=0 BUILDX_GIT_LABELS=0 BUILDX_NO_DEFAULT_ATTESTATIONS=1 \
+            compose build --provenance=false gleskit || fail 'The initial local build failed; no browser was opened.'
     fi
     verify_image "$task_image"
     printf '%s\n' 'Starting GLESKit on http://127.0.0.1:8123; waiting for readiness (up to 60 seconds).'
