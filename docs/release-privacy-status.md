@@ -32,8 +32,8 @@ remote credentials.
 
 ## Runtime validation boundary
 
-Tests use native Linux ARM64 under Apple Silicon Docker Desktop, fresh state,
-synthetic providers/data and real pinned OpenCode.
+The Docker validation workflow builds on native Linux ARM64 and AMD64 and uses
+fresh state, synthetic providers/data and real pinned OpenCode.
 
 | Covered | Checks |
 | --- | --- |
@@ -56,7 +56,8 @@ providers still receive intentionally submitted requests.
 - **Prebuilt images/dependencies:** review source/relinking, license-text and
   notice obligations before opening the separate image-distribution gate.
 - **Public MCP/ngrok:** authenticated remote deployment is not implemented.
-- **Other platforms:** Intel, emulation, Windows and other hosts need validation.
+- **Host launch:** Windows browser handoff needs a WSL 2 desktop check in addition
+  to the Linux container tests.
 - **Research outputs:** the reviewed manuscript notebook includes saved figures
   and tables. Original evaluation runs, private session exports and other
   notebooks remain separate.

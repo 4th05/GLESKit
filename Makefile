@@ -28,7 +28,7 @@ help:
 	@echo "  make desk_app             Compatibility alias for make ui (native shell retired)"
 	@echo "  make ui                   Build/open the local browser app (web_app alias)"
 	@echo "  make close_ui             Stop this checkout's web host and all owned workers; keep data"
-	@echo "  make ui_docker            Build once/open the Docker app (Apple Silicon); no host Python/R/Node"
+	@echo "  make ui_docker            Build once/open the Docker app (ARM64 or AMD64); no host Python/R/Node"
 	@echo "  make close_ui_docker      Stop the Docker app and children; keep its private data volume"
 	@echo "  make status_ui_docker     Show Docker app status without opening or starting it"
 	@echo "  make web_app              Compatibility alias for make ui"

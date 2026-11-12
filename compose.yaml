@@ -2,11 +2,11 @@ name: gleskit-local
 
 services:
   gleskit:
-    image: gleskit-local:arm64
+    image: gleskit-local:${GLESKIT_DOCKER_ARCH:-arm64}
     build:
       context: .
       dockerfile: Dockerfile
-    platform: linux/arm64
+    platform: linux/${GLESKIT_DOCKER_ARCH:-arm64}
     pull_policy: never
     init: true
     user: "10001:10001"

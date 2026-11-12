@@ -21,14 +21,15 @@ state_path = root / "state.json"
 state = json.loads(state_path.read_text())
 args = sys.argv[1:]
 name = pathlib.Path(sys.argv[0]).name
-if name == "open":
+if name in ("open", "xdg-open", "powershell.exe"):
     if state.get("browser_error"):
         print("unsafe browser diagnostic: " + args[0], file=sys.stderr)
         sys.exit(1)
     (root / "browser.json").write_text(json.dumps(args))
+    (root / "browser-command").write_text(name)
     sys.exit(0)
 if name == "uname":
-    print(state.get("host_os", "Darwin") if args == ["-s"] else "arm64")
+    print(state.get("host_os", "Darwin") if args == ["-s"] else state.get("kernel_release", "6.8.0"))
     sys.exit(0)
 with (root / "calls.jsonl").open("a") as stream:
     stream.write(json.dumps(args) + "\n")
@@ -72,6 +73,7 @@ elif args[0] == "compose":
     assert args[9:11] == ["-f", str(root / "compose.yaml")], args
     assert os.environ.get("COMPOSE_FILE") is None
     assert os.environ.get("COMPOSE_ENV_FILES") is None
+    assert os.environ["GLESKIT_DOCKER_ARCH"] == state.get("arch", "arm64")
     args = args[11:]
     if args[:2] == ["version", "--short"]:
         if state.get("no_compose"): sys.exit(1)
@@ -111,7 +113,7 @@ class DockerLauncherTests(unittest.TestCase):
         (self.root / ".env").write_text("MUST_NOT_BE_SOURCED=synthetic-private-canary\n")
         self.bin = self.root / "bin"
         self.bin.mkdir()
-        for name in ("docker", "open", "uname"):
+        for name in ("docker", "open", "xdg-open", "powershell.exe", "uname"):
             executable = self.bin / name
             executable.write_text("#!" + sys.executable + "\n" + FAKE_COMMAND)
             executable.chmod(0o700)
@@ -183,12 +185,28 @@ class DockerLauncherTests(unittest.TestCase):
         self.assertEqual(self.calls(), [])
 
     def test_unsupported_engine_architecture_version_and_missing_daemon_are_read_only(self):
-        for changes in ({"runtime": "27.5.1|linux|aarch64"}, {"runtime": "29.0.0|linux|x86_64"},
+        for changes in ({"runtime": "27.5.1|linux|aarch64"}, {"runtime": "29.0.0|linux|riscv64"},
                         {"runtime": "unverified|linux|aarch64"}, {"daemon_down": True}, {"no_compose": True}):
             with self.subTest(changes=changes):
                 self.state = {"image": True, "container": False, **changes}
                 self.assertNotEqual(self.run_launcher().returncode, 0)
         self.assertEqual(self.mutations(), [])
+
+    def test_amd64_linux_and_wsl_select_native_image_and_open_the_local_browser(self):
+        url = "http://127.0.0.1:8123/#launch=" + NONCE
+        for arch, kernel, browser, args in (
+                ("x86_64", "6.8.0", "xdg-open", [url]),
+                ("amd64", "6.6.87.2-microsoft-standard-WSL2", "powershell.exe",
+                 ["-NoProfile", "-NonInteractive", "-Command", f"Start-Process '{url}'"])):
+            with self.subTest(arch=arch, browser=browser):
+                self.state = {"image": False, "host_os": "Linux", "kernel_release": kernel, "arch": "amd64",
+                              "runtime": f"29.0.0|linux|{arch}", "image_metadata": "linux|amd64|local-web"}
+                self.env["GLESKIT_DOCKER_ARCH"] = "arm64"
+                result = self.run_launcher(trace=True)
+                self.assertEqual(result.returncode, 0, result.stderr)
+                self.assertEqual((self.root / "browser-command").read_text(), browser)
+                self.assertEqual(json.loads((self.root / "browser.json").read_text()), args)
+                self.assertTrue(any("reference=gleskit-local:amd64" in call for call in self.calls()))
 
     def test_foreign_checkout_multiple_containers_and_unowned_volume_are_untouched(self):
         for changes in ({"owner": "another-checkout"}, {"multiple": True},

@@ -1,5 +1,5 @@
 #!/bin/sh
-# Local Docker Desktop launcher. Do not trace the private browser handoff.
+# Local Docker launcher. Do not trace the private browser handoff.
 set +x
 set -eu
 
@@ -14,10 +14,9 @@ esac
 
 task_root=$(CDPATH= cd -P "$(dirname "$0")/.." && pwd -P)
 task_project=gleskit-local
-task_image=gleskit-local:arm64
 task_volume=gleskit-local_state
 [ -f "$task_root/compose.yaml" ] || fail 'Run the launcher from a complete GLESKit checkout.'
-command -v docker >/dev/null 2>&1 || fail 'Install Docker Desktop for Apple Silicon, then start it.'
+command -v docker >/dev/null 2>&1 || fail 'Install Docker with Compose and Buildx, then start the local Linux engine.'
 [ -z "${DOCKER_HOST-}${DOCKER_TLS_VERIFY-}${DOCKER_CERT_PATH-}" ] ||
     fail 'Unset DOCKER_HOST, DOCKER_TLS_VERIFY and DOCKER_CERT_PATH; select a local Docker context instead.'
 task_context=$(docker context show 2>/dev/null) || fail 'Cannot read the selected Docker context.'
@@ -32,24 +31,27 @@ unset COMPOSE_FILE COMPOSE_PROJECT_NAME COMPOSE_PROFILES COMPOSE_ENV_FILES
 COMPOSE_DISABLE_ENV_FILE=1 COMPOSE_REMOVE_ORPHANS=0 COMPOSE_BAKE=false
 export COMPOSE_DISABLE_ENV_FILE COMPOSE_REMOVE_ORPHANS COMPOSE_BAKE
 compose() {
-    engine compose --ansi never --env-file /dev/null --project-name "$task_project" \
+    GLESKIT_DOCKER_ARCH="$task_arch" engine compose --ansi never --env-file /dev/null --project-name "$task_project" \
         --project-directory "$task_root" -f "$task_root/compose.yaml" "$@"
 }
 task_runtime=$(engine info --format '{{.ServerVersion}}|{{.OSType}}|{{.Architecture}}' 2>/dev/null) ||
-    fail 'The local Docker engine is unavailable. Start Docker Desktop and retry.'
+    fail 'The local Docker engine is unavailable. Start Docker and retry.'
 task_version=${task_runtime%%|*}
 task_major=${task_version%%.*}
 case $task_major in ''|*[!0-9]*) fail 'Cannot verify the Docker Engine version.' ;; esac
 [ "$task_major" -ge 28 ] || fail 'Docker Engine 28 or newer is required for safe localhost port publishing.'
-case $task_runtime in "$task_version|linux|arm64"|"$task_version|linux|aarch64") ;; *)
-    fail 'This image requires a native Linux ARM64 engine. Other architectures are not yet validated.' ;;
+case $task_runtime in
+    "$task_version|linux|arm64"|"$task_version|linux|aarch64") task_arch=arm64 ;;
+    "$task_version|linux|amd64"|"$task_version|linux|x86_64") task_arch=amd64 ;;
+    *) fail 'GLESKit requires a Linux Docker engine on ARM64 or AMD64.' ;;
 esac
-compose version --short >/dev/null 2>&1 || fail 'Install the Docker Compose plugin supplied with Docker Desktop.'
+task_image="gleskit-local:$task_arch"
+compose version --short >/dev/null 2>&1 || fail 'Install the Docker Compose plugin and retry.'
 
 verify_image() {
     task_metadata=$(engine image inspect "$1" --format '{{.Os}}|{{.Architecture}}|{{index .Config.Labels "org.gleskit.app"}}' 2>/dev/null) ||
         fail 'Cannot verify the local GLESKit image.'
-    [ "$task_metadata" = 'linux|arm64|local-web' ] || fail 'The image is not the expected GLESKit ARM64 application.'
+    [ "$task_metadata" = "linux|$task_arch|local-web" ] || fail "The image is not the expected GLESKit $task_arch application."
 }
 
 find_container() {
@@ -105,9 +107,16 @@ case $task_action in
         exit 0 ;;
 esac
 
-[ "$(uname -s)" = Darwin ] && [ "$(uname -m)" = arm64 ] ||
-    fail 'Automatic browser opening is currently validated only on Apple Silicon macOS.'
-command -v open >/dev/null 2>&1 || fail 'The macOS browser-open command is unavailable.'
+case $(uname -s) in
+    Darwin) task_browser=open ;;
+    Linux)
+        case $(uname -r) in
+            *[Mm]icrosoft*) task_browser=powershell.exe ;;
+            *) task_browser=xdg-open ;;
+        esac ;;
+    *) fail 'Run the launcher on macOS, Linux, or Windows through WSL.' ;;
+esac
+command -v "$task_browser" >/dev/null 2>&1 || fail "The browser launcher $task_browser is unavailable."
 if [ -n "$task_container" ]; then
     [ "$task_owner" = "$task_expected" ] ||
         fail 'This app uses an explicit input override. Use the documented override launch commands; stop remains available here.'
@@ -151,7 +160,15 @@ task_url=$(compose exec -T gleskit python -m gleskit_mcp.web.container --launch-
 task_nonce=${task_url#http://127.0.0.1:8123/\#launch=}
 [ "$task_nonce" != "$task_url" ] && [ "${#task_nonce}" -eq 43 ] || fail 'Invalid private browser handoff.'
 case $task_nonce in *[!a-zA-Z0-9_-]*) fail 'Invalid private browser handoff.' ;; esac
-if ! open "$task_url" >/dev/null 2>&1; then
+open_browser() {
+    case $task_browser in
+        powershell.exe)
+            # Only the fixed localhost prefix and the validated nonce reach PowerShell.
+            powershell.exe -NoProfile -NonInteractive -Command "Start-Process '$1'" ;;
+        *) "$task_browser" "$1" ;;
+    esac
+}
+if ! open_browser "$task_url" >/dev/null 2>&1; then
     unset task_url task_nonce
     fail 'The app is running, but the browser could not open. Retry open.'
 fi

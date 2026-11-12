@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Opt-in local ARM64 Docker validation with synthetic data; never publishes.
+"""Opt-in local Docker validation with synthetic data; never publishes.
 
 Only this run's uniquely named containers, image, volume and scratch files are
 removed. A passing functional report is NOT licensing/content/network approval.
@@ -250,8 +250,15 @@ class Probe:
         if not endpoint.startswith("unix:///"):
             raise RuntimeError("Only a local Unix-socket Docker engine is allowed")
         value = self.docker("info", "--format", "{{.ServerVersion}}|{{.OSType}}|{{.Architecture}}").decode().strip().split("|")
-        if len(value) != 3 or value[1:] not in (["linux", "arm64"], ["linux", "aarch64"]) or int(value[0].split(".")[0]) < 28:
-            raise RuntimeError("Docker Engine 28+ on native Linux ARM64 is required")
+        architectures = {"arm64": "arm64", "aarch64": "arm64", "amd64": "amd64", "x86_64": "amd64"}
+        if len(value) != 3 or value[1] != "linux" or value[2] not in architectures or int(value[0].split(".")[0]) < 28:
+            raise RuntimeError("Docker Engine 28+ on native Linux ARM64 or AMD64 is required")
+        arch = architectures[value[2]]
+        self.env["GLESKIT_DOCKER_ARCH"] = arch
+        self.env["DOCKER_CONTEXT"] = self.context
+        if self.image is None:
+            self.image = "gleskit-local:" + arch
+        self.report["platform"] = "linux/" + arch
         self.report["engine_version"] = value[0]
         builder = self.docker("buildx", "inspect", self.context).decode().splitlines()
         drivers = [line.split(":", 1)[1].strip() for line in builder if line.startswith("Driver:")]
@@ -471,7 +478,7 @@ class Probe:
                                        fresh_runtime_rebuild_passed=False)
                 else:
                     self.report.update(build_mode="complete-pinned-runtime-build", fresh_runtime_rebuild_passed=False)
-                self.docker("build", "--builder", self.context, "--provenance=false", "--file", str(dockerfile),
+                self.docker("build", "--builder", self.context, "--platform", self.report["platform"], "--provenance=false", "--file", str(dockerfile),
                             "--tag", self.test_image, str(self.source), timeout=3600)
                 self.image = self.test_image
                 if not reuse_runtime: self.report["fresh_runtime_rebuild_passed"] = True
@@ -503,7 +510,7 @@ class Probe:
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--context", required=True)
-    parser.add_argument("--image", default="gleskit-local:arm64")
+    parser.add_argument("--image", help="Local image to validate (default: gleskit-local:<engine architecture>)")
     parser.add_argument("--build", action="store_true", help="Build a disposable image from sanitized current source")
     parser.add_argument("--reuse-validated-runtime", action="store_true", help="Diagnostic app-only rebuild; cannot approve a fresh install")
     parser.add_argument("--report", type=Path, required=True, help="New private JSON report; never publication approval")

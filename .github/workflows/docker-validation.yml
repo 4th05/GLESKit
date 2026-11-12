@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       docker_validation:
-        description: Build and smoke-test the full native ARM64 runtime (slow, no publication)
+        description: Build and smoke-test the native ARM64 and AMD64 runtimes (slow, no publication)
         required: true
         type: boolean
         default: false
@@ -34,7 +34,11 @@ jobs:
   docker:
     needs: source
     if: ${{ inputs.docker_validation }}
-    runs-on: ubuntu-24.04-arm
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [ubuntu-24.04-arm, ubuntu-24.04]
+    runs-on: ${{ matrix.runner }}
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7

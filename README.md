@@ -72,12 +72,13 @@ connection modes currently supported by this release.
 
 ## Installation
 
-**Docker is required for the supported web-app installation.** Tested target:
-Apple Silicon macOS with native Linux ARM64 containers. Other platforms and
-emulation are not validated.
+**Docker is required for the web app.** The launcher selects a native Linux
+ARM64 or AMD64 image for macOS, Linux, or Windows through WSL 2.
 
-1. Install and start [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-   with Engine **28+** and Docker Compose.
+1. Start a local Docker Engine **28+** with Compose and Buildx. Use
+   [Docker Desktop](https://www.docker.com/products/docker-desktop/) on macOS
+   or Windows. On Windows, enable [Docker's WSL 2 integration](https://docs.docker.com/desktop/features/wsl/)
+   and run the commands inside the integrated distribution.
 2. Download or clone this repository; open a terminal in its root folder.
 3. Run:
 
@@ -85,8 +86,10 @@ emulation are not validated.
    make ui_docker
    ```
 
+If Make is unavailable, run `sh scripts/docker_ui.sh open`.
+
 First launch builds the pinned environment and can take **20 minutes or more**.
-The final image is **about 6 GB**, excluding research data. Extra build/cache
+The ARM64 image is **about 6 GB**, excluding research data. Extra build/cache
 space is needed; the first-build peak has not been measured. Host Python, R,
 Node.js and OpenCode are not required.
 

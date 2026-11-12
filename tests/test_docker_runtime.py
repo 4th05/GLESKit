@@ -88,8 +88,8 @@ class ContainerRuntimeTests(unittest.TestCase):
             self.assertEqual(hashlib.sha256((ROOT / row["lock"]).read_bytes()).hexdigest(), row["lock_sha256"])
         self.assertEqual(hashlib.sha256((ROOT / meta["r_base"]["installer"]).read_bytes()).hexdigest(), meta["r_base"]["installer_sha256"])
         dockerfile = (ROOT / "Dockerfile").read_text()
-        self.assertIn(meta["r_base"]["platform_digest"], dockerfile)
-        self.assertIn(meta["frontend"]["platform_digest"], dockerfile)
+        self.assertIn(meta["r_base"]["manifest_digest"], dockerfile)
+        self.assertIn(meta["frontend"]["manifest_digest"], dockerfile)
         self.assertNotRegex(dockerfile, r"(?m)^COPY\s+(?:--\S+\s+)*\.(?:\s|/)")
         self.assertIn("--require-hashes", dockerfile)
 
@@ -98,8 +98,9 @@ class ContainerRuntimeTests(unittest.TestCase):
         for literal in ('"127.0.0.1:8123:8123"', "state:/app/var", "read_only: true", "init: true",
                         'user: "10001:10001"', 'restart: "no"', "no-new-privileges:true"):
             self.assertIn(literal, compose)
+        self.assertEqual(compose.count("${GLESKIT_DOCKER_ARCH:-arm64}"), 2)
         for forbidden in ("privileged:", "network_mode:", "docker.sock", "env_file:", "${", "./var:", "./:/app"):
-            self.assertNotIn(forbidden, compose)
+            self.assertNotIn(forbidden, compose.replace("${GLESKIT_DOCKER_ARCH:-arm64}", "arm64"))
         patterns = [line.strip() for line in (ROOT / ".dockerignore").read_text().splitlines()
                     if line.strip() and not line.startswith("#")]
         self.assertEqual(patterns[0], "**")

@@ -1,7 +1,6 @@
 # Reproducible runtime baseline
 
-The portable target is native **Linux ARM64**, tested under Docker Desktop on
-Apple Silicon macOS. Exact public inputs are recorded in
+The Docker build targets **Linux ARM64 and AMD64**. Exact public inputs are recorded in
 [`docker/runtime.json`](../docker/runtime.json),
 [`docker/python.lock`](../docker/python.lock) and
 [`docker/r-packages.lock.json`](../docker/r-packages.lock.json).
@@ -21,11 +20,11 @@ Mac Python/R installation.
 | Python | 3.12.13; 70 hash-locked runtime distributions, plus the pinned pip bootstrap |
 | R | 4.3.2; 220 locked packages, including 10 bundled with R |
 | Bioconductor package generation | 3.18 |
-| OpenCode | 1.18.23, checksum-verified Linux ARM64 executable |
+| OpenCode | 1.18.23, checksum-verified Linux ARM64 and baseline AMD64 executables |
 | Frontend builder | Node 24.22.1 / npm 11.19.1; build stage only |
-| Linux userspace | Ubuntu 22.04, snapshot 20261024T000000Z; 385 exact package versions |
+| Linux userspace | Ubuntu 22.04, snapshot 20261024T000000Z; exact inventory for each architecture |
 
-Base and Node builder images are pinned by platform digest. Python/OpenCode
+Base and Node builder images are pinned by manifest digest. Python/OpenCode
 archives, package artifacts and build helpers have recorded SHA-256 values.
 No host credentials, local libraries, scientific sessions or data volumes are
 build inputs. Source-only distribution does not ship a prebuilt runtime image.
@@ -68,4 +67,5 @@ Subsequent app-only builds reuse the scientific layers.
 
 The native development environment and its ignored captures under `var/` are
 left unchanged. They are neither release inputs nor a portable runtime guarantee.
-Intel, other operating systems and emulated images require separate validation.
+The Docker validation workflow runs native builds and smoke tests for both
+architectures. The Windows browser handoff requires a separate WSL 2 test.

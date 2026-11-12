@@ -1,5 +1,6 @@
-# Native Linux ARM64 development image; publication remains a separate release gate.
-FROM node@sha256:294d33a992da016e059121deb0c979dffb4478b77a304376bca41393297c1ea2 AS frontend
+# Pinned Linux runtime for ARM64 and AMD64.
+FROM node@sha256:55fb5f5a527ea2c5c4a95f963e48ef90aa38c7b346054fdc8ee9957a2b55d205 AS frontend
+ARG TARGETARCH
 WORKDIR /build/web
 COPY apps/web/package.json apps/web/package-lock.json ./
 COPY docker/runtime.json /locks/runtime.json
@@ -8,7 +9,8 @@ import { readFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
 const lock = JSON.parse(readFileSync("/locks/runtime.json"));
-if (process.arch !== "arm64" || process.version !== "v" + lock.frontend.node_version ||
+const target = { arm64: "arm64", amd64: "x64" }[process.env.TARGETARCH];
+if (process.platform !== "linux" || process.arch !== target || process.version !== "v" + lock.frontend.node_version ||
     execFileSync("npm", ["--version"], { encoding: "utf8" }).trim() !== lock.frontend.npm_version ||
     createHash("sha256").update(readFileSync("package-lock.json")).digest("hex") !== lock.frontend.lock_sha256)
   throw new Error("Frontend runtime or lock differs from the validated baseline.");
@@ -19,7 +21,7 @@ COPY apps/web/scripts/build-web.mjs scripts/build-web.mjs
 COPY apps/web/src/ src/
 RUN npm test && npm run build
 
-FROM rocker/r-ver@sha256:7cc27046e6aa08d13c823f7e5f6b247e5f4cb6978715bf02798d96d5217c56e4 AS runtime-base
+FROM rocker/r-ver@sha256:4e32addfc4da3e660f6e0d05ce5e43d3eceb9db58a60b9a142e0dde9a654ead1 AS runtime-base
 
 RUN printf '%s\n' \
       'deb [check-valid-until=no] https://snapshot.ubuntu.com/ubuntu/20261024T000000Z/ jammy main universe' \
@@ -58,16 +60,20 @@ RUN mkdir -p /opt/gleskit/r-library \
     && Rscript --vanilla -e 'stopifnot(getRversion() == "4.3.2", capabilities("cairo"), capabilities("png")); cat("R headless graphics available\n")'
 
 # All dependency inputs are public, exact and hash-checked. Cache mounts are not image layers.
+ARG TARGETARCH
 RUN --mount=type=bind,source=docker/runtime.json,target=/locks/runtime.json \
     python - <<'PY'
-import json, platform, subprocess, sys
+import json, os, platform, subprocess, sys
 with open("/locks/runtime.json") as stream:
     lock = json.load(stream)
 actual = dict(line.split("\t") for line in subprocess.check_output(
     ["dpkg-query", "-W", "-f=${binary:Package}\t${Version}\n"], text=True).splitlines())
-assert platform.machine() == "aarch64" and platform.system() == "Linux"
+arch = os.environ["TARGETARCH"]
+assert platform.machine() == {"arm64": "aarch64", "amd64": "x86_64"}[arch] and platform.system() == "Linux"
 assert sys.version.split()[0] == lock["python"]["version"]
-assert actual == lock["system"]["installed_packages"], "OS package snapshot differs from the reviewed baseline"
+system = lock["system"]
+expected = system["installed_packages"] if arch == "arm64" else system["installed_packages_amd64"]
+assert actual == expected, "OS package snapshot differs from the reviewed baseline"
 PY
 
 FROM runtime-base AS dependencies
@@ -86,7 +92,7 @@ PY
 RUN --mount=type=bind,source=docker/runtime.json,target=/locks/runtime.json \
     --mount=type=bind,source=docker/r-packages.lock.json,target=/locks/r-packages.lock.json \
     --mount=type=bind,source=docker/install-r.R,target=/locks/install-r.R \
-    --mount=type=cache,id=gleskit-r-sources-4.3.2-arm64-v1,target=/opt/gleskit/r-sources,sharing=locked \
+    --mount=type=cache,id=gleskit-r-sources-4.3.2-${TARGETARCH}-v1,target=/opt/gleskit/r-sources,sharing=locked \
     python - <<'PY'
 import hashlib, json, subprocess
 with open("/locks/runtime.json") as stream:
@@ -104,15 +110,16 @@ subprocess.run(["Rscript", "--vanilla", "/locks/install-r.R", "/locks/r-packages
 PY
 RUN --mount=type=bind,source=docker/runtime.json,target=/locks/runtime.json \
     python - <<'PY'
-import hashlib, json, pathlib, subprocess, tarfile, urllib.request
+import hashlib, json, os, pathlib, subprocess, tarfile, urllib.request
 with open("/locks/runtime.json") as stream:
     lock = json.load(stream)["opencode"]
+artifact = lock if os.environ["TARGETARCH"] == "arm64" else lock["amd64"]
 archive = pathlib.Path("/tmp/gleskit-opencode.tar.gz")
 try:
-    with urllib.request.urlopen(lock["url"], timeout=60) as response, archive.open("wb") as output:
+    with urllib.request.urlopen(artifact["url"], timeout=60) as response, archive.open("wb") as output:
         while chunk := response.read(1024 * 1024):
             output.write(chunk)
-    assert hashlib.sha256(archive.read_bytes()).hexdigest() == lock["sha256"]
+    assert hashlib.sha256(archive.read_bytes()).hexdigest() == artifact["sha256"]
     target = pathlib.Path("/opt/gleskit/bin/opencode")
     target.parent.mkdir(parents=True, exist_ok=True)
     with tarfile.open(archive) as source:

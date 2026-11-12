@@ -106,7 +106,7 @@ Original GLESKit branding and any included copied assets must be reviewed too.
 No local credentials, personal accounts, unpublished data, or runtime profiles
 belong in a notice file or public source release.
 
-## Pinned container boundary (Linux ARM64)
+## Pinned container boundary (Linux ARM64 and AMD64)
 
 Docker build instructions are now source-release candidates. A locally built
 image additionally contains Python 3.12.13, R 4.3.2, OpenCode 1.18.23, compiled
@@ -119,7 +119,7 @@ pip, excluding GLESKit), 220 locked R packages, the build-only R helper, and the
 204-entry npm lock graph, including optional/build packages. Exact R source URLs,
 versions, hashes and reported licenses are in `docker/r-packages.lock.json`;
 Python wheel hashes are in `docker/python.lock`. Base-image digests, CPython and
-OpenCode archives, the Ubuntu snapshot and all 385 OS package versions are in
+OpenCode archives, the Ubuntu snapshot and per-architecture OS package versions are in
 `docker/runtime.json`. Metadata is evidence for review, not legal approval.
 
 OpenCode's exact upstream tag reports MIT terms:

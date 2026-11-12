@@ -68,7 +68,7 @@ need renewed review for edits, not another nested copy.
 
 ## Opt-in Docker validation
 
-Start a local Linux ARM64 engine (28+) with Compose/Buildx. Use a new report path:
+Start a local Linux ARM64 or AMD64 engine (28+) with Compose/Buildx. Use a new report path:
 
 ```sh
 python3 scripts/release/docker_smoke.py --context desktop-linux --build --report tmp/docker-validation.json
@@ -110,5 +110,5 @@ See [scope and limits](../../docs/release-privacy-status.md).
 ## Run CI manually
 
 The manual workflow runs source guards first. Enable its optional Docker input
-for the native ARM64 build/smoke test. Its pinned checkout is read-only, retains
+for the native ARM64 and AMD64 build/smoke tests. Its pinned checkout is read-only, retains
 no credentials, accepts no model secrets and publishes nothing.

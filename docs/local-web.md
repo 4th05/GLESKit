@@ -1,11 +1,11 @@
 # Use the local web app
 
-Use Docker for the supported researcher installation on Apple Silicon macOS.
+Use Docker for the researcher installation on macOS, Linux, or Windows with WSL 2.
 Run the commands below from the project root unless another directory is specified.
 
 ## Contents
 
-- [Start and stop Docker](#docker-source-installation-apple-silicon)
+- [Start and stop Docker](#docker-source-installation)
 - [Configure providers and models](#configure-providers-and-models)
 - [Choose a workspace](#choose-a-workspace)
 - [Upload files or download a cohort](#upload-files-or-download-a-cohort)
@@ -17,10 +17,13 @@ Run the commands below from the project root unless another directory is specifi
 - [Run natively for development](#start-from-a-source-checkout)
 - [Verify a change](#verification)
 
-## Docker source installation (Apple Silicon)
+## Docker source installation
 
-1. Start Docker Desktop with Engine 28+ and Docker Compose. Use a local Linux
-   ARM64 engine; other architectures and remote engines are not supported.
+1. Start a local Linux Docker engine (28+) with Compose and Buildx. The launcher
+   selects ARM64 or AMD64 from the engine. On Windows, enable WSL 2 integration
+   in Docker Desktop and run the launcher inside the integrated distribution.
+   For browser opening it uses `open` on macOS, `xdg-open` on desktop Linux,
+   and Windows PowerShell through WSL interop on Windows.
 2. Open the project folder in a terminal.
 3. Run:
 
@@ -29,7 +32,7 @@ Run the commands below from the project root unless another directory is specifi
    ```
 
 The first launch builds the pinned environment and can take 20 minutes or more.
-The final image is about **6 GB**, excluding research data. Build-cache and
+The ARM64 image is about **6 GB**, excluding research data. Build-cache and
 first-build peak disk usage have not been measured. See [runtime versions](runtime-baseline.md).
 
 | To do this | Run this |
@@ -38,6 +41,11 @@ first-build peak disk usage have not been measured. See [runtime versions](runti
 | Check status | `make status_ui_docker` |
 | Stop the app and all its children | `make close_ui_docker` |
 | Select Docker Desktop's local context explicitly | `DOCKER_CONTEXT=desktop-linux make ui_docker` |
+
+Run `sh scripts/docker_ui.sh open` if Make is unavailable. For the manual
+Docker commands below, replace `desktop-linux` with your local context if it
+differs. On AMD64, use `gleskit-local:amd64` for the backup image and set
+`GLESKIT_DOCKER_ARCH=amd64` for manual Compose commands.
 
 Only `127.0.0.1:8123` is published. The launcher opens an authenticated browser
 session; typing that address alone does not bypass authentication. Keep the
@@ -202,7 +210,8 @@ import host environments, upgrade locked scientific dependencies or erase state.
 
 | Problem | Action |
 | --- | --- |
-| Docker engine unavailable | Start Docker Desktop; select a local context and unset `DOCKER_HOST`/TLS overrides |
+| Docker engine unavailable | Start Docker, select a local context, and unset `DOCKER_HOST`/TLS overrides |
+| WSL cannot reach Docker | Enable Docker Desktop integration for that WSL 2 distribution |
 | Port 8123 already used | Identify the owner; stop only your GLESKit instance or resolve the conflict explicitly |
 | Page has no authenticated session | Run the open helper again; do not reuse a stale private launch link |
 | Chat cannot send | Check the active connection in **Providers & models**, then engine status under **OpenCode** |

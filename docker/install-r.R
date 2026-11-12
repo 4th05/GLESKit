@@ -12,9 +12,10 @@ bootstrap_sha <- args[[5]]
 if (!identical(as.character(getRversion()), "4.3.2")) {
   stop("This lock requires R 4.3.2; no automatic version substitution is allowed.")
 }
-if (!identical(unname(Sys.info()["sysname"]), "Linux") ||
-    !identical(unname(Sys.info()["machine"]), "aarch64")) {
-  stop("This installer is only validated for Linux ARM64; the host library is not modified.")
+machine <- unname(Sys.info()["machine"])
+platforms <- c(aarch64 = "linux/arm64", x86_64 = "linux/amd64")
+if (!identical(unname(Sys.info()["sysname"]), "Linux") || !(machine %in% names(platforms))) {
+  stop("This installer requires Linux ARM64 or AMD64.")
 }
 dir.create(library_path, recursive = TRUE, showWarnings = FALSE)
 dir.create(cache_path, recursive = TRUE, showWarnings = FALSE)
@@ -152,7 +153,7 @@ if (!requireNamespace("jsonlite", quietly = TRUE, lib.loc = library_path)) {
 }
 lock <- jsonlite::fromJSON(lock_path, simplifyVector = FALSE)
 if (!identical(lock$schema, 1L) || !identical(lock$r_version, "4.3.2") ||
-    !identical(lock$platform, "linux/arm64")) {
+    !(platforms[[machine]] %in% unlist(lock$platforms))) {
   stop("Unsupported R source lock schema, version or platform.")
 }
 packages <- lock$packages

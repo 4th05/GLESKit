@@ -2763,7 +2763,7 @@
   ],
   "schema": 1,
   "status": "metadata-inventory-not-compatibility-or-redistribution-approval",
-  "platform": "linux/arm64",
+  "platforms": ["linux/arm64", "linux/amd64"],
   "python": [
     {
       "name": "anndata",
